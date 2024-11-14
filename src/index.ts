@@ -8,12 +8,12 @@ import { BvBrodcast, BvStore } from './BvBroadcast';
 import { connectToPeers } from './connectToPeers';
 
 const PORT = process.env.PORT || 3000;
-const PEER_PORTS = process.env.PEER_PORTS ? process.env.PEER_PORTS.split(",") : []; // Comma-separated ports of peer servers
+// const PEER_PORTS = process.env.PEER_PORTS ? process.env.PEER_PORTS.split(",") : []; // Comma-separated ports of peer servers
 
-if(PEER_PORTS.length === 0) {
-    console.error("No peer ports provided");
-    process.exit(1);
-}
+// if(PEER_PORTS.length === 0) {
+//     console.error("No peer ports provided");
+//     process.exit(1);
+// }
 
 
 
@@ -33,7 +33,7 @@ export const allPeersRoom = "allPeers";
 let readySevers = new Set<string>();
 
 io.on("connection", (socket) => {
-    console.log(`User connected: ${socket.id}`);
+    // console.log(`User connected: ${socket.id}`);
 
     socket.on("message", (message) => {
         console.log(`Message from ${socket.id}: ${message}`);
@@ -45,7 +45,7 @@ io.on("connection", (socket) => {
     });
 
     socket.on(MessageType.SERVER_ID, (peerId: string) => {
-        console.log(`Received server id from server ${socket.id}: ${peerId}`);
+        // console.log(`Received server id from server ${socket.id}: ${peerId}`);
         ServerInfo.storePeerIds(peerId, socket);
         socket.join(allPeersRoom);
         if(ServerInfo.PEER_IDS.length === ServerInfo.PEER_PORTS.length) {
