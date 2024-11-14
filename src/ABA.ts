@@ -83,7 +83,7 @@ class ABA{
         }
         else{
             if(rnd == this.values[0]){
-                console.log(`Decided value ${rnd}`);
+                console.log(`Decided value ${rnd}. id: ${this.id}`);
                 if(this.decided){
                     console.log(`Already decided`);
                     this.decided = true;
