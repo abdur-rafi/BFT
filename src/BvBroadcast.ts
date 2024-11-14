@@ -2,7 +2,7 @@ import { randomUUID } from "crypto";
 import { Server } from "socket.io";
 import { BV_BROADCAST_MESSAGE, MessageType } from "./messageTypes";
 import { ServerInfo } from "./serverInfo";
-import { allPeersRoom } from ".";
+import { allPeersRoom, io } from ".";
 
 class BvBrodcast{
 
@@ -14,7 +14,7 @@ class BvBrodcast{
     private group : string;
     private broadcasted : Set<boolean>;
 
-    constructor(io: Server, group : string, id?: string){
+    constructor(group : string, id?: string){
         this.id = id ? id : randomUUID();
         this.io = io;
         this.valueStore = [new Set(), new Set()];
@@ -25,10 +25,10 @@ class BvBrodcast{
     }
 
     public boradcast(binValue: boolean){
-        if(this.broadcasted.has(binValue)){
-            // console.log(`Already broadcasted value ${binValue} with id ${this.id}`);
-            return;
-        }
+        // if(this.broadcasted.has(binValue)){
+        //     // console.log(`Already broadcasted value ${binValue} with id ${this.id}`);
+        //     return;
+        // }
         console.log(`Broadcasting value ${binValue} with id ${this.id}`);
 
         let message : BV_BROADCAST_MESSAGE = {
@@ -90,18 +90,19 @@ class BvStore{
         return BvStore.bvStore.has(id);
     }
     
-    public static onBvBroadcastMessage(message : BV_BROADCAST_MESSAGE, io: Server){
+    public static onBvBroadcastMessage(message : BV_BROADCAST_MESSAGE){
         let bv = BvStore.getBvBroadcast(message.id);
         if(!bv){
-            bv = new BvBrodcast(io, allPeersRoom, message.id);
+            bv = new BvBrodcast(allPeersRoom, message.id);
             BvStore.addBvBroadcast(bv);
         }
         bv!.onReceiveBVal(message.value, message.serverId);
     }
 
-    public static startBvBroadcast(io: Server, id : string, binValue: boolean){
-        let bv = new BvBrodcast(io, allPeersRoom, id);
+    public static startBvBroadcast(id : string, binValue: boolean){
+        let bv = new BvBrodcast(allPeersRoom, id);
         bv.boradcast(binValue);
+        bv.onReceiveBVal(binValue, ServerInfo.OWN_ID);
         BvStore.addBvBroadcast(bv);
     }
 }

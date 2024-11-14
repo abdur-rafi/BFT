@@ -9,7 +9,7 @@ let readySevers = new Set<string>();
 export function connectToPeers(
     peers: string[], 
     ownId: string,
-    io : Server
+    // io : Server
     // cb: (peerId: string, socket: Socket) => void 
 ) 
     {
@@ -35,13 +35,13 @@ export function connectToPeers(
             // BvStore.startBvBroadcast(io, '1', false);
             readySevers.add(message.serverId);
             if(readySevers.size === ServerInfo.PEER_PORTS.length){
-                BvStore.startBvBroadcast(io, '1', false);
+                BvStore.startBvBroadcast('1', false);
             }
         });
 
         peerSocket.on(MessageType.BV_BROADCAST, (message: BV_BROADCAST_MESSAGE) => {
             console.log(`Received BV_BROADCAST message from ${message.serverId}: ${message.value}`);
-            BvStore.onBvBroadcastMessage(message, io);
+            BvStore.onBvBroadcastMessage(message);
         });
         
     });

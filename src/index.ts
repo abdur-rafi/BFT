@@ -26,7 +26,7 @@ const io = new Server(httpServer, {
     }
 });
 
-connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, io)
+connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID)
 
 export const allPeersRoom = "allPeers";
 // let readyCount = 0;
@@ -83,3 +83,4 @@ httpServer.listen(PORT, () => {
     // BvStore.startBvBroadcast(io,'1',false);
 });
 
+export {io};
