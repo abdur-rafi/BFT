@@ -57,7 +57,7 @@ class BvBrodcast{
         }
         if(count === (2 * ServerInfo.t + 1)){
             this.binValues.push(binValue);
-            console.log(`Added value ${binValue} to binValues`);
+            console.log(`Added value ${binValue} to binValues. bvId : ${this.id}`);
             this.bvNonEmptyCallBack(this.binValues);
             return true;
         }
@@ -113,9 +113,7 @@ class BvStore{
         let bv = new BvBrodcast(allPeersRoom, id);
         bv.setBvNonEmptyCallBack(bvBroadcastCallback);
         BvStore.addBvBroadcast(bv);
-        
         bv.broadcast(binValue);
-
         bv.onReceiveBVal(binValue, ServerInfo.OWN_ID);
         
         let storedMessages = this.bvMessageStore.get(id);

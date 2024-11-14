@@ -39,8 +39,11 @@ export function connectToPeers(
                 let value = Math.random() < 0.5;
                 // value = false;
                 console.log(`Starting ABA with value ${value}`);
-                // BvStore.startBvBroadcast('1', value);
+                // BvStore.bvBroadcast('1', value, ()=>{});
+                // BvStore.bvBroadcast('2', !value, ()=>{});
+                // BvStore.bvBroadcast('2', !value, ()=>{});
                 ABAStore.ABA_Start(value, '1');
+                ABAStore.ABA_Start(!value, '2');
             }
         });
 
