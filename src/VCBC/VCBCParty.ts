@@ -8,7 +8,7 @@ import {
 } from "./VCBCMessageTypes";
 
 export class VCBCParty {
-    id: string; // Party identifier
+    server_id: string; // Party identifier
     mBar: string | null; // m̄: Delivered message
     muBar: string | null; // µ̄: Threshold signature
     Wd: Set<string>; // Set of signature shares
@@ -17,7 +17,7 @@ export class VCBCParty {
     messageLog: Map<string, any>;
 
     constructor(id: string, signatureScheme: SignatureScheme) {
-        this.id = id;
+        this.server_id = id;
         this.mBar = null;
         this.muBar = null;
         this.Wd = new Set();
@@ -32,8 +32,8 @@ export class VCBCParty {
             this.mBar = message;
             const hash = this.signatureScheme.hash(message);
             const signatureShare = this.signatureScheme.generateShare(`${tag}:${hash}`);
-            console.log(`[Party ${this.id}] Broadcast received, sending c-ready.`);
-            return <C_READY_MESSAGE>{type: "c-ready", tag, hash, signatureShare, sender: this.id};
+            console.log(`[Party ${this.server_id}] Broadcast received, sending c-ready.`);
+            return <C_READY_MESSAGE>{type: "c-ready", tag, hash, signatureShare, sender: this.server_id};
         }
         return null;
     }
@@ -48,10 +48,10 @@ export class VCBCParty {
         if (this.muBar === null && this.signatureScheme.verifyShare(`${tag}:${hash}`, signatureShare)) {
             this.Wd.add(signatureShare);
             this.rd++;
-            console.log(`[Party ${this.id}] Valid c-ready received from ${sender}.`);
+            console.log(`[Party ${this.server_id}] Valid c-ready received from ${sender}.`);
             if (this.rd === Math.ceil((this.signatureScheme.totalParties + this.signatureScheme.t + 1) / 2)) {
                 const thresholdSignature = this.signatureScheme.combineShares(Array.from(this.Wd));
-                console.log(`[Party ${this.id}] Threshold signature created, sending c-final.`);
+                console.log(`[Party ${this.server_id}] Threshold signature created, sending c-final.`);
                 return <C_FINAL_MESSAGE>{type: "c-final", tag, hash, thresholdSignature};
             }
         }
@@ -66,7 +66,7 @@ export class VCBCParty {
 
         if (this.muBar === null && this.signatureScheme.verifySignature(`${tag}:${hash}`, thresholdSignature)) {
             this.muBar = thresholdSignature;
-            console.log(`[Party ${this.id}] Final message verified and payload delivered: ${this.mBar}`);
+            console.log(`[Party ${this.server_id}] Final message verified and payload delivered: ${this.mBar}`);
             return <C_DELIVER_MESSAGE>{type: "c-deliver", message: this.mBar};
         }
         return null;
@@ -78,7 +78,7 @@ export class VCBCParty {
         let requester = message.sender;
 
         if (this.muBar !== null) {
-            console.log(`[Party ${this.id}] Responding to c-request from ${requester}.`);
+            console.log(`[Party ${this.server_id}] Responding to c-request from ${requester}.`);
             return <C_ANSWER_MESSAGE>{type: "c-answer", tag, payload: this.mBar, thresholdSignature: this.muBar};
         }
         return null;
@@ -93,7 +93,7 @@ export class VCBCParty {
         if (this.muBar === null && this.signatureScheme.verifySignature(`${tag}:${this.signatureScheme.hash(payload)}`, thresholdSignature)) {
             this.muBar = thresholdSignature;
             this.mBar = payload;
-            console.log(`[Party ${this.id}] Payload delivered via c-answer: ${payload}`);
+            console.log(`[Party ${this.server_id}] Payload delivered via c-answer: ${payload}`);
             return <C_DELIVER_MESSAGE>{type: "c-deliver", message: this.mBar};
         }
         return null;

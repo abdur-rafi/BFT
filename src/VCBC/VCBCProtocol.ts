@@ -12,9 +12,9 @@ export class VCBCProtocol {
 
     // Broadcast a message
     broadcast(sender: VCBCParty, message: string) {
-        console.log(`[VCBCProtocol] ${sender.id} initiating broadcast.`);
+        console.log(`[VCBCProtocol] ${sender.server_id} initiating broadcast.`);
         const initialMessages = this.parties.map((party) =>
-            party.handleBroadcast(this.tag, message, sender.id)
+            party.handleBroadcast(this.tag, message, sender.server_id)
         );
         this.processMessages(initialMessages);
     }
