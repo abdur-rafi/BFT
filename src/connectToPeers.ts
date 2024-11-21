@@ -13,6 +13,7 @@ let readySevers = new Set<string>();
 export function connectToPeers(
     peers: string[], 
     ownId: string,
+    onReady  : (alea : AleaBft)=>void
     // io : Server
     // cb: (peerId: string, socket: Socket) => void 
 ) {
@@ -48,11 +49,12 @@ export function connectToPeers(
                 // ABAStore.ABA_Start(value, '1');
                 // ABAStore.ABA_Start(!value, '2');
                 // let alea = new AleaBft();
-                alea.startAgreementComponent();
-                alea.onReceiveCommand({
-                    command : `execute ${ServerInfo.OWN_ID}`,
-                    id : ServerInfo.OWN_ID
-                })
+                // alea.startAgreementComponent();
+                // alea.onReceiveCommand({
+                //     command : `execute ${ServerInfo.OWN_ID}`,
+                //     id : ServerInfo.OWN_ID
+                // })
+                onReady(alea);
                 
             }
         });

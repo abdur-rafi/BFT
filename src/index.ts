@@ -6,6 +6,7 @@ import { ServerInfo } from './serverInfo';
 import { BV_BROADCAST_MESSAGE, MessageType, READY_MESSAGE } from './messageTypes';
 import { BvBrodcast, BvStore } from './BvBroadcast';
 import { connectToPeers } from './connectToPeers';
+import { AleaBft, ClientCommand } from './aleaBft';
 
 const PORT = process.env.PORT || 3000;
 // const PEER_PORTS = process.env.PEER_PORTS ? process.env.PEER_PORTS.split(",") : []; // Comma-separated ports of peer servers
@@ -25,8 +26,22 @@ const io = new Server(httpServer, {
         methods: ["GET", "POST"]
     }
 });
+let commandCount = 0;
 
-connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID)
+connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
+    // let alea = new AleaBft();  
+    console.log("All servers ready");
+    alea.startAgreementComponent();
+    app.get('/', (req, res)=>{
+        let command : ClientCommand = {
+            command : `execute ${ServerInfo.OWN_ID}`,
+            id : `${ServerInfo.OWN_ID}_${commandCount++}`
+        }
+        console.log(`New command id: ${command.id}`);
+        alea.onReceiveCommand(command);
+        res.status(200).end(`Command Send to ${ServerInfo.OWN_ID}`);
+    })
+})
 
 export const allPeersRoom = "allPeers";
 // let readyCount = 0;

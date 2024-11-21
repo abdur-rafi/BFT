@@ -3,6 +3,7 @@ version: "3.8"
 services:
   bft_server3002:
     image: bft_server
+    container_name: bft_server_3002
     environment:
       - PORT=3002
       - OWN_ID=1
@@ -12,6 +13,7 @@ services:
 
   bft_server3003:
     image: bft_server
+    container_name: bft_server_3003
     environment:
       - PORT=3003
       - ALL_PORTS=${PORTS}
@@ -21,6 +23,7 @@ services:
 
   bft_server3004:
     image: bft_server
+    container_name: bft_server_3004
     environment:
       - PORT=3004
       - ALL_PORTS=${PORTS}
@@ -30,6 +33,7 @@ services:
 
   bft_server3005:
     image: bft_server
+    container_name: bft_server_3005
     environment:
       - PORT=3005
       - ALL_PORTS=${PORTS}
@@ -37,8 +41,11 @@ services:
     ports:
       - "3005:3005"
 
+  # Uncomment the following services as needed and ensure unique container names
+
   # bft_server3006:
   #   image: bft_server
+  #   container_name: bft_server_3006
   #   environment:
   #     - PORT=3006
   #     - ALL_PORTS=${PORTS}
@@ -48,6 +55,7 @@ services:
 
   # bft_server3007:
   #   image: bft_server
+  #   container_name: bft_server_3007
   #   environment:
   #     - PORT=3007
   #     - ALL_PORTS=${PORTS}
@@ -57,6 +65,7 @@ services:
 
   # bft_server3008:
   #   image: bft_server
+  #   container_name: bft_server_3008
   #   environment:
   #     - PORT=3008
   #     - ALL_PORTS=${PORTS}
@@ -66,6 +75,7 @@ services:
 
   # bft_server3009:
   #   image: bft_server
+  #   container_name: bft_server_3009
   #   environment:
   #     - PORT=3009
   #     - ALL_PORTS=${PORTS}
@@ -75,6 +85,7 @@ services:
 
   # bft_server3010:
   #   image: bft_server
+  #   container_name: bft_server_3010
   #   environment:
   #     - PORT=3010
   #     - ALL_PORTS=${PORTS}
@@ -84,6 +95,7 @@ services:
 
   # bft_server3011:
   #   image: bft_server
+  #   container_name: bft_server_3011
   #   environment:
   #     - PORT=3011
   #     - ALL_PORTS=${PORTS}
@@ -93,6 +105,7 @@ services:
 
   # bft_server3012:
   #   image: bft_server
+  #   container_name: bft_server_3012
   #   environment:
   #     - PORT=3012
   #     - ALL_PORTS=${PORTS}
@@ -102,6 +115,7 @@ services:
 
   # bft_server3013:
   #   image: bft_server
+  #   container_name: bft_server_3013
   #   environment:
   #     - PORT=3013
   #     - ALL_PORTS=${PORTS}
@@ -111,6 +125,7 @@ services:
 
   # bft_server3014:
   #   image: bft_server
+  #   container_name: bft_server_3014
   #   environment:
   #     - PORT=3014
   #     - ALL_PORTS=${PORTS}
@@ -120,6 +135,7 @@ services:
 
   # bft_server3015:
   #   image: bft_server
+  #   container_name: bft_server_3015
   #   environment:
   #     - PORT=3015
   #     - ALL_PORTS=${PORTS}
@@ -129,6 +145,7 @@ services:
 
   # bft_server3016:
   #   image: bft_server
+  #   container_name: bft_server_3016
   #   environment:
   #     - PORT=3016
   #     - ALL_PORTS=${PORTS}
@@ -138,6 +155,7 @@ services:
 
   # bft_server3017:
   #   image: bft_server
+  #   container_name: bft_server_3017
   #   environment:
   #     - PORT=3017
   #     - ALL_PORTS=${PORTS}

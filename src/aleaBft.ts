@@ -5,6 +5,7 @@ import { VCBCStore } from "./VCBC/VCBCStore";
 import { io } from ".";
 import { VCBC } from "./VCBC/VCBCParty";
 import { exit } from "process";
+import fs from 'fs';
 
 export const AgreementComponentMessageType = {
     FILL_GAP : "FILL_GAP",
@@ -72,6 +73,7 @@ class BroadCastComponent{
             }
             // todo
             VCBCStore.startVCBC(batch.id, batch);
+            this.batch = [];
         }
     }
 }
@@ -158,9 +160,11 @@ class QueueManager{
 
 class ExecuteCommand{
     public executedCommands : Set<string>;
-
+    public file : number;
     constructor(){
         this.executedCommands = new Set();
+        // open a file to write
+        this.file = fs.openSync('commands.txt', 'w');
     }
     
     public isExecuted(m : CommandBatch['commands'][0]){
@@ -169,7 +173,9 @@ class ExecuteCommand{
 
     public executeIfNotAlready(m : CommandBatch['commands'][0]){
         if(!this.executedCommands.has(m.id)){
-            console.log(`Executing command with id ${m.id} in server ${ServerInfo.OWN_ID}`);
+            // console.log(`Executing command with id ${m.id} in server ${ServerInfo.OWN_ID}`);
+            // write to file
+            fs.writeSync(this.file, `Executing command ${m.id}\n`);
         }
     }
 }
@@ -288,6 +294,7 @@ export class AleaBft{
 
     public onReceiveCommand(c : ClientCommand){
         if(this.exComm.isExecuted(c)){
+            console.log("Already executed command");
             return;
         }
         this.brComponent.onReceiveNotExecutedCommand(c);
