@@ -1,5 +1,5 @@
 # ports array from 3002 to 3005
-ports=(3002 3003 3004 3005)
+ports=(3002 3003 3004 3005 3006 3007 3008 3009)
 # loop through the ports array
 for port in "${ports[@]}"
 do

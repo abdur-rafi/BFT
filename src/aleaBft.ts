@@ -55,7 +55,7 @@ class BroadCastComponent{
     public batch : ClientCommand[];
 
     constructor(){
-        this.batchSize = 1;
+        this.batchSize = 32;
         this.priority = 0;
         this.ownIndex = serverIdToIndex(ServerInfo.OWN_ID);
         this.batch = [];

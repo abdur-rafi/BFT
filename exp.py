@@ -1,7 +1,7 @@
 import requests
 import random
 
-ports = [3002, 3003, 3004, 3005]
+ports = [3002, 3003, 3004, 3005, 3006, 3007, 3008, 3009]
 
 # make request to a port
 def make_request(port):
@@ -12,6 +12,6 @@ def make_request(port):
 for i in range(5000):
     # port = ports[i % 4]
     # select a port randomly
-    port = ports[random.randint(0, 3)]
+    port = ports[random.randint(0, len(ports) - 1)]
     # print(make_request(port))
     make_request(port)
