@@ -19,6 +19,7 @@ class ABA{
     private waitedForBvValues : boolean;
 
     private auxMessagesRoundWise : Map<number, AUX_MESSAGE[]>;
+    private onDecided : (v : boolean) => void;
 
     private initBeforeEachRound(){
         this.waitInRound = true;
@@ -29,9 +30,10 @@ class ABA{
         this.values = [];
         this.waitedForBvValues = false;
         this.auxMessageSet = [new Set(), new Set()];
+
     }
 
-    constructor(binValue: boolean, id : string){
+    constructor(binValue: boolean, id : string, onDecided : (v : boolean)=>void){
         this.est = binValue;    
         this.roundNo = 0;
         // this.auxMessageCount = [0, 0];
@@ -44,10 +46,11 @@ class ABA{
         this.decided = false;
         this.waitedForBvValues = false;
         this.auxMessagesRoundWise = new Map();
+        this.onDecided = onDecided;
     }
 
     public broadcastAux(binValue: boolean){
-        console.log(`broadcasting aux. serverId : ${ServerInfo.OWN_ID}`)
+        // console.log(`broadcasting aux. serverId : ${ServerInfo.OWN_ID}`)
         let message : AUX_MESSAGE = {
             binValue: binValue,
             abaId : this.id,
@@ -77,13 +80,14 @@ class ABA{
 
     public afterValues(){
         let rnd = RandomSequence.getNextRandom();
-        console.log(`Random value ${rnd}, values: ${this.values.join(", ")}`);
+        // console.log(`Random value ${rnd}, values: ${this.values.join(", ")}`);
         if(this.values.length > 1){
             this.est = rnd;
         }
         else{
             if(rnd == this.values[0]){
-                console.log(`Decided value ${rnd}. id: ${this.id}`);
+                // console.log(`Decided value ${rnd}. id: ${this.id}`);
+                this.onDecided(rnd);
                 if(this.decided){
                     console.log(`Already decided`);
                     this.decided = true;
@@ -100,7 +104,7 @@ class ABA{
 
     public takeAuxMessage(message: AUX_MESSAGE){
         if(message.roundNo < this.roundNo){
-            console.log(`Old message received. roundNo: ${message.roundNo}, this.roundNo: ${this.roundNo}`);
+            // console.log(`Old message received. roundNo: ${message.roundNo}, this.roundNo: ${this.roundNo}`);
             return;
         }
         if(this.waitedForBvValues && message.roundNo === this.roundNo){
@@ -124,11 +128,11 @@ class ABA{
         }
         this.auxMessageSet[bvIndex].add(message.serverId);
 
-        console.log( "distinct processes size : " + this.distinctProcesseses.size)
+        // console.log( "distinct processes size : " + this.distinctProcesseses.size)
         
         if(this.waitInRound && this.distinctProcesseses.size >= ServerInfo.N - ServerInfo.t){
-            console.log("(n-t) aux received")
-            console.log(this.distinctProcesseses);
+            // console.log("(n-t) aux received")
+            // console.log(this.distinctProcesseses);
             if(this.binValues.length > 1){
                 if(this.auxMessageSet[0].size === this.distinctProcesseses.size){
                     this.values = [false];
@@ -173,8 +177,8 @@ class ABAStore{
         ABAStore.abas.set(id, aba);
     }
 
-    public static ABA_Start(binValue: boolean, id: string){
-        let aba = new ABA(binValue, id);
+    public static ABA_Start(binValue: boolean, id: string, onDeliver : (v : boolean)=>void){
+        let aba = new ABA(binValue, id, onDeliver);
         ABAStore.setABA(id, aba);
 
         let messages = ABAStore.getMessagesForABA(id);

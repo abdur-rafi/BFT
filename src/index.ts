@@ -36,7 +36,7 @@ io.on("connection", (socket) => {
     // console.log(`User connected: ${socket.id}`);
 
     socket.on("message", (message) => {
-        console.log(`Message from ${socket.id}: ${message}`);
+        // console.log(`Message from ${socket.id}: ${message}`);
         io.emit("message", message);
     });
 
@@ -50,6 +50,7 @@ io.on("connection", (socket) => {
         socket.join(allPeersRoom);
         if(ServerInfo.PEER_IDS.length === ServerInfo.PEER_PORTS.length) {
             console.log("All peer servers connected");
+            console.log(`All ids: ${ServerInfo.ALL_IDS}`);
             // BvStore.startBvBroadcast(io, '1', false);
             let message : READY_MESSAGE = {
                 serverId: ServerInfo.OWN_ID

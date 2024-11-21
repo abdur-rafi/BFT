@@ -1,9 +1,12 @@
-export const MessageType = {
+import { CommandBatch } from "../aleaBft"
+
+export const VCBCMessageType = {
     C_READY : 'c-ready',
     C_FINAL : 'c-final',
     C_REQUEST : 'c-request',
     C_ANSWER : 'c-answer',
     C_DELIVER : 'c-deliver',
+    C_SEND : 'c-send'
 }
 
 export type C_READY_MESSAGE = {
@@ -11,7 +14,7 @@ export type C_READY_MESSAGE = {
     tag: string,
     hash: string,
     signatureShare: string,
-    sender: string
+    sender: string,
 }
 
 export type C_FINAL_MESSAGE = {
@@ -30,11 +33,17 @@ export type C_REQUEST_MESSAGE = {
 export type C_ANSWER_MESSAGE = {
     type: 'c-answer',
     tag: string,
-    payload: string,
+    message: CommandBatch,
     thresholdSignature: string
 }
 
 export type C_DELIVER_MESSAGE = {
     type: 'c-deliver',
     message: string
+}
+export type C_SEND_MESSAGE = {
+    type: 'c-send',
+    message: CommandBatch,
+    sender: string,
+    tag: string
 }

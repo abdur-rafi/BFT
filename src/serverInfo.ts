@@ -32,10 +32,14 @@ class ServerInfo{
     public static PEER_CONNECTIONS : Record<string, Socket> = {};
     public static OWN_ID : string = OWN_ID!;
     public static t = Math.floor(ALL_PORTS.length / 3)
+    public static ALL_IDS : string[] = []
     
     public static storePeerIds(peerId : string, socket : Socket) {
         this.PEER_IDS.push(peerId);
         this.PEER_CONNECTIONS[peerId] = socket;
+        this.ALL_IDS.push(peerId);
+        this.ALL_IDS.sort();
+        
     }
     public static N = ALL_PORTS.length;
 }

@@ -31,7 +31,7 @@ class BvBrodcast{
         //     // console.log(`Already broadcasted value ${binValue} with id ${this.id}`);
         //     return;
         // }
-        console.log(`Broadcasting value ${binValue} with id ${this.id}`);
+        // console.log(`Broadcasting value ${binValue} with id ${this.id}`);
 
         let message : BV_BROADCAST_MESSAGE = {
             id: this.id,
@@ -57,7 +57,7 @@ class BvBrodcast{
         }
         if(count === (2 * ServerInfo.t + 1)){
             this.binValues.push(binValue);
-            console.log(`Added value ${binValue} to binValues. bvId : ${this.id}`);
+            // console.log(`Added value ${binValue} to binValues. bvId : ${this.id}`);
             this.bvNonEmptyCallBack(this.binValues);
             return true;
         }
