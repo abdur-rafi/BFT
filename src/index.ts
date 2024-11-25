@@ -38,8 +38,10 @@ connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
             id : `${ServerInfo.OWN_ID}_${commandCount++}`
         }
         console.log(`New command id: ${command.id}`);
-        alea.onReceiveCommand(command);
-        res.status(200).end(`Command Send to ${ServerInfo.OWN_ID}`);
+        alea.onReceiveCommand(command, ()=>{
+            res.status(200).end(`Command Send to ${ServerInfo.OWN_ID}`);
+        });
+        // res.status(200).end(`Command Send to ${ServerInfo.OWN_ID}`);
     })
 })
 

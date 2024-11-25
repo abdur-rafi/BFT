@@ -55,7 +55,7 @@ class BroadCastComponent{
     public batch : ClientCommand[];
 
     constructor(){
-        this.batchSize = 32;
+        this.batchSize = 1;
         this.priority = 0;
         this.ownIndex = serverIdToIndex(ServerInfo.OWN_ID);
         this.batch = [];
@@ -161,10 +161,13 @@ class QueueManager{
 class ExecuteCommand{
     public executedCommands : Set<string>;
     public file : number;
+    public executeAfterCompletion : Map<string, ()=>void>;
+
     constructor(){
         this.executedCommands = new Set();
         // open a file to write
         this.file = fs.openSync('commands.txt', 'w');
+        this.executeAfterCompletion = new Map();
     }
     
     public isExecuted(m : CommandBatch['commands'][0]){
@@ -176,6 +179,11 @@ class ExecuteCommand{
             // console.log(`Executing command with id ${m.id} in server ${ServerInfo.OWN_ID}`);
             // write to file
             fs.writeSync(this.file, `Executing command ${m.id}\n`);
+            this.executedCommands.add(m.id);
+            if(this.executeAfterCompletion.has(m.id)){
+                this.executeAfterCompletion.get(m.id)!();
+                // this.executeAfterCompletion.delete(m.id);
+            }
         }
     }
 }
@@ -267,13 +275,14 @@ export class AleaBft{
     public brComponent : BroadCastComponent;
     public qManager : QueueManager;
     public exComm : ExecuteCommand;
-    public acComponent : AgreementComponent
+    public acComponent : AgreementComponent;
 
     constructor(){
         this.qManager = new QueueManager();
         this.exComm = new ExecuteCommand();
         this.acComponent = new AgreementComponent(this.qManager, this.exComm);
         this.brComponent = new BroadCastComponent();
+        // this.executeAfterCompletion = new Map();
 
 
         VCBCStore.onDecide = (cmdb)=>{
@@ -292,11 +301,12 @@ export class AleaBft{
         this.acComponent.startAgreementComponent();
     }
 
-    public onReceiveCommand(c : ClientCommand){
+    public onReceiveCommand(c : ClientCommand, onExecute : ()=>void){
         if(this.exComm.isExecuted(c)){
             console.log("Already executed command");
             return;
         }
+        this.exComm.executeAfterCompletion.set(c.id, onExecute);
         this.brComponent.onReceiveNotExecutedCommand(c);
     }
 

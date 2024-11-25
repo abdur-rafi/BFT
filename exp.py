@@ -9,7 +9,7 @@ def make_request(port):
     return r.text
 
 # make 10000 requests in total to all ports randomly
-for i in range(5000):
+for i in range(500):
     # port = ports[i % 4]
     # select a port randomly
     port = ports[random.randint(0, len(ports) - 1)]
