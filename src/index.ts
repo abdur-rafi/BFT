@@ -39,14 +39,13 @@ connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
         }
         console.log(`New command id: ${command.id}`);
         alea.onReceiveCommand(command, ()=>{
-            res.status(200).end(`Command Send to ${ServerInfo.OWN_ID}`);
+            res.status(200).end(`Command Sent to ${ServerInfo.OWN_ID}`);
         });
-        // res.status(200).end(`Command Send to ${ServerInfo.OWN_ID}`);
     })
 })
 
 export const allPeersRoom = "allPeers";
-// let readyCount = 0;
+
 let readySevers = new Set<string>();
 
 io.on("connection", (socket) => {
