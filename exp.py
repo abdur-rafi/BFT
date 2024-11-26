@@ -34,15 +34,17 @@ def make_request(port):
 # Function to make parallel requests
 def parallel_requests():
     # Number of parallel threads
-    max_threads = 8  # Adjust this based on your requirements
+    max_threads = 6  # Adjust this based on your requirements
+
+    # Generate 500 random ports for requests
+    random_ports = [random.choice(ports) for _ in range(500)]
+
 
     # start timer
-    start = time.time()
+    start_time = time.time()
 
     # Using ThreadPoolExecutor for parallelism
     with ThreadPoolExecutor(max_threads) as executor:
-        # Generate 500 random ports for requests
-        random_ports = [random.choice(ports) for _ in range(500)]
         # Submit tasks to the executor
         futures = [executor.submit(make_request, port) for port in random_ports]
 
@@ -51,9 +53,15 @@ def parallel_requests():
             print(future.result())
 
     # end timer
-    end = time.time()
+    end_time = time.time()
 
-    print(f"Time taken: {end - start} seconds for {len(random_ports)} requests")
+    total_time = end_time - start_time
+    total_requests = len(random_ports)
+    throughput = total_requests / total_time
+
+    print(f"Total Requests: {total_requests}")
+    print(f"Total Time Taken: {total_time:.2f} seconds")
+    print(f"Throughput: {throughput:.2f} requests per second")
 
 if __name__ == "__main__":
     parallel_requests()
