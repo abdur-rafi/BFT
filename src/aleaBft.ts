@@ -168,6 +168,8 @@ class ExecuteCommand{
         // open a file to write
         this.file = fs.openSync('commands.txt', 'w');
         this.executeAfterCompletion = new Map();
+        fs.writeSync(this.file, `${new Date().getTime()}\n`);
+        // fs.writeSync(this.file, `Started at ${new Date().toString()}\n`);
     }
     
     public isExecuted(m : CommandBatch['commands'][0]){
@@ -178,13 +180,20 @@ class ExecuteCommand{
         if(!this.executedCommands.has(m.id)){
             // console.log(`Executing command with id ${m.id} in server ${ServerInfo.OWN_ID}`);
             // write to file
-            fs.writeSync(this.file, `Executing command ${m.id}\n`);
+            // fs.writeSync(this.file, `Executing command ${m.id}\n`);
+            fs.writeSync(this.file, `${new Date().getTime()}\n`);
+            // fs.writeSync(this.file, `Executing command ${m.id} at ${new Date().toString()}\n`);
             this.executedCommands.add(m.id);
             if(this.executeAfterCompletion.has(m.id)){
                 this.executeAfterCompletion.get(m.id)!();
                 // this.executeAfterCompletion.delete(m.id);
             }
         }
+    }
+
+    public flush(){
+        // flush the content
+        fs.closeSync(this.file);
     }
 }
 
@@ -323,5 +332,9 @@ export class AleaBft{
                 type : 'c-final'
             })
         });
+    }
+
+    public flushCommands(){
+        this.exComm.flush();
     }
 }

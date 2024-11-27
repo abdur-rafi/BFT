@@ -32,6 +32,17 @@ connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
     // let alea = new AleaBft();  
     console.log("All servers ready");
     alea.startAgreementComponent();
+
+    let cmdCount = 250;
+    for(let i = 0; i < cmdCount; i++){
+        let command : ClientCommand = {
+            command : `execute ${ServerInfo.OWN_ID}`,
+            id : `${ServerInfo.OWN_ID}_${commandCount++}`
+        }
+        console.log(`New command id: ${command.id}`);
+        alea.onReceiveCommand(command, ()=>{});
+    }
+
     app.get('/', (req, res)=>{
         let command : ClientCommand = {
             command : `execute ${ServerInfo.OWN_ID}`,
@@ -42,6 +53,10 @@ connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
             res.status(200).end(`Command Sent to ${ServerInfo.OWN_ID}`);
         });
     })
+    app.get('/flush', (req, res)=>{
+        alea.flushCommands();
+        res.status(200).end(`Flushed commands`);
+    });
 })
 
 export const allPeersRoom = "allPeers";

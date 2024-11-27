@@ -34,7 +34,7 @@ def make_request(port):
 # Function to make parallel requests
 def parallel_requests():
     # Number of parallel threads
-    max_threads = 6  # Adjust this based on your requirements
+    max_threads = 16  # Adjust this based on your requirements
 
     # Generate 500 random ports for requests
     random_ports = [random.choice(ports) for _ in range(500)]
