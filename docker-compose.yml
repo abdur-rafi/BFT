@@ -1,12 +1,12 @@
-
 services:
+
   bft_server3002:
     image: bft_server
     container_name: bft_server_3002
     environment:
       - PORT=3002
-      - OWN_ID=1
       - ALL_PORTS=${PORTS}
+      - OWN_ID=1
     ports:
       - "3002:3002"
 
@@ -39,7 +39,6 @@ services:
       - OWN_ID=4
     ports:
       - "3005:3005"
-
 
   bft_server3006:
     image: bft_server
@@ -81,82 +80,242 @@ services:
     ports:
       - "3009:3009"
 
-  # bft_server3010:
-  #   image: bft_server
-  #   container_name: bft_server_3010
-  #   environment:
-  #     - PORT=3010
-  #     - ALL_PORTS=${PORTS}
-  #     - OWN_ID=9
-  #   ports:
-  #     - "3010:3010"
+  bft_server3010:
+    image: bft_server
+    container_name: bft_server_3010
+    environment:
+      - PORT=3010
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=9
+    ports:
+      - "3010:3010"
 
-  # bft_server3011:
-  #   image: bft_server
-  #   container_name: bft_server_3011
-  #   environment:
-  #     - PORT=3011
-  #     - ALL_PORTS=${PORTS}
-  #     - OWN_ID=10
-  #   ports:
-  #     - "3011:3011"
+  bft_server3011:
+    image: bft_server
+    container_name: bft_server_3011
+    environment:
+      - PORT=3011
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=10
+    ports:
+      - "3011:3011"
 
-  # bft_server3012:
-  #   image: bft_server
-  #   container_name: bft_server_3012
-  #   environment:
-  #     - PORT=3012
-  #     - ALL_PORTS=${PORTS}
-  #     - OWN_ID=11
-  #   ports:
-  #     - "3012:3012"
+  bft_server3012:
+    image: bft_server
+    container_name: bft_server_3012
+    environment:
+      - PORT=3012
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=11
+    ports:
+      - "3012:3012"
 
-  # bft_server3013:
-  #   image: bft_server
-  #   container_name: bft_server_3013
-  #   environment:
-  #     - PORT=3013
-  #     - ALL_PORTS=${PORTS}
-  #     - OWN_ID=12
-  #   ports:
-  #     - "3013:3013"
+  bft_server3013:
+    image: bft_server
+    container_name: bft_server_3013
+    environment:
+      - PORT=3013
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=12
+    ports:
+      - "3013:3013"
 
-  # bft_server3014:
-  #   image: bft_server
-  #   container_name: bft_server_3014
-  #   environment:
-  #     - PORT=3014
-  #     - ALL_PORTS=${PORTS}
-  #     - OWN_ID=13
-  #   ports:
-  #     - "3014:3014"
+  bft_server3014:
+    image: bft_server
+    container_name: bft_server_3014
+    environment:
+      - PORT=3014
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=13
+    ports:
+      - "3014:3014"
 
-  # bft_server3015:
-  #   image: bft_server
-  #   container_name: bft_server_3015
-  #   environment:
-  #     - PORT=3015
-  #     - ALL_PORTS=${PORTS}
-  #     - OWN_ID=14
-  #   ports:
-  #     - "3015:3015"
+  bft_server3015:
+    image: bft_server
+    container_name: bft_server_3015
+    environment:
+      - PORT=3015
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=14
+    ports:
+      - "3015:3015"
 
-  # bft_server3016:
-  #   image: bft_server
-  #   container_name: bft_server_3016
-  #   environment:
-  #     - PORT=3016
-  #     - ALL_PORTS=${PORTS}
-  #     - OWN_ID=15
-  #   ports:
-  #     - "3016:3016"
+  bft_server3016:
+    image: bft_server
+    container_name: bft_server_3016
+    environment:
+      - PORT=3016
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=15
+    ports:
+      - "3016:3016"
 
-  # bft_server3017:
-  #   image: bft_server
-  #   container_name: bft_server_3017
-  #   environment:
-  #     - PORT=3017
-  #     - ALL_PORTS=${PORTS}
-  #     - OWN_ID=16
-  #   ports:
-  #     - "3017:3017"
+  bft_server3017:
+    image: bft_server
+    container_name: bft_server_3017
+    environment:
+      - PORT=3017
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=16
+    ports:
+      - "3017:3017"
+
+  bft_server3018:
+    image: bft_server
+    container_name: bft_server_3018
+    environment:
+      - PORT=3018
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=17
+    ports:
+      - "3018:3018"
+
+  bft_server3019:
+    image: bft_server
+    container_name: bft_server_3019
+    environment:
+      - PORT=3019
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=18
+    ports:
+      - "3019:3019"
+
+  bft_server3020:
+    image: bft_server
+    container_name: bft_server_3020
+    environment:
+      - PORT=3020
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=19
+    ports:
+      - "3020:3020"
+
+  bft_server3021:
+    image: bft_server
+    container_name: bft_server_3021
+    environment:
+      - PORT=3021
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=20
+    ports:
+      - "3021:3021"
+
+  bft_server3022:
+    image: bft_server
+    container_name: bft_server_3022
+    environment:
+      - PORT=3022
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=21
+    ports:
+      - "3022:3022"
+
+  bft_server3023:
+    image: bft_server
+    container_name: bft_server_3023
+    environment:
+      - PORT=3023
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=22
+    ports:
+      - "3023:3023"
+
+  bft_server3024:
+    image: bft_server
+    container_name: bft_server_3024
+    environment:
+      - PORT=3024
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=23
+    ports:
+      - "3024:3024"
+
+  bft_server3025:
+    image: bft_server
+    container_name: bft_server_3025
+    environment:
+      - PORT=3025
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=24
+    ports:
+      - "3025:3025"
+
+  bft_server3026:
+    image: bft_server
+    container_name: bft_server_3026
+    environment:
+      - PORT=3026
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=25
+    ports:
+      - "3026:3026"
+
+  bft_server3027:
+    image: bft_server
+    container_name: bft_server_3027
+    environment:
+      - PORT=3027
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=26
+    ports:
+      - "3027:3027"
+
+  bft_server3028:
+    image: bft_server
+    container_name: bft_server_3028
+    environment:
+      - PORT=3028
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=27
+    ports:
+      - "3028:3028"
+
+  bft_server3029:
+    image: bft_server
+    container_name: bft_server_3029
+    environment:
+      - PORT=3029
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=28
+    ports:
+      - "3029:3029"
+
+  bft_server3030:
+    image: bft_server
+    container_name: bft_server_3030
+    environment:
+      - PORT=3030
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=29
+    ports:
+      - "3030:3030"
+
+  bft_server3031:
+    image: bft_server
+    container_name: bft_server_3031
+    environment:
+      - PORT=3031
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=30
+    ports:
+      - "3031:3031"
+
+  bft_server3032:
+    image: bft_server
+    container_name: bft_server_3032
+    environment:
+      - PORT=3032
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=31
+    ports:
+      - "3032:3032"
+
+  bft_server3033:
+    image: bft_server
+    container_name: bft_server_3033
+    environment:
+      - PORT=3033
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=32
+    ports:
+      - "3033:3033"

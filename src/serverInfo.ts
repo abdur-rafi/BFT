@@ -1,10 +1,11 @@
 import { Socket } from "socket.io";
-import { connectToPeers } from "./connectToPeers";
+import {numberOfPortsTakenInExperiment} from "./ExpConfig";
 
 let PORT = process.env.PORT;
 let ALL_PORTS = process.env.ALL_PORTS ? process.env.ALL_PORTS.split(",") : [];
-// let PEER_PORTS = process.env.PEER_PORTS ? process.env.PEER_PORTS.split(",") : [];
-// let PEER_CONNECTIONS: Record<string, Socket> = connectToPeers(PEER_PORTS);
+
+ALL_PORTS = ALL_PORTS.slice(0, numberOfPortsTakenInExperiment);
+
 let OWN_ID = process.env.OWN_ID;
 
 if(!PORT) {
