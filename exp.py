@@ -1,7 +1,8 @@
-import requests
 import random
 import time
 from concurrent.futures import ThreadPoolExecutor
+
+import requests
 
 from ExperimentConfig import numberOfPortsTakenInExperiment
 
@@ -23,7 +24,8 @@ def make_request(port):
         delay = end - start  # Calculate the delay for this request
         return r.text, delay
     except requests.RequestException as e:
-        return str(e), 0  # Return 0 delay for failed requests
+        print(f"Request to port {port} failed: {e}")
+        return None, 0
 
 # Function to make parallel requests, calculate throughput, and average delay
 def parallel_requests():
@@ -66,7 +68,7 @@ def parallel_requests():
     print(f"Average Delay: {average_delay:.4f} seconds per request")
 
     with open("results/delaysExp.txt", "a") as f:
-        f.write(f"Total number of ports: {len(portsTakenInExperiment)}\n")
+        f.write(f"Total number of nodes: {len(portsTakenInExperiment)}\n")
         f.write(f"Total Requests: {total_requests}\n")
         f.write(f"Total Time Taken: {total_time:.2f} seconds\n")
         f.write(f"Average Delay: {average_delay:.4f} seconds per request\n")

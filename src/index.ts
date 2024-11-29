@@ -33,15 +33,16 @@ connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
     console.log("All servers ready");
     alea.startAgreementComponent();
 
-    let cmdCount = 250;
-    for(let i = 0; i < cmdCount; i++){
-        let command : ClientCommand = {
-            command : `execute ${ServerInfo.OWN_ID}`,
-            id : `${ServerInfo.OWN_ID}_${commandCount++}`
-        }
-        console.log(`New command id: ${command.id}`);
-        alea.onReceiveCommand(command, ()=>{});
-    }
+    // -------------- For delay calculation, it should be commented out --------------
+    // let cmdCount = 250;
+    // for(let i = 0; i < cmdCount; i++){
+    //     let command : ClientCommand = {
+    //         command : `execute ${ServerInfo.OWN_ID}`,
+    //         id : `${ServerInfo.OWN_ID}_${commandCount++}`
+    //     }
+    //     console.log(`New command id: ${command.id}`);
+    //     alea.onReceiveCommand(command, ()=>{});
+    // }
 
     app.get('/', (req, res)=>{
         let command : ClientCommand = {

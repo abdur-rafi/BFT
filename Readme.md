@@ -1,6 +1,7 @@
 ## Instructions to Run
 
 - Specify Number of ports required for the experiment in "ExperimentConfig.py" and "ExpConfig.ts"
+- if you want only delay, then comment out specific part in index.ts (comment in the file)
 - generate docker-compose.yml file using "generate_docker_compose.py"
   ```python 
        python generate_docker_compose.py
