@@ -53,7 +53,7 @@ def main():
     print(f"Average throughput: {avgThroughput} commands per second")
 
     with open("results/throughputExp.txt", "a") as f:
-        f.write(f"Total number of ports: {numberOfPortsTakenInExperiment}\n")
+        f.write(f"Total number of nodes: {numberOfPortsTakenInExperiment}\n")
         f.write(f"Average throughput: {avgThroughput} commands per second\n")
         f.write("\n\n")
         
