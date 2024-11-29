@@ -1,40 +1,40 @@
-Total number of ports: 4
+Total number of nodes: 4
 Total Requests: 500
 Total Time Taken: 2.19 seconds
 Average Delay: 0.1330 seconds per request
 
 
-Total number of ports: 8
+Total number of nodes: 8
 Total Requests: 500
 Total Time Taken: 11.63 seconds
 Average Delay: 0.7245 seconds per request
 
 
-Total number of ports: 12
+Total number of nodes: 12
 Total Requests: 500
 Total Time Taken: 30.31 seconds
 Average Delay: 1.8574 seconds per request
 
 
-Total number of ports: 16
+Total number of nodes: 16
 Total Requests: 500
 Total Time Taken: 65.40 seconds
 Average Delay: 4.0894 seconds per request
 
 
-Total number of ports: 20
+Total number of nodes: 20
 Total Requests: 500
 Total Time Taken: 137.65 seconds
 Average Delay: 8.6185 seconds per request
 
 
-Total number of ports: 24
+Total number of nodes: 24
 Total Requests: 500
 Total Time Taken: 38.06 seconds
 Average Delay: 2.1532 seconds per request
 
 
-Total number of ports: 28
+Total number of nodes: 28
 Total Requests: 500
 Total Time Taken: 2.85 seconds
 Average Delay: 0.0011 seconds per request

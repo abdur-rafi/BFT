@@ -1,32 +1,28 @@
-Total number of ports: 4
+Total number of nodes: 4
 Average throughput: 205.88374241471084 commands per second
 
 
-Total number of ports: 8
+Total number of nodes: 8
 Average throughput: 166.23002745157837 commands per second
 
 
-Total number of ports: 12
+Total number of nodes: 12
 Average throughput: 87.11458587183569 commands per second
 
 
-Total number of ports: 16
+Total number of nodes: 16
 Average throughput: 51.037544880268534 commands per second
 
 
-Total number of ports: 20
+Total number of nodes: 20
 Average throughput: 33.142921518841355 commands per second
 
 
-Total number of ports: 24
+Total number of nodes: 24
 Average throughput: 20.31453560003938 commands per second
 
 
-Total number of ports: 28
+Total number of nodes: 28
 Average throughput: 7.518399145378085 commands per second
-
-
-Total number of ports: 32
-Average throughput: 7.558109939440557 commands per second
 
 

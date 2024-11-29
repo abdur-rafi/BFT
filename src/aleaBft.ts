@@ -110,7 +110,7 @@ class QueueManager{
         // console.log(`index : ${index}`);
         // let front = this.priorieyQueues[index].front();
         // console.log(`Front priority : ${front?.priority}`);
-        return (this.priorieyQueues[index].isEmpty() === false) && 
+        return !this.priorieyQueues[index].isEmpty() &&
             (this.priorieyQueues[index].front().priority == (this.lastPriorities[index] + 1));
 
     }
