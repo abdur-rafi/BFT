@@ -1,12 +1,12 @@
 // src/index.ts
 import express from 'express';
-import { createServer } from 'http';
-import { Server } from 'socket.io';
-import { ServerInfo } from './serverInfo';
-import { BV_BROADCAST_MESSAGE, MessageType, READY_MESSAGE } from './messageTypes';
-import { BvBrodcast, BvStore } from './BvBroadcast';
-import { connectToPeers } from './connectToPeers';
-import { AleaBft, ClientCommand } from './aleaBft';
+import {createServer} from 'http';
+import {Server} from 'socket.io';
+import {ServerInfo} from './serverInfo';
+import {MessageType, READY_MESSAGE} from './messageTypes';
+import {connectToPeers} from './connectToPeers';
+import {AleaBft, ClientCommand} from './aleaBft';
+import {cmdCountForThroughput, experimentMode} from "./ExpConfig";
 
 const PORT = process.env.PORT || 3000;
 // const PEER_PORTS = process.env.PEER_PORTS ? process.env.PEER_PORTS.split(",") : []; // Comma-separated ports of peer servers
@@ -33,17 +33,19 @@ connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
     console.log("All servers ready");
     alea.startAgreementComponent();
 
-    // -------------- For delay calculation, it should be commented out starting this line --------------
-    let cmdCount = 250;
-    for(let i = 0; i < cmdCount; i++){
-        let command : ClientCommand = {
-            command : `execute ${ServerInfo.OWN_ID}`,
-            id : `${ServerInfo.OWN_ID}_${commandCount++}`
+    // -------------- For delay calculation, it is not needed --------------
+    if (experimentMode === "Throughput") {
+        for (let i = 0; i < cmdCountForThroughput; i++) {
+            let command: ClientCommand = {
+                command: `execute ${ServerInfo.OWN_ID}`,
+                id: `${ServerInfo.OWN_ID}_${commandCount++}`
+            }
+            console.log(`New command id: ${command.id}`);
+            alea.onReceiveCommand(command, () => {
+            });
         }
-        console.log(`New command id: ${command.id}`);
-        alea.onReceiveCommand(command, ()=>{});
     }
-    // -------------- For delay calculation, it should be commented out ending this line --------------
+    // -------------- For delay calculation, it is not needed --------------
 
     app.get('/', (req, res)=>{
         let command : ClientCommand = {

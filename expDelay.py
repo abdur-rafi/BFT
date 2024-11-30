@@ -4,7 +4,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
-from ExperimentConfig import numberOfPortsTakenInExperiment
+from ExperimentConfig import numberOfPortsTakenInExperiment, experimentXAxis, BatchSize, RandomPortCountForDelay, \
+    MaxThreadCountForDelay, LCMForBatchSize
 
 ports = [3002, 3003, 3004, 3005,
          3006, 3007, 3008, 3009,
@@ -34,10 +35,18 @@ def parallel_requests():
     portsTakenInExperiment = ports[:numberOfPortsTakenInExperiment]
 
     # Number of parallel threads
-    max_threads = 32  # Adjust this based on your requirements
+    max_threads = MaxThreadCountForDelay  # Adjust this based on your requirements
 
-    # Generate 500 random ports for requests
-    random_ports = [random.choice(portsTakenInExperiment) for _ in range(500)]
+    random_ports = []
+
+    if experimentXAxis == "Nodes":
+        # Randomly generate `RandomPortCountForDelay` requests
+        random_ports = [random.choice(portsTakenInExperiment) for _ in range(RandomPortCountForDelay)]
+    elif experimentXAxis == "BatchSize":
+        # Generate requests ensuring each port gets a multiple of the batch size
+        for port in portsTakenInExperiment:
+            # Assign requests in multiples of batch size
+            random_ports.extend([port] * LCMForBatchSize)
 
     # Start the timer
     start_time = time.time()
@@ -67,12 +76,19 @@ def parallel_requests():
     print(f"Total Time Taken: {total_time:.2f} seconds")
     print(f"Average Delay: {average_delay:.4f} seconds per request")
 
-    with open("results/delaysExp.txt", "a") as f:
-        f.write(f"Total number of nodes: {len(portsTakenInExperiment)}\n")
-        f.write(f"Total Requests: {total_requests}\n")
-        f.write(f"Total Time Taken: {total_time:.2f} seconds\n")
-        f.write(f"Average Delay: {average_delay:.4f} seconds per request\n")
-        f.write("\n\n")
+    if experimentXAxis == "Nodes":
+        with open("results/delaysExp.txt", "a") as f:
+            f.write(f"Total number of nodes: {len(portsTakenInExperiment)}\n")
+            f.write(f"Total Requests: {total_requests}\n")
+            f.write(f"Total Time Taken: {total_time:.2f} seconds\n")
+            f.write(f"Average Delay: {average_delay:.4f} seconds per request\n")
+            f.write("\n\n")
+
+    elif experimentXAxis == "BatchSize":
+        with open("results/delaysExpBt.txt", "a") as f:
+            f.write(f"Batch size: {BatchSize}\n")
+            f.write(f"Average Delay: {average_delay:.4f} seconds per request\n")
+            f.write("\n\n")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-from ExperimentConfig import numberOfPortsTakenInExperiment
+from ExperimentConfig import numberOfPortsTakenInExperiment, experimentXAxis, BatchSize
 
 folder = 'commandsFile'
 
@@ -52,10 +52,17 @@ def main():
     avgThroughput = sum(throughputs) / len(throughputs)
     print(f"Average throughput: {avgThroughput} commands per second")
 
-    with open("results/throughputExp.txt", "a") as f:
-        f.write(f"Total number of nodes: {numberOfPortsTakenInExperiment}\n")
-        f.write(f"Average throughput: {avgThroughput} commands per second\n")
-        f.write("\n\n")
+    if experimentXAxis == "Nodes":
+        with open("results/throughputExp.txt", "a") as f:
+            f.write(f"Total number of nodes: {numberOfPortsTakenInExperiment}\n")
+            f.write(f"Average throughput: {avgThroughput} commands per second\n")
+            f.write("\n\n")
+
+    elif experimentXAxis == "BatchSize":
+        with open("results/throughputExpBt.txt", "a") as f:
+            f.write(f"Batch size: {BatchSize}\n")
+            f.write(f"Average throughput: {avgThroughput} commands per second\n")
+            f.write("\n\n")
         
 
 if __name__ == "__main__":

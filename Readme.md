@@ -1,7 +1,6 @@
 ## Instructions to Run
 
-- Specify Number of ports required for the experiment in "ExperimentConfig.py" and "ExpConfig.ts"
-- if you want only delay, then comment out specific part in index.ts (comment in the file)
+- Specify parameters required for the experiment in <b>"ExperimentConfig.py" and "ExpConfig.ts"</b>
 - generate docker-compose.yml file using "generate_docker_compose.py"
   ```python 
        python generate_docker_compose.py
@@ -15,16 +14,18 @@
        python flush.py
   ```
 
-- ```python 
-       python exp.py
+- Delay Calculation
+  ```python  
+   python expDelay.py
   ```
   
-- ```bash 
-       ./cpCommandsFile.sh
-  ```
-- ```python 
-       python parsecmdfile.py
-  ```
+- Throughput Calculation
+  -  ```bash 
+         ./cpCommandsFile.sh
+     ```
+  - ```python 
+         python expThroughput.py
+    ```
   
 ## Or, The Whole Pipeline Together
   ** Not Recommended. As the previous step has to be done before the next steps. Sometimes, next step starts before completing the previous one. So, errors may generate

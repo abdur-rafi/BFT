@@ -26,7 +26,7 @@ fi
 
 # Step 5: Run experiment Python script
 echo "Running experiment script..."
-python exp.py
+python expDelay.py
 if [ $? -ne 0 ]; then
     echo "Error running 'exp.py'. Exiting..."
     exit 1
@@ -47,7 +47,7 @@ fi
 
 # Step 7: Parse command files
 echo "Parsing command files..."
-python parsecmdfile.py
+python expThroughput.py
 if [ $? -ne 0 ]; then
     echo "Error running 'parsecmdfile.py'. Exiting..."
     exit 1
