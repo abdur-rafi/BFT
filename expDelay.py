@@ -48,6 +48,9 @@ def parallel_requests():
             # Assign requests in multiples of batch size
             random_ports.extend([port] * LCMForBatchSize)
 
+        # # Randomly shuffle the ports
+        # random.shuffle(random_ports)
+
     # Start the timer
     start_time = time.time()
 

@@ -1,24 +1,21 @@
 Batch size: 1
-Average Delay: 0.7859 seconds per request
-
+Average Delay: 0.2153 seconds per request
 
 Batch size: 2
-Average Delay: 0.4897 seconds per request
-
+Average Delay: 0.2395 seconds per request
 
 Batch size: 4
-Average Delay: 0.3437 seconds per request
-
+Average Delay: 0.2465 seconds per request
 
 Batch size: 8
-Average Delay: 0.2796 seconds per request
+Average Delay: 0.2612 seconds per request
 
 
 Batch size: 16
-Average Delay: 0.2879 seconds per request
+Average Delay: 0.2755 seconds per request
 
 
 Batch size: 32
-Average Delay: 0.3370 seconds per request
+Average Delay: 0.3277 seconds per request
 
 
