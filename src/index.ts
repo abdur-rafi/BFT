@@ -34,7 +34,7 @@ connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
     alea.startAgreementComponent();
 
     // -------------- For delay calculation, it should be commented out starting this line --------------
-    let cmdCount = 150;
+    let cmdCount = 250;
     for(let i = 0; i < cmdCount; i++){
         let command : ClientCommand = {
             command : `execute ${ServerInfo.OWN_ID}`,

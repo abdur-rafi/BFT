@@ -6,6 +6,7 @@ import { io } from ".";
 import { VCBC } from "./VCBC/VCBCParty";
 import { exit } from "process";
 import fs from 'fs';
+import { BatchSize} from "./ExpConfig";
 
 export const AgreementComponentMessageType = {
     FILL_GAP : "FILL_GAP",
@@ -55,7 +56,7 @@ class BroadCastComponent{
     public batch : ClientCommand[];
 
     constructor(){
-        this.batchSize = 1;
+        this.batchSize = BatchSize;
         this.priority = 0;
         this.ownIndex = serverIdToIndex(ServerInfo.OWN_ID);
         this.batch = [];

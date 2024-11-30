@@ -1,4 +1,5 @@
-let numberOfPortsTakenInExperiment : number;
-numberOfPortsTakenInExperiment = 32;
+let numberOfPortsTakenInExperiment : number = 24;
 
-export { numberOfPortsTakenInExperiment };
+let BatchSize : number = 1;
+
+export { numberOfPortsTakenInExperiment, BatchSize };
