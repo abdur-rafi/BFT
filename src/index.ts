@@ -31,20 +31,20 @@ let commandCount = 0;
 connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
     // let alea = new AleaBft();  
     console.log("All servers ready");
-    alea.startAgreementComponent();
+    // alea.startAgreementComponent();
 
     // -------------- For delay calculation, it is not needed --------------
-    if (experimentMode === "Throughput") {
-        for (let i = 0; i < cmdCountForThroughput; i++) {
-            let command: ClientCommand = {
-                command: `execute ${ServerInfo.OWN_ID}`,
-                id: `${ServerInfo.OWN_ID}_${commandCount++}`
-            }
-            console.log(`New command id: ${command.id}`);
-            alea.onReceiveCommand(command, () => {
-            });
-        }
-    }
+    // if (experimentMode === "Throughput") {
+    //     for (let i = 0; i < cmdCountForThroughput; i++) {
+    //         let command: ClientCommand = {
+    //             command: `execute ${ServerInfo.OWN_ID}`,
+    //             id: `${ServerInfo.OWN_ID}_${commandCount++}`
+    //         }
+    //         console.log(`New command id: ${command.id}`);
+    //         alea.onReceiveCommand(command, () => {
+    //         });
+    //     }
+    // }
     // -------------- For delay calculation, it is not needed --------------
 
     app.get('/', (req, res)=>{
@@ -57,10 +57,21 @@ connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
             res.status(200).end(`Command Sent to ${ServerInfo.OWN_ID}`);
         });
     })
+
     app.get('/flush', (req, res)=>{
         alea.flushCommands();
         res.status(200).end(`Flushed commands`);
     });
+
+    app.get('/serverinfo', (req, res)=>{
+        res.status(200).json({
+            groupId : ServerInfo.OWN_GROUP_ID,
+            groupSize : ServerInfo.GROUP_SIZE,
+            ownGroupOthersIds : ServerInfo.OWN_GROUP_OTHERS_IDS,
+            amILeader : ServerInfo.AM_I_LEADER,
+            otherGroupLeadersIds : ServerInfo.OTHER_GROUP_LEADERS_IDS
+        });
+    })
 })
 
 export const allPeersRoom = "allPeers";
@@ -91,6 +102,7 @@ io.on("connection", (socket) => {
                 serverId: ServerInfo.OWN_ID
             }
             io.to(allPeersRoom).emit(MessageType.READY,message);
+            ServerInfo.calculateGroupInfo();
         }
     });
     

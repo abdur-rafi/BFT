@@ -79,3 +79,23 @@ services:
       - OWN_ID=8
     ports:
       - "3009:3009"
+
+  bft_server3010:
+    image: bft_server
+    container_name: bft_server_3010
+    environment:
+      - PORT=3010
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=9
+    ports:
+      - "3010:3010"
+
+  bft_server3011:
+    image: bft_server
+    container_name: bft_server_3011
+    environment:
+      - PORT=3011
+      - ALL_PORTS=${PORTS}
+      - OWN_ID=10
+    ports:
+      - "3011:3011"
