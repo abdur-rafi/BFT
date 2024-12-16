@@ -6,7 +6,7 @@ import { ServerInfo } from "./serverInfo";
 import { C_ANSWER_MESSAGE, C_FINAL_MESSAGE, C_READY_MESSAGE, C_SEND_MESSAGE, VCBCMessageType } from "./VCBC/VCBCMessageTypes";
 
 function emitCSendMessage(message : C_SEND_MESSAGE){
-    io.emit(VCBCMessageType.C_SEND, message);
+    io.to(ServerInfo.OWN_GROUP_OTHERS_ROOM).emit(VCBCMessageType.C_SEND, message);
 }
 
 function sendCReadyMessage(toServerId : string, message : C_READY_MESSAGE){
@@ -15,7 +15,7 @@ function sendCReadyMessage(toServerId : string, message : C_READY_MESSAGE){
 }
 
 function emitCFinalMessage(message : C_FINAL_MESSAGE){
-    io.emit(VCBCMessageType.C_FINAL, message);
+    io.to(ServerInfo.OWN_GROUP_OTHERS_ROOM).emit(VCBCMessageType.C_FINAL, message);
 }
 
 
@@ -24,11 +24,11 @@ function sendCAnswerMessage(toServerId : string, message : C_ANSWER_MESSAGE){
 }
 
 function emitAuxMessage(message : AUX_MESSAGE){
-    io.to(allPeersRoom).emit(MessageType.AUX, message);
+    io.to(ServerInfo.OWN_GROUP_OTHERS_ROOM).emit(MessageType.AUX, message);
 }
 
 function emitFillGapMessage(message : FILL_GAP_MESSAGE){
-    io.emit(AgreementComponentMessageType.FILL_GAP, message);
+    io.to(ServerInfo.OWN_GROUP_OTHERS_ROOM).emit(AgreementComponentMessageType.FILL_GAP, message);
 
 }
 
@@ -37,7 +37,7 @@ function sendFillerMessage(toServerId : string, message : FILLER_MESSAGE){
 }
 
 function emitBvBroadcastMessage(message : BV_BROADCAST_MESSAGE){
-    io.to(allPeersRoom).emit(MessageType.BV_BROADCAST, message);
+    io.to(ServerInfo.OWN_GROUP_OTHERS_ROOM).emit(MessageType.BV_BROADCAST, message);
 }
 
 function emitServerId(socket : Socket){

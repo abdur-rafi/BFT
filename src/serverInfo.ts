@@ -1,5 +1,6 @@
 import { Socket } from "socket.io";
 import {groupSize, numberOfPortsTakenInExperiment, t} from "./ExpConfig";
+import { AleaBft } from "./aleaBft";
 
 let PORT = process.env.PORT;
 let ALL_PORTS = process.env.ALL_PORTS ? process.env.ALL_PORTS.split(",") : [];
@@ -49,6 +50,15 @@ class ServerInfo{
     public static OWN_GROUP_OTHERS_ROOM = "ownGroupOthers";
     public static OTHER_GROUP_LEADERS_ROOM = "otherGroupLeaders";
 
+    public static OWN_GROUP_IDS : string[] = [];
+
+    public static allPeersConnected = false;
+    public static allPeersReady = false;
+    
+    public static onReady : (alea : AleaBft)=>void = ()=>{};
+
+    public static alea : AleaBft;
+
     
     public static storePeerIds(peerId : string, socket : Socket) {
         this.PEER_IDS.push(peerId);
@@ -68,6 +78,11 @@ class ServerInfo{
     }
 
     public static calculateGroupInfo(){
+        
+        if(!this.allPeersConnected || !this.allPeersReady){
+            console.log("Not all peers connected or ready");
+            return;
+        }
 
         let own_serial = parseInt(this.OWN_ID);
         this.OWN_GROUP_ID = this.calculateGroupIdFromSerial(own_serial);
@@ -92,6 +107,23 @@ class ServerInfo{
                 }
             }
         }
+
+        this.OWN_GROUP_IDS = [this.OWN_ID, ... this.OWN_GROUP_OTHERS_IDS];
+        this.OWN_GROUP_IDS.sort();
+
+        console.log({
+            groupId : this.OWN_GROUP_ID,
+            groupSize : this.GROUP_SIZE,
+            ownGroupOthersIds : this.OWN_GROUP_OTHERS_IDS,
+            amILeader : this.AM_I_LEADER,
+            otherGroupLeadersIds : this.OTHER_GROUP_LEADERS_IDS,
+            ownGroupIds : this.OWN_GROUP_IDS,
+            allIds : this.ALL_IDS
+        })
+
+        ServerInfo.alea = new AleaBft();
+
+        this.onReady(ServerInfo.alea);
     }
 }
 

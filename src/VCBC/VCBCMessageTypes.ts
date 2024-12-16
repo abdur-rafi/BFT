@@ -12,16 +12,16 @@ export const VCBCMessageType = {
 export type C_READY_MESSAGE = {
     type: 'c-ready',
     tag: string,
-    hash: string,
-    signatureShare: string,
+    // hash: string,
+    // signatureShare: string,
     sender: string,
 }
 
 export type C_FINAL_MESSAGE = {
     type: 'c-final',
     tag: string,
-    hash: string,
-    thresholdSignature: string
+    // hash: string,
+    // thresholdSignature: string
 }
 
 export type C_REQUEST_MESSAGE = {
@@ -34,7 +34,7 @@ export type C_ANSWER_MESSAGE = {
     type: 'c-answer',
     tag: string,
     message: CommandBatch,
-    thresholdSignature: string
+    // thresholdSignature: string
 }
 
 export type C_DELIVER_MESSAGE = {

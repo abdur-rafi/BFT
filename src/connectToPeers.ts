@@ -13,12 +13,12 @@ let readySevers = new Set<string>();
 export function connectToPeers(
     peers: string[], 
     ownId: string,
-    onReady  : (alea : AleaBft)=>void
+    // onReady  : (alea : AleaBft)=>void
     // io : Server
     // cb: (peerId: string, socket: Socket) => void 
 ) {
 
-    let alea = new AleaBft();  
+    // let alea = new AleaBft();  
     // const peerConnections: Record<string, Socket> = {};
 
     peers.forEach(peerPort => {
@@ -55,7 +55,9 @@ export function connectToPeers(
                 //     command : `execute ${ServerInfo.OWN_ID}`,
                 //     id : ServerInfo.OWN_ID
                 // })
-                onReady(alea);
+                ServerInfo.allPeersReady = true;
+                ServerInfo.calculateGroupInfo();
+                // onReady(alea);
                 
             }
         });
@@ -92,13 +94,13 @@ export function connectToPeers(
 
         peerSocket.on(AgreementComponentMessageType.FILLER, (message : FILLER_MESSAGE) => {
             console.log(`Received filler message for ${message.requestedFor} from ${message.sentFrom} by ${message.requestedBy}`);
-            alea.onFiller(message);
+            ServerInfo.alea.onFiller(message);
         });
 
         peerSocket.on(AgreementComponentMessageType.FILL_GAP, (message : FILL_GAP_MESSAGE) => {
             console.log(`Received fill gap message for ${message.requestedFor}  by ${message.requestedBy}`);
             // console.log(`Received fill gap message for ${message.requestedFor}`);
-            alea.onFllGap(message);
+            ServerInfo.alea.onFllGap(message);
         });
         
     });

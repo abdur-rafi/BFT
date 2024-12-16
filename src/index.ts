@@ -22,7 +22,8 @@ const io = new Server(httpServer, {
 });
 let commandCount = 0;
 
-connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
+
+ServerInfo.onReady =  (alea : AleaBft)=>{
     console.log("All servers ready");
     alea.startAgreementComponent();
 
@@ -65,7 +66,9 @@ connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
             otherGroupLeadersIds : ServerInfo.OTHER_GROUP_LEADERS_IDS
         });
     })
-})
+}
+
+connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID);
 
 export const allPeersRoom = "allPeers";
 
@@ -94,6 +97,7 @@ io.on("connection", (socket) => {
                 serverId: ServerInfo.OWN_ID
             }
             ioOps.emitReadyMessage(message);
+            ServerInfo.allPeersConnected = true;
             ServerInfo.calculateGroupInfo();
         }
     });

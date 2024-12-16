@@ -1,7 +1,7 @@
 import { exit } from "process";
 import { CommandBatch } from "../aleaBft";
 import { ServerInfo } from "../serverInfo";
-import { SignatureScheme } from "./SignatureScheme";
+// import { SignatureScheme } from "./SignatureScheme";
 import { C_ANSWER_MESSAGE, C_FINAL_MESSAGE, C_READY_MESSAGE, C_REQUEST_MESSAGE, C_SEND_MESSAGE, VCBCMessageType } from "./VCBCMessageTypes";
 import { VCBC } from "./VCBCParty";
 import { ioOps } from "../ioOps";
@@ -9,7 +9,7 @@ import { ioOps } from "../ioOps";
 export class VCBCStore{
 
     static vcbcMap : Map<string, VCBC> = new Map();
-    static signatureScheme = new SignatureScheme(ServerInfo.t, ServerInfo.N);
+    // static signatureScheme = new SignatureScheme(ServerInfo.t, ServerInfo.N);
     static onDecide : (message : CommandBatch) => void = (message : CommandBatch) => {
         console.error("Decide function not set");
         exit(1);
@@ -23,7 +23,8 @@ export class VCBCStore{
             sender : ServerInfo.OWN_ID,
             tag : tag
         }
-        let vcbc = new VCBC(tag, this.signatureScheme, this.onDecide);
+        // let vcbc = new VCBC(tag, this.signatureScheme, this.onDecide);
+        let vcbc = new VCBC(tag, this.onDecide);
         this.vcbcMap.set(tag, vcbc);
         vcbc.mBar = message;
         ioOps.emitCSendMessage(m);
@@ -31,7 +32,8 @@ export class VCBCStore{
 
     static async handleCSendMessage(message : C_SEND_MESSAGE){
         if(!this.vcbcMap.has(message.tag)){
-            let vcbc = new VCBC(message.tag, this.signatureScheme, this.onDecide);
+            // let vcbc = new VCBC(message.tag, this.signatureScheme, this.onDecide);
+            let vcbc = new VCBC(message.tag, this.onDecide);
             this.vcbcMap.set(message.tag, vcbc);
             let cready = vcbc.handleSendMessage(message);
             if(cready){
@@ -69,7 +71,8 @@ export class VCBCStore{
             vcbc.handleFinalMessage(message);
         }
         else{
-            let vcbc = new VCBC(message.tag, this.signatureScheme, this.onDecide);
+            // let vcbc = new VCBC(message.tag, this.signatureScheme, this.onDecide);
+            let vcbc = new VCBC(message.tag, this.onDecide);
             this.vcbcMap.set(message.tag, vcbc);
             vcbc.handleFinalMessage(message);
         }

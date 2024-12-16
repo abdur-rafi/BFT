@@ -129,7 +129,7 @@ class ABA{
 
         // console.log( "distinct processes size : " + this.distinctProcesseses.size)
         
-        if(this.waitInRound && this.distinctProcesseses.size >= ServerInfo.N - ServerInfo.t){
+        if(this.waitInRound && this.distinctProcesseses.size >= ServerInfo.GROUP_SIZE - ServerInfo.t){
             // console.log("(n-t) aux received")
             // console.log(this.distinctProcesseses);
             if(this.binValues.length > 1){

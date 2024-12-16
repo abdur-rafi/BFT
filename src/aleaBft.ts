@@ -46,7 +46,8 @@ const getCommandBatchPrioriy : IGetCompareValue<CommandBatch> = (commandBatch : 
 }
 
 function serverIdToIndex(id : string){
-    return parseInt(id);
+    // return parseInt(id);
+    return ServerInfo.OWN_GROUP_IDS.indexOf(id);
 }
 
 class BroadCastComponent{
@@ -88,7 +89,7 @@ class QueueManager{
 
     constructor(){
 
-        this.N = ServerInfo.N
+        this.N = ServerInfo.GROUP_SIZE;
         this.priorieyQueues = new Array(this.N);
         this.lastPriorities = new Array(this.N);
 
@@ -217,7 +218,7 @@ class AgreementComponent{
     }
 
     public roundNoToServer(){
-        return ServerInfo.ALL_IDS[this.roundNo % ServerInfo.N];
+        return ServerInfo.OWN_GROUP_IDS[this.roundNo % ServerInfo.GROUP_SIZE];
     }
 
     public startAgreementComponent(){
@@ -328,9 +329,9 @@ export class AleaBft{
     public onFiller(message : FILLER_MESSAGE){
         message.commandBatches.forEach(cb=>{
             VCBCStore.handleCFinalMessage({
-                hash : '',
+                // hash : '',
                 tag : cb.id,
-                thresholdSignature : '',
+                // thresholdSignature : '',
                 type : 'c-final'
             })
         });
