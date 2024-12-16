@@ -1,5 +1,5 @@
-import { allPeersRoom, io } from ".";
 import { BvStore } from "./BvBroadcast";
+import { ioOps } from "./ioOps";
 import { AUX_MESSAGE, MessageType } from "./messageTypes";
 import { RandomSequence } from "./Random";
 import { ServerInfo } from "./serverInfo";
@@ -57,8 +57,7 @@ class ABA{
             roundNo : this.roundNo,
             serverId: ServerInfo.OWN_ID
         }
-        io.to(allPeersRoom).emit(MessageType.AUX, message);
-        // ABAStore.onAuxMessage(message);
+        ioOps.emitAuxMessage(message);
         this.takeAuxMessage(message);
     }
 

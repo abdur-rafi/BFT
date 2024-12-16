@@ -46,6 +46,9 @@ class ServerInfo{
     
     public static GROUP_SIZE : number = groupSize;
 
+    public static OWN_GROUP_OTHERS_ROOM = "ownGroupOthers";
+    public static OTHER_GROUP_LEADERS_ROOM = "otherGroupLeaders";
+
     
     public static storePeerIds(peerId : string, socket : Socket) {
         this.PEER_IDS.push(peerId);
@@ -79,11 +82,13 @@ class ServerInfo{
             if(current_group === this.OWN_GROUP_ID){
                 if(i !== own_serial){
                     this.OWN_GROUP_OTHERS_IDS.push(i.toString());
+                    this.PEER_CONNECTIONS[i.toString()].join(this.OWN_GROUP_OTHERS_ROOM);
                 }
             }
             else{
                 if(this.isLeader(i)){
                     this.OTHER_GROUP_LEADERS_IDS.push(i.toString());
+                    this.PEER_CONNECTIONS[i.toString()].join(this.OTHER_GROUP_LEADERS_ROOM);
                 }
             }
         }

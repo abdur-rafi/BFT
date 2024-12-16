@@ -1,27 +1,22 @@
 import { randomUUID } from "crypto";
-import { Server } from "socket.io";
 import { BV_BROADCAST_MESSAGE, MessageType } from "./messageTypes";
 import { ServerInfo } from "./serverInfo";
-import { allPeersRoom, io } from ".";
+import { ioOps } from "./ioOps";
 
 class BvBrodcast{
 
     private id: string;
-    private io: Server;
     private valueStore: Set<string>[];
     // private countStore: Map<boolean, number>;
     private binValues: boolean[];
-    private group : string;
     private broadcasted : Set<boolean>;
     private bvNonEmptyCallBack : (binValues: boolean[]) => void;
 
-    constructor(group : string, id?: string){
+    constructor(id?: string){
         this.id = id ? id : randomUUID();
-        this.io = io;
         this.valueStore = [new Set(), new Set()];
         // this.countStore = new Map();
         this.binValues = [];
-        this.group = group;
         this.broadcasted = new Set();
         this.bvNonEmptyCallBack = (binValues: boolean[]) => {};
     }
@@ -40,7 +35,7 @@ class BvBrodcast{
         }
         this.broadcasted.add(binValue);
 
-        this.io.to(this.group).emit(MessageType.BV_BROADCAST, message);
+        ioOps.emitBvBroadcastMessage(message);
     }
 
     public onReceiveBVal(binValue:boolean, serverId: string){
@@ -110,7 +105,7 @@ class BvStore{
     }
 
     public static bvBroadcast(id : string, binValue: boolean, bvBroadcastCallback : (binValues: boolean[]) => void){
-        let bv = new BvBrodcast(allPeersRoom, id);
+        let bv = new BvBrodcast(id);
         bv.setBvNonEmptyCallBack(bvBroadcastCallback);
         BvStore.addBvBroadcast(bv);
         bv.broadcast(binValue);

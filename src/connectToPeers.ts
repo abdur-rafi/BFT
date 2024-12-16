@@ -1,12 +1,12 @@
-import { io as Client, io, Socket } from 'socket.io-client';
+import { io as Client } from 'socket.io-client';
 import { AUX_MESSAGE, BV_BROADCAST_MESSAGE, MessageType, READY_MESSAGE } from './messageTypes';
 import { BvStore } from './BvBroadcast';
 import { ServerInfo } from './serverInfo';
-import { Server } from 'socket.io';
 import { ABAStore } from './ABA';
 import { VCBCMessageType } from './VCBC/VCBCMessageTypes';
 import { VCBCStore } from './VCBC/VCBCStore';
 import { AgreementComponentMessageType, AleaBft, CommandBatch, FILL_GAP_MESSAGE, FILLER_MESSAGE } from './aleaBft';
+import { ioOps } from './ioOps';
 
 let readySevers = new Set<string>();
 
@@ -25,7 +25,8 @@ export function connectToPeers(
         const peerSocket = Client(`http://bft_server${peerPort}:${peerPort}`);
         peerSocket.on("connect", () => {
             // console.log(`Connected to server on port ${peerPort}`);
-            peerSocket.emit(MessageType.SERVER_ID, ownId);
+            // peerSocket.emit(MessageType.SERVER_ID, ownId);
+            ioOps.emitServerId(peerSocket);
         });
         // peerSocket.on(MessageType.SERVER_ID, (peerId: string) => {
         //     console.log(`Received server id from server ${peerPort}: ${peerId}`);

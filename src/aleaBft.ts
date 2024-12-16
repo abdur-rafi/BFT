@@ -2,11 +2,11 @@ import { IGetCompareValue, MinPriorityQueue } from "@datastructures-js/priority-
 import { ServerInfo } from "./serverInfo";
 import { ABAStore } from "./ABA";
 import { VCBCStore } from "./VCBC/VCBCStore";
-import { io } from ".";
 import { VCBC } from "./VCBC/VCBCParty";
 import { exit } from "process";
 import fs from 'fs';
 import { BatchSize} from "./ExpConfig";
+import { ioOps } from "./ioOps";
 
 export const AgreementComponentMessageType = {
     FILL_GAP : "FILL_GAP",
@@ -251,7 +251,7 @@ class AgreementComponent{
                 requestedBy : ServerInfo.OWN_ID,
                 roundNo : this.roundNo,
             }
-            io.emit(AgreementComponentMessageType.FILL_GAP, message);
+            ioOps.emitFillGapMessage(message);
             this.waiting = true;
             this.waitingForServerId = serverId;
             this.waitingPriority = this.qManager.getLastPriority(serverId) + 1;
@@ -276,7 +276,7 @@ class AgreementComponent{
                 requestedFor : message.requestedFor,
                 requestedBy : message.requestedBy
             }
-            ServerInfo.PEER_CONNECTIONS[message.requestedBy].emit(AgreementComponentMessageType.FILLER, msg);
+            ioOps.sendFillerMessage(message.requestedBy, msg);
         }
     }
 

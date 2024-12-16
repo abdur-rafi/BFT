@@ -1,10 +1,10 @@
 import { exit } from "process";
-import { io } from "..";
 import { CommandBatch } from "../aleaBft";
 import { ServerInfo } from "../serverInfo";
 import { SignatureScheme } from "./SignatureScheme";
 import { C_ANSWER_MESSAGE, C_FINAL_MESSAGE, C_READY_MESSAGE, C_REQUEST_MESSAGE, C_SEND_MESSAGE, VCBCMessageType } from "./VCBCMessageTypes";
 import { VCBC } from "./VCBCParty";
+import { ioOps } from "../ioOps";
 
 export class VCBCStore{
 
@@ -26,7 +26,7 @@ export class VCBCStore{
         let vcbc = new VCBC(tag, this.signatureScheme, this.onDecide);
         this.vcbcMap.set(tag, vcbc);
         vcbc.mBar = message;
-        io.emit(VCBCMessageType.C_SEND, m);
+        ioOps.emitCSendMessage(m);
     }
 
     static async handleCSendMessage(message : C_SEND_MESSAGE){
@@ -35,7 +35,7 @@ export class VCBCStore{
             this.vcbcMap.set(message.tag, vcbc);
             let cready = vcbc.handleSendMessage(message);
             if(cready){
-                ServerInfo.PEER_CONNECTIONS[message.sender].emit('c-ready', cready);
+                ioOps.sendCReadyMessage(message.sender, cready);
             }
             else{
                 console.error("Cready should not be null");
@@ -51,7 +51,7 @@ export class VCBCStore{
             }
             let cfinal = vcbc.handleReadyMessage(message);
             if(cfinal){
-                io.emit(VCBCMessageType.C_FINAL, cfinal);
+                ioOps.emitCFinalMessage(cfinal);
                 vcbc.handleFinalMessage(cfinal);
             }
         }
@@ -80,7 +80,7 @@ export class VCBCStore{
         if(vcbc){
             let answer = vcbc.handleRequest(message);
             if(answer){
-                ServerInfo.PEER_CONNECTIONS[message.sender].emit(VCBCMessageType.C_ANSWER, answer);
+                ioOps.sendCAnswerMessage(message.sender, answer);
             }
         }
     }
