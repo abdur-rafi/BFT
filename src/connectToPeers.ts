@@ -5,8 +5,8 @@ import { ServerInfo } from './serverInfo';
 import { ABAStore } from './ABA';
 import { VCBCMessageType } from './VCBC/VCBCMessageTypes';
 import { VCBCStore } from './VCBC/VCBCStore';
-import { AgreementComponentMessageType, AleaBft, CommandBatch, FILL_GAP_MESSAGE, FILLER_MESSAGE } from './aleaBft';
 import { ioOps } from './ioOps';
+import { AgreementComponentMessageType, FILLER_MESSAGE, FILL_GAP_MESSAGE } from './Alea/types';
 
 let readySevers = new Set<string>();
 

@@ -1,9 +1,9 @@
 import { Socket } from "socket.io-client";
 import { allPeersRoom, io } from ".";
-import { AgreementComponentMessageType, FILL_GAP_MESSAGE, FILLER_MESSAGE } from "./aleaBft";
 import { AUX_MESSAGE, BV_BROADCAST_MESSAGE, MessageType, READY_MESSAGE } from "./messageTypes";
 import { ServerInfo } from "./serverInfo";
 import { C_ANSWER_MESSAGE, C_FINAL_MESSAGE, C_READY_MESSAGE, C_SEND_MESSAGE, VCBCMessageType } from "./VCBC/VCBCMessageTypes";
+import { FILL_GAP_MESSAGE, AgreementComponentMessageType, FILLER_MESSAGE } from "./Alea/types";
 
 function emitCSendMessage(message : C_SEND_MESSAGE){
     io.to(ServerInfo.OWN_GROUP_OTHERS_ROOM).emit(VCBCMessageType.C_SEND, message);

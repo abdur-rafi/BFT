@@ -1,4 +1,4 @@
-import { CommandBatch } from "../aleaBft";
+import { CommandBatch } from "../Alea/types";
 import { ServerInfo } from "../serverInfo";
 // import {SignatureScheme} from "./SignatureScheme";
 import {

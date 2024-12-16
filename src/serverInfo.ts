@@ -1,6 +1,6 @@
 import { Socket } from "socket.io";
 import {groupSize, numberOfPortsTakenInExperiment, t} from "./ExpConfig";
-import { AleaBft } from "./aleaBft";
+import { AleaBft } from "./Alea/alea";
 
 let PORT = process.env.PORT;
 let ALL_PORTS = process.env.ALL_PORTS ? process.env.ALL_PORTS.split(",") : [];

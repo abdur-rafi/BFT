@@ -1,10 +1,10 @@
 import { exit } from "process";
-import { CommandBatch } from "../aleaBft";
 import { ServerInfo } from "../serverInfo";
 // import { SignatureScheme } from "./SignatureScheme";
 import { C_ANSWER_MESSAGE, C_FINAL_MESSAGE, C_READY_MESSAGE, C_REQUEST_MESSAGE, C_SEND_MESSAGE, VCBCMessageType } from "./VCBCMessageTypes";
 import { VCBC } from "./VCBCParty";
 import { ioOps } from "../ioOps";
+import { CommandBatch } from "../Alea/types";
 
 export class VCBCStore{
 

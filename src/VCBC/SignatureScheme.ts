@@ -1,4 +1,4 @@
-import { CommandBatch } from "../aleaBft";
+import { CommandBatch } from "../Alea/types";
 
 export class SignatureScheme {
     t: number; // Threshold

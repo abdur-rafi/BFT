@@ -5,9 +5,10 @@ import {Server} from 'socket.io';
 import {ServerInfo} from './serverInfo';
 import {MessageType, READY_MESSAGE} from './messageTypes';
 import {connectToPeers} from './connectToPeers';
-import {AleaBft, ClientCommand} from './aleaBft';
 import {cmdCountForThroughput, experimentMode} from "./ExpConfig";
 import { ioOps } from './ioOps';
+import { AleaBft } from './Alea/alea';
+import { ClientCommand } from './Alea/types';
 
 const PORT = process.env.PORT || 3000;
 
@@ -74,12 +75,6 @@ export const allPeersRoom = "allPeers";
 
 
 io.on("connection", (socket) => {
-    // console.log(`User connected: ${socket.id}`);
-
-    socket.on("message", (message) => {
-        // console.log(`Message from ${socket.id}: ${message}`);
-        io.emit("message", message);
-    });
 
     socket.on("disconnect", () => {
         console.log(`User disconnected: ${socket.id}`);
