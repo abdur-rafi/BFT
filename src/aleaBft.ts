@@ -46,7 +46,7 @@ const getCommandBatchPrioriy : IGetCompareValue<CommandBatch> = (commandBatch : 
 }
 
 function serverIdToIndex(id : string){
-    return parseInt(id) - 1;
+    return parseInt(id);
 }
 
 class BroadCastComponent{
@@ -107,6 +107,7 @@ class QueueManager{
     }
 
     public hasNextPriority(serverId : string){
+        // console.log(`Server id : ${serverId}`);
         let index = serverIdToIndex(serverId);
         // console.log(`index : ${index}`);
         // let front = this.priorieyQueues[index].front();

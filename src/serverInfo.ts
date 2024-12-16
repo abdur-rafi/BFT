@@ -21,10 +21,12 @@ if(ALL_PORTS.length === 0) {
 
 let OWN_ID = ALL_PORTS.indexOf(PORT).toString();
 
+console.log(`OWN_ID: ${OWN_ID}`);
+
 class ServerInfo{
 
     public static PORT : number = parseInt(PORT!);
-    public static PEER_PORTS : string[] = ALL_PORTS.filter(port => port !== PORT);
+    public static PEER_PORTS : string[] = ALL_PORTS.filter(port => port != PORT);
     public static PEER_IDS : string[] = [];
 
     // peerId to socket
@@ -33,7 +35,7 @@ class ServerInfo{
     // own id is the index of the port in the ALL_PORTS sorted array
     public static OWN_ID : string = OWN_ID!;
     public static t = t;
-    public static ALL_IDS : string[] = [];
+    public static ALL_IDS : string[] = [OWN_ID];
     public static N = ALL_PORTS.length;
     
     public static OWN_GROUP_ID : number = 0;

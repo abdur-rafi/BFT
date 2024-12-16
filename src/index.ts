@@ -31,7 +31,7 @@ let commandCount = 0;
 connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
     // let alea = new AleaBft();  
     console.log("All servers ready");
-    // alea.startAgreementComponent();
+    alea.startAgreementComponent();
 
     // -------------- For delay calculation, it is not needed --------------
     // if (experimentMode === "Throughput") {
