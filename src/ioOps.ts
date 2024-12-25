@@ -3,7 +3,7 @@ import { allPeersRoom, io } from ".";
 import { AUX_MESSAGE, BV_BROADCAST_MESSAGE, MessageType, READY_MESSAGE } from "./messageTypes";
 import { ServerInfo } from "./serverInfo";
 import { C_ANSWER_MESSAGE, C_FINAL_MESSAGE, C_READY_MESSAGE, C_SEND_MESSAGE, VCBCMessageType } from "./VCBC/VCBCMessageTypes";
-import { FILL_GAP_MESSAGE, AgreementComponentMessageType, FILLER_MESSAGE } from "./Alea/types";
+import { FILL_GAP_MESSAGE, AgreementComponentMessageType, FILLER_MESSAGE, ABA_Result } from "./Alea/types";
 
 function emitCSendMessage(message : C_SEND_MESSAGE){
     io.to(ServerInfo.OWN_GROUP_OTHERS_ROOM).emit(VCBCMessageType.C_SEND, message);
@@ -48,6 +48,12 @@ function emitReadyMessage(message : READY_MESSAGE){
     io.to(allPeersRoom).emit(MessageType.READY, message);
 }
 
+function emitABAResult(message : ABA_Result){
+
+    io.to(ServerInfo.OTHER_GROUP_LEADERS_ROOM).emit(AgreementComponentMessageType.ABA_RESULT, message);
+
+}
+
 export const ioOps = {
     emitCSendMessage,
     sendCReadyMessage,
@@ -58,5 +64,6 @@ export const ioOps = {
     sendFillerMessage,
     emitBvBroadcastMessage,
     emitServerId,
-    emitReadyMessage
+    emitReadyMessage,
+    emitABAResult
 }

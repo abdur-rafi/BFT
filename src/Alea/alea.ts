@@ -23,7 +23,10 @@ export class AleaBft{
         VCBCStore.onDecide = (cmdb)=>{
             console.log(`Decided command batch with id ${cmdb.id} in server ${ServerInfo.OWN_ID}`);
             this.qManager.insert(cmdb.createdFrom, cmdb);
-            if(this.acComponent.waiting && this.acComponent.waitingForServerId === cmdb.createdFrom && cmdb.priority === this.acComponent.waitingPriority){
+            if(this.acComponent.waiting && 
+                this.acComponent.waitingForServerId === cmdb.createdFrom 
+                && cmdb.priority === this.acComponent.waitingPriority
+            ){
                 this.acComponent.waiting = false;
                 this.acComponent.onTrueDeliver(cmdb.createdFrom);
             }

@@ -2,6 +2,7 @@
 export const AgreementComponentMessageType = {
     FILL_GAP : "FILL_GAP",
     FILLER : "FILLER",
+    ABA_RESULT : "ABA_RESULT"
 }
 
 export type FILL_GAP_MESSAGE = {
@@ -33,7 +34,7 @@ export type CommandBatch = {
 }
 
 export type ABA_Result = {
-    groupId : string;
+    groupId : number;
     roundNo : number;
     result : boolean;
     serverId : string;

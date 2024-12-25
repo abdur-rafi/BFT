@@ -102,6 +102,10 @@ export function connectToPeers(
             // console.log(`Received fill gap message for ${message.requestedFor}`);
             ServerInfo.alea.onFllGap(message);
         });
+
+        peerSocket.on(AgreementComponentMessageType.ABA_RESULT, (message)=>{
+            console.log(`Received ABA result for round ${message.roundNo} from ${message.serverId} with result ${message.result}`);
+        });
         
     });
 

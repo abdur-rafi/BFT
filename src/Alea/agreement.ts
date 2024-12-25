@@ -3,7 +3,7 @@ import { ioOps } from "../ioOps";
 import { ServerInfo } from "../serverInfo";
 import { ExecuteCommand } from "./executeCommand";
 import { QueueManager } from "./queueManager";
-import { FILL_GAP_MESSAGE, CommandBatch, FILLER_MESSAGE } from "./types";
+import { FILL_GAP_MESSAGE, CommandBatch, FILLER_MESSAGE, ABA_Result } from "./types";
 
 export class AgreementComponent{
     public roundNo : number;
@@ -33,10 +33,19 @@ export class AgreementComponent{
         // console.log(`Starting ABA for round ${this.roundNo} in server ${ServerInfo.OWN_ID}`);
         ABAStore.ABA_Start(propose, `${this.roundNo}`, (v)=>{
             // console.log(`ABA decided ${v} for round ${this.roundNo} in server ${ServerInfo.OWN_ID} to execute command of server ${serverId}`);
+            
             if(v){
                 this.onTrueDeliver(serverId);
             }
             else{
+                let message : ABA_Result = {
+                    groupId : ServerInfo.OWN_GROUP_ID,
+                    roundNo : this.roundNo,
+                    result : v,
+                    serverId : serverId,
+                    commandBatch : null
+                }
+                ioOps.emitABAResult(message);
                 this.startAgreementComponent();
             }
         });
@@ -48,6 +57,16 @@ export class AgreementComponent{
             this.onAcDeliver(cmd);
             this.qManager.dequeueAndInsertInDeliver(serverId);
             this.qManager.setLastPriority(serverId, cmd.priority);
+
+            let message : ABA_Result = {
+                groupId : ServerInfo.OWN_GROUP_ID,
+                roundNo : this.roundNo,
+                result : true,
+                serverId : serverId,
+                commandBatch : cmd
+            }
+            ioOps.emitABAResult(message);
+
             this.startAgreementComponent();
         }
         else{
