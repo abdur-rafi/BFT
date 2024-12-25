@@ -34,7 +34,7 @@ export type CommandBatch = {
 }
 
 export type ABA_Result = {
-    groupId : number;
+    groupNo : number;
     roundNo : number;
     result : boolean;
     serverId : string;

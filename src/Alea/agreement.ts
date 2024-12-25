@@ -39,13 +39,15 @@ export class AgreementComponent{
             }
             else{
                 let message : ABA_Result = {
-                    groupId : ServerInfo.OWN_GROUP_ID,
+                    groupNo : ServerInfo.OWN_GROUP_ID,
                     roundNo : this.roundNo,
                     result : v,
                     serverId : serverId,
                     commandBatch : null
                 }
-                ioOps.emitABAResult(message);
+                if(ServerInfo.AM_I_LEADER){
+                    ioOps.emitABAResult(message);
+                }
                 this.startAgreementComponent();
             }
         });
@@ -59,13 +61,15 @@ export class AgreementComponent{
             this.qManager.setLastPriority(serverId, cmd.priority);
 
             let message : ABA_Result = {
-                groupId : ServerInfo.OWN_GROUP_ID,
+                groupNo : ServerInfo.OWN_GROUP_ID,
                 roundNo : this.roundNo,
                 result : true,
                 serverId : serverId,
                 commandBatch : cmd
             }
-            ioOps.emitABAResult(message);
+            if(ServerInfo.AM_I_LEADER){
+                ioOps.emitABAResult(message);
+            }
 
             this.startAgreementComponent();
         }
