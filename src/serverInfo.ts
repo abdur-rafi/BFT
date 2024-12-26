@@ -41,6 +41,7 @@ class ServerInfo{
     
     public static OWN_GROUP_ID : number = 0;
     public static OWN_GROUP_OTHERS_IDS : string[] = [];
+    public static ONW_GROUP_LEADER_IDS : string[] = [];
     // public static OWN_GROUP_LEADERS_IDS : string[] = [];
     public static AM_I_LEADER : boolean = false;
     public static OTHER_GROUP_LEADERS_IDS : string[] = [];
@@ -49,6 +50,7 @@ class ServerInfo{
 
     public static OWN_GROUP_OTHERS_ROOM = "ownGroupOthers";
     public static OTHER_GROUP_LEADERS_ROOM = "otherGroupLeaders";
+    public static OWN_GROUP_NON_LEADERS_ROOM = "ownGroupNonLeaders";
 
     public static OWN_GROUP_IDS : string[] = [];
 
@@ -98,6 +100,10 @@ class ServerInfo{
                 if(i !== own_serial){
                     this.OWN_GROUP_OTHERS_IDS.push(i.toString());
                     this.PEER_CONNECTIONS[i.toString()].join(this.OWN_GROUP_OTHERS_ROOM);
+
+                    if( this.AM_I_LEADER && !this.isLeader(i)){
+                        this.PEER_CONNECTIONS[i.toString()].join(this.OWN_GROUP_NON_LEADERS_ROOM);
+                    }
                 }
             }
             else{
@@ -110,6 +116,12 @@ class ServerInfo{
 
         this.OWN_GROUP_IDS = [this.OWN_ID, ... this.OWN_GROUP_OTHERS_IDS];
         this.OWN_GROUP_IDS.sort();
+        
+        this.OWN_GROUP_IDS.forEach(id => {
+            if(this.isLeader(parseInt(id))){
+                this.ONW_GROUP_LEADER_IDS.push(id);
+            }
+        });
 
         console.log({
             groupId : this.OWN_GROUP_ID,
@@ -118,7 +130,8 @@ class ServerInfo{
             amILeader : this.AM_I_LEADER,
             otherGroupLeadersIds : this.OTHER_GROUP_LEADERS_IDS,
             ownGroupIds : this.OWN_GROUP_IDS,
-            allIds : this.ALL_IDS
+            allIds : this.ALL_IDS,
+            ownGroupLeaderIds : this.ONW_GROUP_LEADER_IDS
         })
 
         ServerInfo.alea = new AleaBft();

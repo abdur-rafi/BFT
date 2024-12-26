@@ -7,6 +7,7 @@ import { VCBCMessageType } from './VCBC/VCBCMessageTypes';
 import { VCBCStore } from './VCBC/VCBCStore';
 import { ioOps } from './ioOps';
 import { ABA_Result, AgreementComponentMessageType, FILLER_MESSAGE, FILL_GAP_MESSAGE } from './Alea/types';
+import { abaResultManager } from './Alea/abaResultManager';
 
 let readySevers = new Set<string>();
 
@@ -104,7 +105,8 @@ export function connectToPeers(
         });
 
         peerSocket.on(AgreementComponentMessageType.ABA_RESULT, (message : ABA_Result)=>{
-            // console.log(`Received ABA result for round ${message.roundNo} from ${message.serverId} with result ${message.result}`);
+            abaResultManager.onABAResult(message);
+            // console.log(`${ServerInfo.OWN_ID} Received ABA result for round ${message.roundNo} from ${message.serverId} group ${message.groupNo} with result ${message.result}`);
         });
         
     });

@@ -1,6 +1,7 @@
 import { ABAStore } from "../ABA";
 import { ioOps } from "../ioOps";
 import { ServerInfo } from "../serverInfo";
+import { abaResultManager } from "./abaResultManager";
 import { ExecuteCommand } from "./executeCommand";
 import { QueueManager } from "./queueManager";
 import { FILL_GAP_MESSAGE, CommandBatch, FILLER_MESSAGE, ABA_Result } from "./types";
@@ -8,7 +9,7 @@ import { FILL_GAP_MESSAGE, CommandBatch, FILLER_MESSAGE, ABA_Result } from "./ty
 export class AgreementComponent{
     public roundNo : number;
     public qManager : QueueManager;
-    public excmd : ExecuteCommand;
+    // public excmd : ExecuteCommand;
     public waiting : boolean;
     public waitingForServerId : string;
     public waitingPriority : number;
@@ -16,7 +17,7 @@ export class AgreementComponent{
     constructor(qm : QueueManager, excm : ExecuteCommand){
         this.roundNo = 0;
         this.qManager = qm;
-        this.excmd = excm;
+        // this.excmd = excm;
         this.waiting = false;
         this.waitingForServerId = '';
         this.waitingPriority = 0;
@@ -38,15 +39,19 @@ export class AgreementComponent{
                 this.onTrueDeliver(serverId);
             }
             else{
-                let message : ABA_Result = {
-                    groupNo : ServerInfo.OWN_GROUP_ID,
-                    roundNo : this.roundNo,
-                    result : v,
-                    serverId : serverId,
-                    commandBatch : null
-                }
                 if(ServerInfo.AM_I_LEADER){
+                    let message : ABA_Result = {
+                        groupNo : ServerInfo.OWN_GROUP_ID,
+                        roundNo : this.roundNo,
+                        result : v,
+                        serverId : ServerInfo.OWN_ID,
+                        commandBatch : null
+                    }
                     ioOps.emitABAResult(message);
+                    ServerInfo.ONW_GROUP_LEADER_IDS.forEach(id=>{
+                        message.serverId = id;
+                        abaResultManager.onABAResult(message);
+                    })
                 }
                 this.startAgreementComponent();
             }
@@ -56,19 +61,23 @@ export class AgreementComponent{
     public onTrueDeliver(serverId : string){
         if(this.qManager.hasNextPriority(serverId)){
             let cmd = this.qManager.front(serverId);
-            this.onAcDeliver(cmd);
+            // this.onAcDeliver(cmd);
             this.qManager.dequeueAndInsertInDeliver(serverId);
             this.qManager.setLastPriority(serverId, cmd.priority);
 
-            let message : ABA_Result = {
-                groupNo : ServerInfo.OWN_GROUP_ID,
-                roundNo : this.roundNo,
-                result : true,
-                serverId : serverId,
-                commandBatch : cmd
-            }
             if(ServerInfo.AM_I_LEADER){
+                let message : ABA_Result = {
+                    groupNo : ServerInfo.OWN_GROUP_ID,
+                    roundNo : this.roundNo,
+                    result : true,
+                    serverId : ServerInfo.OWN_ID,
+                    commandBatch : cmd
+                }
                 ioOps.emitABAResult(message);
+                ServerInfo.ONW_GROUP_LEADER_IDS.forEach(id=>{
+                    message.serverId = id;
+                    abaResultManager.onABAResult(message);
+                })
             }
 
             this.startAgreementComponent();
@@ -90,11 +99,11 @@ export class AgreementComponent{
         }
     }
 
-    public onAcDeliver(m : CommandBatch){
-        m.commands.forEach(c=>{
-            this.excmd.executeIfNotAlready(c);
-        })
-    }
+    // public onAcDeliver(m : CommandBatch){
+    //     m.commands.forEach(c=>{
+    //         this.excmd.executeIfNotAlready(c);
+    //     })
+    // }
 
     public onFillGap(message : FILL_GAP_MESSAGE){
         if(this.qManager.getLastPriority(message.requestedFor) > message.lastPriority){

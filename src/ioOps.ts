@@ -54,6 +54,10 @@ function emitABAResult(message : ABA_Result){
 
 }
 
+function emitConsensusReachedABAResult(message : ABA_Result){
+    io.to(ServerInfo.OWN_GROUP_NON_LEADERS_ROOM).emit(AgreementComponentMessageType.ABA_RESULT, message);
+}
+
 export const ioOps = {
     emitCSendMessage,
     sendCReadyMessage,
@@ -65,5 +69,6 @@ export const ioOps = {
     emitBvBroadcastMessage,
     emitServerId,
     emitReadyMessage,
-    emitABAResult
+    emitABAResult,
+    emitConsensusReachedABAResult
 }
