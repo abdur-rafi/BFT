@@ -1,13 +1,15 @@
 import { Socket } from "socket.io";
 import {groupSize, numberOfPortsTakenInExperiment, t} from "./ExpConfig";
 import { AleaBft } from "./Alea/alea";
+import { exit } from "process";
 
 let PORT = process.env.PORT;
 let ALL_PORTS = process.env.ALL_PORTS ? process.env.ALL_PORTS.split(",") : [];
 ALL_PORTS.sort();
 
 ALL_PORTS = ALL_PORTS.slice(0, numberOfPortsTakenInExperiment);
-
+let FAIL = process.env.FAIL == "true";
+let MALICIOUS = process.env.MALICIOUS == "true";
 
 if(!PORT) {
     console.error("No port provided");
@@ -44,6 +46,8 @@ class ServerInfo{
     public static ONW_GROUP_LEADER_IDS : string[] = [];
     // public static OWN_GROUP_LEADERS_IDS : string[] = [];
     public static AM_I_LEADER : boolean = false;
+    public static SHOULD_FAIL : boolean = FAIL;
+    public static IS_MALICIOUS : boolean = MALICIOUS;
     public static OTHER_GROUP_LEADERS_IDS : string[] = [];
     
     public static GROUP_SIZE : number = groupSize;
@@ -133,6 +137,11 @@ class ServerInfo{
             allIds : this.ALL_IDS,
             ownGroupLeaderIds : this.ONW_GROUP_LEADER_IDS
         })
+
+        if(ServerInfo.SHOULD_FAIL){
+            console.log("Faulty server. Exiting");
+            exit(0);
+        }
 
         ServerInfo.alea = new AleaBft();
 

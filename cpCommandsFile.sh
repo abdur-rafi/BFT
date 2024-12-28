@@ -8,7 +8,7 @@ ports=(3002 3003 3004 3005
        3030 3031 3032 3033)
 
 # specify the number of ports to be considered
-num_ports=$(python -c "import ExperimentConfig; print(ExperimentConfig.numberOfPortsTakenInExperiment)")
+num_ports=$(python3 -c "import ExperimentConfig; print(ExperimentConfig.numberOfPortsTakenInExperiment)")
 
 # loop through the ports array
 for ((i=0; i<num_ports; i++))
@@ -20,14 +20,14 @@ done
 echo "All commands files copied successfully!"
 
 ## nested loop to check if any of the commands files are different
-#for ((i=0; i<num_ports; i++))
-#do
-#  for ((j=0; j<num_ports; j++))
-#  do
-#    # check if the files are different
-#    if ! cmp -s ./commandsFile/commands_${ports[i]}.txt ./commandsFile/commands_${ports[j]}.txt
-#    then
-#      echo "commands_${ports[i]}.txt and commands_${ports[j]}.txt are different"
-#    fi
-#  done
-#done
+for ((i=0; i<num_ports; i++))
+do
+ for ((j=i+1; j<num_ports; j++))
+ do
+   # check if the files are different
+   if ! cmp -s ./commandsFile/commands_${ports[i]}.txt ./commandsFile/commands_${ports[j]}.txt
+   then
+     echo "commands_${ports[i]}.txt and commands_${ports[j]}.txt are different"
+   fi
+ done
+done

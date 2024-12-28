@@ -15,6 +15,8 @@ with open(output_file, "w") as f:
       - PORT={port}
       - ALL_PORTS=${{PORTS}}
       - OWN_ID={port - 3001}
+      - FAIL=false
+      - MALICIOUS=false
     ports:
       - "{port}:{port}"
 """

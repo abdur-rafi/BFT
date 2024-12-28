@@ -7,6 +7,8 @@ services:
       - PORT=3002
       - ALL_PORTS=${PORTS}
       - OWN_ID=1
+      - FAIL=false
+      - MALICIOUS=true
     ports:
       - "3002:3002"
 
@@ -17,6 +19,8 @@ services:
       - PORT=3003
       - ALL_PORTS=${PORTS}
       - OWN_ID=2
+      - FAIL=false
+      - MALICIOUS=false
     ports:
       - "3003:3003"
 
@@ -27,6 +31,8 @@ services:
       - PORT=3004
       - ALL_PORTS=${PORTS}
       - OWN_ID=3
+      - FAIL=false
+      - MALICIOUS=false
     ports:
       - "3004:3004"
 
@@ -37,6 +43,8 @@ services:
       - PORT=3005
       - ALL_PORTS=${PORTS}
       - OWN_ID=4
+      - FAIL=false
+      - MALICIOUS=false
     ports:
       - "3005:3005"
 
@@ -47,6 +55,8 @@ services:
       - PORT=3006
       - ALL_PORTS=${PORTS}
       - OWN_ID=5
+      - FAIL=false
+      - MALICIOUS=false
     ports:
       - "3006:3006"
 
@@ -57,6 +67,8 @@ services:
       - PORT=3007
       - ALL_PORTS=${PORTS}
       - OWN_ID=6
+      - FAIL=false
+      - MALICIOUS=true
     ports:
       - "3007:3007"
 
@@ -67,6 +79,8 @@ services:
       - PORT=3008
       - ALL_PORTS=${PORTS}
       - OWN_ID=7
+      - FAIL=false
+      - MALICIOUS=false
     ports:
       - "3008:3008"
 
@@ -77,6 +91,8 @@ services:
       - PORT=3009
       - ALL_PORTS=${PORTS}
       - OWN_ID=8
+      - FAIL=false
+      - MALICIOUS=false
     ports:
       - "3009:3009"
 
@@ -87,6 +103,8 @@ services:
       - PORT=3010
       - ALL_PORTS=${PORTS}
       - OWN_ID=9
+      - FAIL=false
+      - MALICIOUS=false
     ports:
       - "3010:3010"
 
@@ -97,5 +115,7 @@ services:
       - PORT=3011
       - ALL_PORTS=${PORTS}
       - OWN_ID=10
+      - FAIL=false
+      - MALICIOUS=false
     ports:
       - "3011:3011"

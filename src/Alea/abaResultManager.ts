@@ -201,12 +201,12 @@ class ExecutionManager{
 
     public onABAResult(message : ABA_Result){
         if(message.roundNo < this.roundNo ){
-            console.log("ExeM.onAba.Received ABA result from previous round");
+            // console.log("ExeM.onAba.Received ABA result from previous round");
             return;
         }
         if(message.roundNo === this.roundNo){
             if(message.groupNo < this.groupNo){
-                console.log("ExeM.onAba.Received ABA result from completed group");
+                // console.log("ExeM.onAba.Received ABA result from completed group");
                 return;
             }
             let result = this.abaResultManager.onABAResult(message);
@@ -222,7 +222,7 @@ class ExecutionManager{
                             this.executeCommands.executeIfNotAlready(cmd);
                         }
                     }
-                    console.log("Round completed upto: ", this.roundNo, this.groupNo);
+                    // console.log("Round completed upto: ", this.roundNo, this.groupNo);
                     
                     let numberOfGroups = (ServerInfo.N / ServerInfo.GROUP_SIZE);
 

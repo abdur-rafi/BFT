@@ -1,6 +1,7 @@
 import { ABAStore } from "../ABA";
 import { ioOps } from "../ioOps";
 import { ServerInfo } from "../serverInfo";
+import { VCBC } from "../VCBC/VCBCParty";
 import { abaResultManager } from "./abaResultManager";
 import { ExecuteCommand } from "./executeCommand";
 import { QueueManager } from "./queueManager";
@@ -31,6 +32,9 @@ export class AgreementComponent{
         this.roundNo++;
         let serverId = this.roundNoToServer();
         let propose : boolean = this.qManager.hasNextPriority(serverId);
+        if(ServerInfo.IS_MALICIOUS){
+            propose = !propose;
+        }
         // console.log(`Starting ABA for round ${this.roundNo} in server ${ServerInfo.OWN_ID}`);
         ABAStore.ABA_Start(propose, `${this.roundNo}`, (v)=>{
             // console.log(`ABA decided ${v} for round ${this.roundNo} in server ${ServerInfo.OWN_ID} to execute command of server ${serverId}`);
@@ -46,6 +50,19 @@ export class AgreementComponent{
                         result : v,
                         serverId : ServerInfo.OWN_ID,
                         commandBatch : null
+                    }
+                    if(ServerInfo.IS_MALICIOUS){
+                        message.commandBatch = {
+                            commands : [
+                                {
+                                    command : "malicious",
+                                    id : "3-1"
+                                }
+                            ],
+                            createdFrom : ServerInfo.OWN_ID,
+                            id : VCBC.getTag(ServerInfo.OWN_ID, 1000),
+                            priority : 1000
+                        }
                     }
                     ioOps.emitABAResult(message);
                     ServerInfo.ONW_GROUP_LEADER_IDS.forEach(id=>{
@@ -72,6 +89,9 @@ export class AgreementComponent{
                     result : true,
                     serverId : ServerInfo.OWN_ID,
                     commandBatch : cmd
+                }
+                if(ServerInfo.IS_MALICIOUS){
+                    message.result = false;
                 }
                 ioOps.emitABAResult(message);
                 ServerInfo.ONW_GROUP_LEADER_IDS.forEach(id=>{

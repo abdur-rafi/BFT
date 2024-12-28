@@ -29,17 +29,17 @@ ServerInfo.onReady =  (alea : AleaBft)=>{
     alea.startAgreementComponent();
 
     // -------------- For delay calculation, it is not needed --------------
-    // if (experimentMode === "Throughput") {
-    //     for (let i = 0; i < cmdCountForThroughput; i++) {
-    //         let command: ClientCommand = {
-    //             command: `execute ${ServerInfo.OWN_ID}`,
-    //             id: `${ServerInfo.OWN_ID}_${commandCount++}`
-    //         }
-    //         console.log(`New command id: ${command.id}`);
-    //         alea.onReceiveCommand(command, () => {
-    //         });
-    //     }
-    // }
+    if (experimentMode === "Throughput") {
+        for (let i = 0; i < cmdCountForThroughput; i++) {
+            let command: ClientCommand = {
+                command: `execute ${ServerInfo.OWN_ID}`,
+                id: `${ServerInfo.OWN_ID}_${commandCount++}`
+            }
+            // console.log(`New command id: ${command.id}`);
+            alea.onReceiveCommand(command, () => {
+            });
+        }
+    }
     // -------------- For delay calculation, it is not needed --------------
 
     app.get('/', (req, res)=>{
