@@ -5,7 +5,7 @@ from concurrent.futures import ThreadPoolExecutor
 import requests
 
 from ExperimentConfig import numberOfPortsTakenInExperiment, experimentXAxis, BatchSize, RandomPortCountForDelay, \
-    MaxThreadCountForDelay, LCMForBatchSize
+    MaxThreadCountForDelay, LCMForBatchSize, VMs
 
 ports = [3002, 3003, 3004, 3005,
          3006, 3007, 3008, 3009,
@@ -18,15 +18,33 @@ ports = [3002, 3003, 3004, 3005,
 
 # Function to make a request to a port and measure its delay
 def make_request(port):
-    try:
-        start = time.time()
-        r = requests.get(f"http://localhost:{port}")
-        end = time.time()
-        delay = end - start  # Calculate the delay for this request
-        return r.text, delay
-    except requests.RequestException as e:
-        print(f"Request to port {port} failed: {e}")
-        return None, 0
+    # we have 3 vm's running on 3 different machines.
+    # So, we need to change the request url to the public ip of the vm
+    # the problem is we dont know which port is running on which vm.
+    # we cant use random choice here. we need to try all the vm's and see which one is running the port.
+    for vm in VMs:
+        try:
+            start = time.time()
+            r = requests.get(f"http://{vm}:{port}")
+            end = time.time()
+            delay = end - start  # Calculate the delay for this request
+            return r.text, delay
+        except requests.RequestException as e:
+            print(f"Request to port {port} failed for {vm}: {e}")
+            continue
+
+    return None, 0
+
+#     # for running on local machine only
+#     try:
+#         start = time.time()
+#         r = requests.get(f"http://localhost:{port}")
+#         end = time.time()
+#         delay = end - start  # Calculate the delay for this request
+#         return r.text, delay
+#     except requests.RequestException as e:
+#         print(f"Request to port {port} failed: {e}")
+#         return None, 0
 
 # Function to make parallel requests, calculate throughput, and average delay
 def parallel_requests():

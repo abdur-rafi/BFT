@@ -12,3 +12,5 @@ RandomPortCountForDelay = 512   # Change this to the number of random ports whic
 MaxThreadCountForDelay = 32
 
 LCMForBatchSize = 64    # exp for batch size : multiple of LCM (1,2,4,8,16,32) = 32.
+
+VMs = ['20.244.86.92', '20.244.87.197', '20.244.47.44']  # Change this to the list of VMs you want to run the experiment on
