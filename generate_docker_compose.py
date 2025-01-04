@@ -9,7 +9,8 @@ addMalice = int(sys.argv[6])
 
 print(f"N: {numberOfPortsTakenInExperiment} bs: {batchSize} tc: {totalCommands} gs: {groupSize} t: {t} addMalice: {addMalice}")
 
-commandsPerNode = totalCommands // numberOfPortsTakenInExperiment
+commandsPerNode = (totalCommands // numberOfPortsTakenInExperiment)
+commandsPerNode -= commandsPerNode % batchSize
 
 
 output_file = "docker-compose.yml"
