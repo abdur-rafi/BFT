@@ -9,6 +9,7 @@ import {cmdCountForThroughput, experimentMode} from "./ExpConfig";
 import { ioOps } from './ioOps';
 import { AleaBft } from './Alea/alea';
 import { ClientCommand } from './Alea/types';
+import { time } from 'console';
 
 const PORT = process.env.PORT || 3000;
 
@@ -18,7 +19,6 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
     cors: {
         origin: "*",
-        methods: ["GET", "POST"]
     }
 });
 let commandCount = 0;
@@ -35,7 +35,7 @@ ServerInfo.onReady =  (alea : AleaBft)=>{
                 command: `execute ${ServerInfo.OWN_ID}`,
                 id: `${ServerInfo.OWN_ID}_${commandCount++}`
             }
-            // console.log(`New command id: ${command.id}`);
+            console.log(`command: ${command.id} ${Date.now()}`);
             alea.onReceiveCommand(command, () => {
             });
         }

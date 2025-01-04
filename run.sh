@@ -1,6 +1,6 @@
-docker compose down
+docker-compose down
 docker build -t bft_server .
-docker compose up 
+docker-compose up 
 
 # create CommandsFile directory with all 32 commands files
 # ports=(3002 3003 3004 3005

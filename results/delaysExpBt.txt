@@ -19,3 +19,7 @@ Batch size: 32
 Average Delay: 0.3277 seconds per request
 
 
+Batch size: 32
+Average Delay: 0.0000 seconds per request
+
+

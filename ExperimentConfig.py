@@ -1,11 +1,11 @@
 # number of ports taken for this experiment
-numberOfPortsTakenInExperiment = 10      # Change this to the number of ports you want to take for the experiment
+numberOfPortsTakenInExperiment = 4      # Change this to the number of ports you want to take for the experiment
 
 experimentMode = "Throughput"  # Change this to "Throughput" or "Delay" based on the experiment you want to run
 
 experimentXAxis = "BatchSize"  # Change this to "Nodes" or "BatchSize" based on the experiment you want to run
 
-BatchSize = 32
+BatchSize = 1
 
 RandomPortCountForDelay = 512   # Change this to the number of random ports which should be multiple of BatchSize
 

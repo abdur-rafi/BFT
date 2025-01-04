@@ -1,0 +1,211 @@
+bft_bft_server3005.1.coand8hx46xk@bft-1    | 
+bft_bft_server3005.1.coand8hx46xk@bft-1    | > nodeimplementation@1.0.0 start
+bft_bft_server3005.1.coand8hx46xk@bft-1    | > ts-node src/index.ts
+bft_bft_server3005.1.coand8hx46xk@bft-1    | 
+bft_bft_server3005.1.coand8hx46xk@bft-1    | {
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_config_user_agent: 'npm/10.9.2 node/v23.5.0 linux x64 workspaces/false',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   NODE_VERSION: '23.5.0',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   HOSTNAME: 'c78dc7d6e315',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   YARN_VERSION: '1.22.22',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_node_execpath: '/usr/local/bin/node',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   ALL_PORTS: '3002,3003,3004,3005',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   SHLVL: '2',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_config_noproxy: '',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   PORT: '3005',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   HOME: '/root',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_package_json: '/app/package.json',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_config_userconfig: '/root/.npmrc',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_config_local_prefix: '/app',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   COLOR: '0',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_config_prefix: '/usr/local',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_config_npm_version: '10.9.2',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_config_cache: '/root/.npm',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_config_node_gyp: '/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   PATH: '/app/node_modules/.bin:/node_modules/.bin:/usr/local/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   NODE: '/usr/local/bin/node',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_package_name: 'nodeimplementation',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_lifecycle_script: 'ts-node src/index.ts',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_package_version: '1.0.0',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_lifecycle_event: 'start',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   OWN_ID: '4',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_config_globalconfig: '/usr/local/etc/npmrc',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_config_init_module: '/root/.npm-init.js',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   PWD: '/app',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_execpath: '/usr/local/lib/node_modules/npm/bin/npm-cli.js',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_config_global_prefix: '/usr/local',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   npm_command: 'start',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   INIT_CWD: '/app',
+bft_bft_server3005.1.coand8hx46xk@bft-1    |   EDITOR: 'vi'
+bft_bft_server3005.1.coand8hx46xk@bft-1    | }
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Server is running on http://localhost:3005
+bft_bft_server3005.1.coand8hx46xk@bft-1    | own Id is 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Connection error for port 3003: xhr poll error
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Connection error for port 3002: xhr poll error
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Connection error for port 3003: xhr poll error
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Connection error for port 3002: xhr poll error
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Connection error for port 3003: xhr poll error
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Connection error for port 3002: xhr poll error
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Connection error for port 3003: xhr poll error
+bft_bft_server3005.1.coand8hx46xk@bft-1    | All peer servers connected
+bft_bft_server3005.1.coand8hx46xk@bft-1    | All ids: 1,2,3,4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | All servers ready
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_0
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_1
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_2
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_3
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_5
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_6
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_7
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_8
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_9
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_10
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_11
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_12
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_13
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_14
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_15
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_16
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_17
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_18
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_19
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_20
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_21
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_22
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_23
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_24
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_25
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_26
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_27
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_28
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_29
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_30
+bft_bft_server3005.1.coand8hx46xk@bft-1    | New command id: 4_31
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_0 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_0 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_0 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_0 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_1 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_1 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_1 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_1 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_2 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_2 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_2 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_2 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_3 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_3 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_3 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_3 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_4 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_4 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_4 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_4 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_5 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_5 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_5 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_5 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_6 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_6 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_6 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_6 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_7 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_7 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_7 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_7 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_8 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_8 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_8 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_8 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_9 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_9 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_9 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_9 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_10 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_10 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_10 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_10 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_11 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_11 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_11 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_11 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_12 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_12 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_12 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_12 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_13 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_13 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_13 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_13 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_14 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_14 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_14 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_14 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_15 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_15 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_15 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_15 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_16 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_16 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_16 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_16 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_17 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_17 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_17 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_17 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_18 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_18 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_18 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_18 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_19 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_19 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_19 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_19 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_20 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_20 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_20 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_20 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_21 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_21 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_21 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_21 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_22 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_22 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_22 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_22 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_23 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_23 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_23 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_23 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_24 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_24 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_24 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_24 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_25 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_25 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_25 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_25 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_26 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_26 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_26 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_26 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_27 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_27 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_27 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_27 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_28 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_28 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_28 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_28 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_29 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_29 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_29 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_29 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_30 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_30 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_30 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_30 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 3_31 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 4_31 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 1_31 in server 4
+bft_bft_server3005.1.coand8hx46xk@bft-1    | Executing command with id 2_31 in server 4
