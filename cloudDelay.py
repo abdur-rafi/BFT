@@ -1,7 +1,7 @@
 import re
 from collections import defaultdict
 from ExperimentConfig import (numberOfPortsTakenInExperiment, experimentXAxis, BatchSize,
-                              fileExtName, folderPath, faultPorts, faultName)
+                              fileExtName, faultPorts, faultName, folder)
 
 def calculate_average_delay(folder, ports):
     """
@@ -69,7 +69,6 @@ def calculate_average_delay(folder, ports):
 
 
 def main():
-    folder = folderPath + "" + str(numberOfPortsTakenInExperiment)
 
     ports = [3002, 3003, 3004, 3005,
              3006, 3007, 3008, 3009,
