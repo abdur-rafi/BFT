@@ -22,10 +22,13 @@ export function connectToPeers(
     // const peerConnections: Record<string, Socket> = {};
 
     peers.forEach(peerPort => {
-        const peerSocket = Client(`http://bft_server${peerPort}:${peerPort}`);
+        const peerSocket = Client(`http://bft_bft_server${peerPort}:${peerPort}`);
         peerSocket.on("connect", () => {
             // console.log(`Connected to server on port ${peerPort}`);
             peerSocket.emit(MessageType.SERVER_ID, ownId);
+        });
+        peerSocket.on("connect_error", (err) => {
+            console.log(`Connection error for port ${peerPort}:`, err.message);
         });
         // peerSocket.on(MessageType.SERVER_ID, (peerId: string) => {
         //     console.log(`Received server id from server ${peerPort}: ${peerId}`);
@@ -99,6 +102,8 @@ export function connectToPeers(
             // console.log(`Received fill gap message for ${message.requestedFor}`);
             alea.onFllGap(message);
         });
+
+
         
     });
 

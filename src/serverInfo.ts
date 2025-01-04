@@ -1,12 +1,25 @@
 import { Socket } from "socket.io";
-import {numberOfPortsTakenInExperiment} from "./ExpConfig";
 
 let PORT = process.env.PORT;
 let ALL_PORTS = process.env.ALL_PORTS ? process.env.ALL_PORTS.split(",") : [];
 
-ALL_PORTS = ALL_PORTS.slice(0, numberOfPortsTakenInExperiment);
 
 let OWN_ID = process.env.OWN_ID;
+
+let batchSize = process.env.BATCH_SIZE;
+
+let cmdCount = process.env.COMMAND_COUNT;
+
+if(!cmdCount){
+    console.log("comd count not provided");
+    process.exit(1);
+}
+
+if(!batchSize){
+    console.error("No batch size provided");
+    process.exit(1);
+}
+// console.log(process.env);
 
 if(!PORT) {
     console.error("No port provided");
@@ -43,6 +56,8 @@ class ServerInfo{
         
     }
     public static N = ALL_PORTS.length;
+    public static BatchSize = parseInt(batchSize!);
+    public static commandCount = parseInt(cmdCount!);
 }
 
 // , ServerInfo.storePeerIds.bind(ServerInfo));

@@ -179,7 +179,7 @@ class ExecuteCommand{
 
     public executeIfNotAlready(m : CommandBatch['commands'][0]){
         if(!this.executedCommands.has(m.id)){
-            // console.log(`Executing command with id ${m.id} in server ${ServerInfo.OWN_ID}`);
+            console.log(`Executing ${this.executedCommands.size + 1}th command: ${m.id} ${Date.now()}`);
             // write to file
             // fs.writeSync(this.file, `Executing command ${m.id}\n`);
             fs.writeSync(this.file, `${new Date().getTime()}\n`);
@@ -296,7 +296,7 @@ export class AleaBft{
 
 
         VCBCStore.onDecide = (cmdb)=>{
-            console.log(`Decided command batch with id ${cmdb.id} in server ${ServerInfo.OWN_ID}`);
+            // console.log(`Decided command batch with id ${cmdb.id} in server ${ServerInfo.OWN_ID}`);
             this.qManager.insert(cmdb.createdFrom, cmdb);
             if(this.acComponent.waiting && this.acComponent.waitingForServerId === cmdb.createdFrom && cmdb.priority === this.acComponent.waitingPriority){
                 this.acComponent.waiting = false;

@@ -7,6 +7,7 @@ import {MessageType, READY_MESSAGE} from './messageTypes';
 import {connectToPeers} from './connectToPeers';
 import {AleaBft, ClientCommand} from './aleaBft';
 import {cmdCountForThroughput, experimentMode} from "./ExpConfig";
+import { time } from 'console';
 
 const PORT = process.env.PORT || 3000;
 // const PEER_PORTS = process.env.PEER_PORTS ? process.env.PEER_PORTS.split(",") : []; // Comma-separated ports of peer servers
@@ -23,7 +24,6 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
     cors: {
         origin: "*",
-        methods: ["GET", "POST"]
     }
 });
 let commandCount = 0;
@@ -40,7 +40,7 @@ connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
                 command: `execute ${ServerInfo.OWN_ID}`,
                 id: `${ServerInfo.OWN_ID}_${commandCount++}`
             }
-            console.log(`New command id: ${command.id}`);
+            console.log(`command: ${command.id} ${Date.now()}`);
             alea.onReceiveCommand(command, () => {
             });
         }
