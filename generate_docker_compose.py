@@ -5,6 +5,9 @@ batchSize = int(sys.argv[2])
 totalCommands = int(sys.argv[3])
 groupSize = int(sys.argv[4])
 t = int(sys.argv[5])
+addMalice = int(sys.argv[6])
+
+print(f"N: {numberOfPortsTakenInExperiment} bs: {batchSize} tc: {totalCommands} gs: {groupSize} t: {t} addMalice: {addMalice}")
 
 commandsPerNode = totalCommands // numberOfPortsTakenInExperiment
 
@@ -23,6 +26,9 @@ PORTS = PORTS[:-1]
 with open(output_file, "w") as f:
     f.write("services:\n")
     for port in range(start_port, end_port + 1):
+        index = port - start_port
+        modulo = index % groupSize
+        malice = True if (modulo < t and addMalice != 0) else False
         service = f"""
   bft_server{port}:
     image: abdurrafi403/bft_server:latest
@@ -32,7 +38,7 @@ with open(output_file, "w") as f:
       - ALL_PORTS={PORTS}
       - OWN_ID={port - 3001}
       - FAIL=false
-      - MALICIOUS=false
+      - MALICIOUS={malice}
       - BATCH_SIZE={batchSize}
       - COMMAND_COUNT={commandsPerNode}
       - GROUP_SIZE={groupSize}
