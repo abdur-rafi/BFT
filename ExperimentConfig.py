@@ -11,7 +11,11 @@ expName = "alea_bft"    # Experiment name: alea_bft or grouped_bft
 
 grpSize = 4             # Group size (if experiment name is grouped_bft)
 
+faultName = ""          # "" or "fault" based on the experiment you want to run
+
 fileExtName = "_" + expName if expName == "alea_bft" else f"_{expName}_{grpSize}"
+
+fileExtName += "_fault" if faultName == "fault" else ""
 
 RandomPortCountForDelay = 512   # Change this to the number of random ports which should be multiple of BatchSize
 
