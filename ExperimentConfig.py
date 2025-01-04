@@ -1,21 +1,25 @@
 # number of ports taken for this experiment
-numberOfPortsTakenInExperiment = 32      # Change this to the number of ports you want to take for the experiment
+numberOfPortsTakenInExperiment = 32 # Change this to the number of ports you want to take for the experiment
 
 experimentMode = "Delay"  # Change this to "Throughput" or "Delay" based on the experiment you want to run
 
-experimentXAxis = "Nodes"  # Change this to "Nodes" or "BatchSize" based on the experiment you want to run
+experimentXAxis = "Nodes"      # Change this to "Nodes" or "BatchSize" based on the experiment you want to run
 
 BatchSize = 1
 
+folderPath = "F:/HISHAM_CSE  ASUS/MSc/CSE 6801/Project/BFT/logsMalice/"
+
 expName = "alea_bft"    # Experiment name: alea_bft or grouped_bft
 
-grpSize = 4             # Group size (if experiment name is grouped_bft)
+grpSize = 8             # Group size (if experiment name is grouped_bft)
 
-faultName = ""          # "" or "fault" based on the experiment you want to run
+faultName = "fault"          # "" or "fault" based on the experiment you want to run
 
 fileExtName = "_" + expName if expName == "alea_bft" else f"_{expName}_{grpSize}"
 
 fileExtName += "_fault" if faultName == "fault" else ""
+
+faultPorts = [3002,3003,3010,3011,3018,3019,3026,3027]   # which ports to fault if faultName is "fault"
 
 RandomPortCountForDelay = 512   # Change this to the number of random ports which should be multiple of BatchSize
 

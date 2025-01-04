@@ -1,7 +1,8 @@
-from ExperimentConfig import numberOfPortsTakenInExperiment, experimentXAxis, BatchSize, fileExtName
+from ExperimentConfig import (numberOfPortsTakenInExperiment, experimentXAxis, BatchSize, fileExtName,
+                              folderPath, faultPorts, faultName)
 import re
 
-folder = "F:/HISHAM_CSE  ASUS/MSc/CSE 6801/Project/BFT/logsCloudLab/" + str(numberOfPortsTakenInExperiment)
+folder = folderPath + "" + str(numberOfPortsTakenInExperiment)
 
 ports = [3002, 3003, 3004, 3005,
          3006, 3007, 3008, 3009,
@@ -39,7 +40,14 @@ def get_first_and_last_relevant_lines(file):
 def main():
     throughputs = []
 
-    for port in ports[:numberOfPortsTakenInExperiment]:
+    relevant_ports = ports[:numberOfPortsTakenInExperiment]
+
+    # Consider only the ports that are not faulty
+    if faultName == "fault":
+        good_ports = [port for port in relevant_ports if port not in faultPorts]
+        relevant_ports = good_ports
+
+    for port in relevant_ports:
         filename = f"{folder}/{port}_log.txt"
         first, last, cmdCount = get_first_and_last_relevant_lines(filename)
         first = int(first)

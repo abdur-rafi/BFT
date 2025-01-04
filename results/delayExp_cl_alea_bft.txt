@@ -1,32 +1,32 @@
 Total number of nodes: 4
-Average Delay: 47.7320135625 s
+Average Delay: 10.51919975 s
 
 
 Total number of nodes: 8
-Average Delay: 80.2058165 s
+Average Delay: 23.259091 s
 
 
 Total number of nodes: 12
-Average Delay: 118.67545148787198 s
+Average Delay: 46.19902291666667 s
 
 
 Total number of nodes: 16
-Average Delay: 152.49200393750002 s
+Average Delay: 76.3045559375 s
 
 
 Total number of nodes: 20
-Average Delay: 193.48535071875003 s
+Average Delay: 120.77352624999999 s
 
 
 Total number of nodes: 24
-Average Delay: 238.12880779569898 s
+Average Delay: 177.974832375 s
 
 
 Total number of nodes: 28
-Average Delay: 285.773833500125 s
+Average Delay: 249.7184559642857 s
 
 
 Total number of nodes: 32
-Average Delay: 335.13488715625 s
+Average Delay: 335.1500543125 s
 
 
