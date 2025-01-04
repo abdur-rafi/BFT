@@ -1,5 +1,4 @@
 import { Socket } from "socket.io";
-import {groupSize, numberOfPortsTakenInExperiment, t} from "./ExpConfig";
 import { AleaBft } from "./Alea/alea";
 import { exit } from "process";
 
@@ -7,7 +6,6 @@ let PORT = process.env.PORT;
 let ALL_PORTS = process.env.ALL_PORTS ? process.env.ALL_PORTS.split(",") : [];
 ALL_PORTS.sort();
 
-ALL_PORTS = ALL_PORTS.slice(0, numberOfPortsTakenInExperiment);
 let FAIL = process.env.FAIL == "true";
 let MALICIOUS = process.env.MALICIOUS == "true";
 
@@ -15,6 +13,20 @@ let MALICIOUS = process.env.MALICIOUS == "true";
 let batchSize = process.env.BATCH_SIZE;
 
 let cmdCount = process.env.COMMAND_COUNT;
+
+let groupSize = process.env.GROUP_SIZE;
+
+let t = process.env.t;
+
+if(!t){
+    console.error("No t provided");
+    process.exit(1);
+}
+
+if(!groupSize){
+    console.error("No group size provided");
+    process.exit(1);
+}
 
 if(!cmdCount){
     console.log("comd count not provided");
@@ -53,7 +65,7 @@ class ServerInfo{
     
     // own id is the index of the port in the ALL_PORTS sorted array
     public static OWN_ID : string = OWN_ID!;
-    public static t = t;
+    public static t = parseInt(t!);
     public static ALL_IDS : string[] = [OWN_ID];
     public static N = ALL_PORTS.length;
     
@@ -66,7 +78,7 @@ class ServerInfo{
     public static IS_MALICIOUS : boolean = MALICIOUS;
     public static OTHER_GROUP_LEADERS_IDS : string[] = [];
     
-    public static GROUP_SIZE : number = groupSize;
+    public static GROUP_SIZE : number = parseInt(groupSize!);
 
     public static OWN_GROUP_OTHERS_ROOM = "ownGroupOthers";
     public static OTHER_GROUP_LEADERS_ROOM = "otherGroupLeaders";

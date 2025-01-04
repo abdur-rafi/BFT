@@ -5,7 +5,6 @@ import {Server} from 'socket.io';
 import {ServerInfo} from './serverInfo';
 import {MessageType, READY_MESSAGE} from './messageTypes';
 import {connectToPeers} from './connectToPeers';
-import {cmdCountForThroughput, experimentMode} from "./ExpConfig";
 import { ioOps } from './ioOps';
 import { AleaBft } from './Alea/alea';
 import { ClientCommand } from './Alea/types';
@@ -29,8 +28,8 @@ ServerInfo.onReady =  (alea : AleaBft)=>{
     alea.startAgreementComponent();
 
     // -------------- For delay calculation, it is not needed --------------
-    if (experimentMode === "Throughput") {
-        for (let i = 0; i < cmdCountForThroughput; i++) {
+    // if (experimentMode === "Throughput") {
+        for (let i = 0; i < ServerInfo.commandCount; i++) {
             let command: ClientCommand = {
                 command: `execute ${ServerInfo.OWN_ID}`,
                 id: `${ServerInfo.OWN_ID}_${commandCount++}`
@@ -39,7 +38,7 @@ ServerInfo.onReady =  (alea : AleaBft)=>{
             alea.onReceiveCommand(command, () => {
             });
         }
-    }
+    // }
     // -------------- For delay calculation, it is not needed --------------
 
     app.get('/', (req, res)=>{

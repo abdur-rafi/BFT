@@ -1,0 +1,82 @@
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | 
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | > nodeimplementation@1.0.0 start
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | > ts-node src/index.ts
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | 
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | OWN_ID: 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Server is running on http://localhost:3003
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | own Id is 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3002: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3005: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3006: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3004: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3009: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3007: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3010: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3011: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3002: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3007: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3010: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3009: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3004: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3011: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3006: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3005: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3006: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3009: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3004: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3002: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3011: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3010: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3007: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3005: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3009: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3010: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3002: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3005: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3007: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3011: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3009: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3010: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3002: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3005: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3011: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3009: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3002: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3005: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3009: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3005: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Connection error for port 3009: xhr poll error
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | All peer servers connected
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | All ids: 0,1,2,3,4,5,6,7,8,9
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Not all peers connected or ready
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | {
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |   groupId: 0,
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |   groupSize: 5,
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |   ownGroupOthersIds: [ '0', '2', '3', '4' ],
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |   amILeader: true,
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |   otherGroupLeadersIds: [ '5', '6', '7' ],
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |   ownGroupIds: [ '0', '1', '2', '3', '4' ],
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |   allIds: [
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |     '0', '1', '2', '3',
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |     '4', '5', '6', '7',
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |     '8', '9'
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |   ],
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    |   ownGroupLeaderIds: [ '0', '1', '2' ]
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | }
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | All servers ready
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | command: 1_0 1735972893920
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Decided command batch with id 1-1 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Decided command batch with id 0-1 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Decided command batch with id 2-1 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Decided command batch with id 4-1 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Decided command batch with id 3-1 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Executing command with id 2_0 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Executing command with id 7_0 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Executing command with id 3_0 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Executing command with id 8_0 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Executing command with id 4_0 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Executing command with id 9_0 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Executing command with id 0_0 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Executing command with id 5_0 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Executing command with id 1_0 in server 1
+bft_bft_server3003.1.e3u6w818wcgm@abdur-rafi-Lenovo-ideapad-320-15IKB    | Executing command with id 6_0 in server 1

@@ -1,4 +1,3 @@
-import { BatchSize } from "../ExpConfig";
 import { ServerInfo } from "../serverInfo";
 import { VCBC } from "../VCBC/VCBCParty";
 import { VCBCStore } from "../VCBC/VCBCStore";
@@ -12,7 +11,7 @@ export class BroadCastComponent{
     public batch : ClientCommand[];
 
     constructor(){
-        this.batchSize = BatchSize;
+        this.batchSize = ServerInfo.BatchSize;
         this.priority = 0;
         this.ownIndex = serverIdToIndex(ServerInfo.OWN_ID);
         this.batch = [];

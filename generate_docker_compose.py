@@ -3,6 +3,8 @@ import sys
 numberOfPortsTakenInExperiment = int(sys.argv[1])
 batchSize = int(sys.argv[2])
 totalCommands = int(sys.argv[3])
+groupSize = int(sys.argv[4])
+t = int(sys.argv[5])
 
 commandsPerNode = totalCommands // numberOfPortsTakenInExperiment
 
@@ -23,7 +25,7 @@ with open(output_file, "w") as f:
     for port in range(start_port, end_port + 1):
         service = f"""
   bft_server{port}:
-    image: abdurrafi403/bft_server:latest
+    image: bft_server
     container_name: bft_server_{port}
     environment:
       - PORT={port}
@@ -33,6 +35,9 @@ with open(output_file, "w") as f:
       - MALICIOUS=false
       - BATCH_SIZE={batchSize}
       - COMMAND_COUNT={commandsPerNode}
+      - GROUP_SIZE={groupSize}
+      - t={t}
+
     ports:
       - "{port}:{port}"
 """
