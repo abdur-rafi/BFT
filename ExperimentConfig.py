@@ -1,11 +1,17 @@
 # number of ports taken for this experiment
-numberOfPortsTakenInExperiment = 4      # Change this to the number of ports you want to take for the experiment
+numberOfPortsTakenInExperiment = 32      # Change this to the number of ports you want to take for the experiment
 
-experimentMode = "Throughput"  # Change this to "Throughput" or "Delay" based on the experiment you want to run
+experimentMode = "Delay"  # Change this to "Throughput" or "Delay" based on the experiment you want to run
 
-experimentXAxis = "BatchSize"  # Change this to "Nodes" or "BatchSize" based on the experiment you want to run
+experimentXAxis = "Nodes"  # Change this to "Nodes" or "BatchSize" based on the experiment you want to run
 
 BatchSize = 1
+
+expName = "alea_bft"    # Experiment name: alea_bft or grouped_bft
+
+grpSize = 4             # Group size (if experiment name is grouped_bft)
+
+fileExtName = "_" + expName if expName == "alea_bft" else f"_{expName}_{grpSize}"
 
 RandomPortCountForDelay = 512   # Change this to the number of random ports which should be multiple of BatchSize
 

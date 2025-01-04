@@ -1,8 +1,7 @@
 import matplotlib.pyplot as plt
 import re
 
-from ExperimentConfig import experimentXAxis
-
+from ExperimentConfig import experimentXAxis, fileExtName
 
 # Function to parse the text file
 def parse_throughput_file(filePath):
@@ -28,7 +27,7 @@ def parse_throughput_file(filePath):
 if experimentXAxis == "Nodes":
 
     # File path
-    file_path = 'results/throughputExp.txt'
+    file_path = 'results/throughputExp_cl' + fileExtName + '.txt'
     # Parse the file
     nodes, _, throughput = parse_throughput_file(file_path)
 
@@ -48,7 +47,7 @@ if experimentXAxis == "Nodes":
     plt.legend(fontsize=12)
 
     # Save the plot as an image file
-    plt.savefig("results/throughput_vs_nodes.png", format='png', dpi=300)
+    plt.savefig("results/throughput_vs_nodes" + fileExtName + ".png", format='png', dpi=300)
 
     # Show the plot
     plt.show()
@@ -56,7 +55,7 @@ if experimentXAxis == "Nodes":
 elif experimentXAxis == "BatchSize":
 
     # File path
-    file_path = 'results/throughputExpBt.txt'
+    file_path = 'results/throughputExpBt_cl' + fileExtName + '.txt'
 
     # Parse the file
     _, batchSizes, throughput = parse_throughput_file(file_path)
@@ -77,7 +76,7 @@ elif experimentXAxis == "BatchSize":
     plt.legend(fontsize=12)
 
     # Save the plot as an image file
-    plt.savefig("results/throughput_vs_batchsize.png", format='png', dpi=300)
+    plt.savefig("results/throughput_vs_batchsize" + fileExtName + ".png" , format='png', dpi=300)
 
     # Show the plot
     plt.show()
