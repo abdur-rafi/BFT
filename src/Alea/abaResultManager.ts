@@ -84,11 +84,14 @@ class ABAResultManagerSingleRound{
     private roundNo : number;
     private consensusResults : (ABA_Result | null)[];
     private consensusReachedUpto : number;
+    private numberOfGroups : number;
+
     constructor(roundNo : number){
+        this.numberOfGroups = ServerInfo.N / ServerInfo.GROUP_SIZE;
         this.groupResultsManagers = [];
         this.roundNo = roundNo;
         this.consensusResults = [];
-        for(let i = 0; i < ServerInfo.GROUP_SIZE; i++){
+        for(let i = 0; i < this.numberOfGroups; i++){
             this.groupResultsManagers.push(new ABAReultManagerSingleRoundAndGroup(roundNo, i));
             this.consensusResults.push(null);
         }
@@ -98,7 +101,7 @@ class ABAResultManagerSingleRound{
     private onConsensusReachedOfGroup(groupNo : number){
         if(groupNo == this.consensusReachedUpto + 1){
             this.consensusReachedUpto++;
-            for(let i = this.consensusReachedUpto + 1; i < ServerInfo.GROUP_SIZE; i++){
+            for(let i = this.consensusReachedUpto + 1; i < this.numberOfGroups; i++){
                 if(this.consensusResults[i] === null){
                     return;
                 }

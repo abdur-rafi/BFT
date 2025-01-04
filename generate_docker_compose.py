@@ -25,7 +25,7 @@ with open(output_file, "w") as f:
     for port in range(start_port, end_port + 1):
         service = f"""
   bft_server{port}:
-    image: bft_server
+    image: abdurrafi403/bft_server:latest
     container_name: bft_server_{port}
     environment:
       - PORT={port}
