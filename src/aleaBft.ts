@@ -223,6 +223,9 @@ class AgreementComponent{
         this.roundNo++;
         let serverId = this.roundNoToServer();
         let propose : boolean = this.qManager.hasNextPriority(serverId);
+        if(ServerInfo.IS_MALICIOUS){
+            propose = !propose;
+        }
         // console.log(`Starting ABA for round ${this.roundNo} in server ${ServerInfo.OWN_ID}`);
         ABAStore.ABA_Start(propose, `${this.roundNo}`, (v)=>{
             // console.log(`ABA decided ${v} for round ${this.roundNo} in server ${ServerInfo.OWN_ID} to execute command of server ${serverId}`);

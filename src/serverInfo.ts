@@ -10,6 +10,9 @@ let batchSize = process.env.BATCH_SIZE;
 
 let cmdCount = process.env.COMMAND_COUNT;
 
+let MALICIOUS = process.env.MALICIOUS == "true";
+
+
 if(!cmdCount){
     console.log("comd count not provided");
     process.exit(1);
@@ -47,6 +50,8 @@ class ServerInfo{
     public static OWN_ID : string = OWN_ID!;
     public static t = Math.floor(ALL_PORTS.length / 3)
     public static ALL_IDS : string[] = []
+
+    public static IS_MALICIOUS : boolean = MALICIOUS;
     
     public static storePeerIds(peerId : string, socket : Socket) {
         this.PEER_IDS.push(peerId);

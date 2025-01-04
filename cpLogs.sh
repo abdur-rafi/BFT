@@ -19,9 +19,9 @@ for ((i=0; i<num_ports; i++))
 do
   # copy the commands file to the container
   # docker cp bft_server_${ports[i]}:/app/commands.txt ./commandsFile/commands_${ports[i]}.txt
-  mkdir -p logsCloudLab/$folder/
-  docker service logs bft_bft_server${ports[i]} > logsCloudLab/$folder/${ports[i]}_log.txt
-  wc -l logsCloudLab/$folder/${ports[i]}_log.txt
+  mkdir -p logsMalice/$folder/
+  docker service logs bft_bft_server${ports[i]} > logsMalice/$folder/${ports[i]}_log.txt
+  wc -l logsMalice/$folder/${ports[i]}_log.txt
 done
 
 
