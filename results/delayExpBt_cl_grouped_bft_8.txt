@@ -1,0 +1,20 @@
+Batch size: 1
+Average Delay: 24.391175812500002 s
+
+
+Batch size: 16
+Average Delay: 2.2365696875 s
+
+
+Batch size: 32
+Average Delay: 1.4926796875 s
+
+
+Batch size: 64
+Average Delay: 1.0761120625 s
+
+
+Batch size: 128
+Average Delay: 0.833483375 s
+
+
