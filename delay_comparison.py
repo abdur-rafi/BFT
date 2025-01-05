@@ -60,7 +60,6 @@ if __name__ == "__main__":
         "results/delayExp_cl_alea_bft.txt",
         "results/delayExp_cl_grouped_bft_4.txt",
         "results/delayExp_cl_grouped_bft_8.txt",
-        "results/delayExp_cl_grouped_bft_8_fault.txt"
     ]
 
     # Labels and colors for datasets

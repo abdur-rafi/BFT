@@ -1,13 +1,13 @@
 # number of ports taken for this experiment
-numberOfPortsTakenInExperiment = 16 # Change this to the number of ports you want to take for the experiment
+numberOfPortsTakenInExperiment = 32 # Change this to the number of ports you want to take for the experiment
 
-experimentMode = "Delay"  # Change this to "Throughput" or "Delay" based on the experiment you want to run
+experimentMode = "Throughput"  # Change this to "Throughput" or "Delay" based on the experiment you want to run
 
-experimentXAxis = "BatchSize"      # Change this to "Nodes" or "BatchSize" based on the experiment you want to run
+experimentXAxis = "Nodes"      # Change this to "Nodes" or "BatchSize" based on the experiment you want to run
 
-BatchSize = 128
+BatchSize = 1
 
-folderPath = "F:/HISHAM_CSE  ASUS/MSc/CSE 6801/Project/Grp-BFT/BFT/logbatch16/"
+folderPath = "F:/HISHAM_CSE  ASUS/MSc/CSE 6801/Project/Grp-BFT/BFT/logFail/"
 
 if experimentXAxis == "Nodes":
     folder = folderPath + "" + str(numberOfPortsTakenInExperiment)
@@ -18,7 +18,7 @@ expName = "grouped_bft"    # Experiment name: alea_bft or grouped_bft
 
 grpSize = 8             # Group size (if experiment name is grouped_bft)
 
-faultName = ""          # "" or "fault" based on the experiment you want to run
+faultName = "fault"          # "" or "fault" based on the experiment you want to run
 
 fileExtName = "_" + expName if expName == "alea_bft" else f"_{expName}_{grpSize}"
 
