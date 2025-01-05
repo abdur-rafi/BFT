@@ -1,0 +1,102 @@
+Step 1 (Only 1st time):
+
+chmod 400 bft-1_key.pem
+
+chmod 400 bft-2_key.pem
+
+chmod 400 bft-3_key.pem
+
+
+Step 2:
+
+ssh -i bft-1_key.pem azureuser@20.244.86.92
+
+ssh -i bft-2_key.pem azureuser@20.244.87.197
+
+ssh -i bft-3_key.pem azureuser@20.244.47.44
+
+ssh -i bft-4_key.pem azureuser@4.240.96.186
+
+ssh -i bft-5_key.pem azureuser@20.197.47.36
+
+ssh -i bft-6_key.pem azureuser@20.40.41.72
+
+ssh -i bft-7_key.pem azureuser@4.240.119.131
+
+ssh -i bft-8_key.pem azureuser@98.70.54.30
+
+ssh -i bft-9_key.pem azureuser@20.244.108.3
+
+ssh -i bft-10_key.pem azureuser@20.244.1.110
+
+ssh -i bft-11_key.pem azureuser@20.193.132.119
+
+ssh -i bft-12_key.pem azureuser@20.193.149.20
+
+ssh -i bft-13_key.pem azureuser@20.197.4.129
+
+ssh -i bft-14_key.pem azureuser@4.240.96.28
+
+ssh -i bft-15_key.pem azureuser@4.240.96.115
+
+ssh -i bft-15_key.pem azureuser@4.240.98.63
+
+azureuser@4.240.96.186
+azureuser-2@20.197.47.36
+
+Step 3 (Only 1st time):
+
+sudo apt update
+sudo apt install -y docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+
+
+Step 4 (Only 1st time):
+
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+Step 5 (for only the manager vm - bft-1):
+
+sudo chmod 666 /var/run/docker.sock
+
+docker swarm init --advertise-addr 20.244.86.92
+
+docker node ls
+
+Step 6 (all vms except swarm):
+
+sudo chmod 666 /var/run/docker.sock
+
+(first add the inbound rule for this port(2377) at least)
+
+sudo docker swarm join --advertise-addr 20.40.41.72 --token SWMTKN-1-3sq0xaqct1tpn6r245x22201y40pnfxt6bnp8s73q9wly2nm7r-4575kb7nothl1zo2l2vqg535u 20.244.86.92:2377
+
+docker swarm leave    (for leaving the swarm - if needed)
+
+
+Step 7 (manager vm):
+
+git clone https://github.com/abdur-rafi/BFT.git
+cd BFT
+
+docker build -t bft_server .
+
+docker stack deploy --compose-file docker-compose.yml bft
+
+docker stack services bft
+
+Step 8 (manager vm):
+
+Visualization
+
+docker run -it -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock dockersamples/visualizer
+
+now go to browser,
+
+http://20.244.86.92:8080
+
+
+
+

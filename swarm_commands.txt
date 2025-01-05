@@ -1,0 +1,19 @@
+docker stack deploy --compose-file docker-compose.yml --resolve-image always bft
+docker service logs -f bft_bft_server3005
+docker stack rm bft
+docker container prune -f
+docker build -t bft_server .
+docker stack ps bft
+
+
+docker tag bft_server docker.io/abdurrafi403/bft_server
+docker push docker.io/abdurrafi403/bft_server
+
+
+
+1735965271300
+1735964951636
+
+5271300
+4951636
+
