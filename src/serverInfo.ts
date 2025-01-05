@@ -6,8 +6,9 @@ let PORT = process.env.PORT;
 let ALL_PORTS = process.env.ALL_PORTS ? process.env.ALL_PORTS.split(",") : [];
 ALL_PORTS.sort();
 
-let FAIL = process.env.FAIL == "true";
-let MALICIOUS = process.env.MALICIOUS == "true";
+let FAIL = process.env.FAIL == "True";
+let MALICIOUS = process.env.MALICIOUS == "True";
+
 
 
 let batchSize = process.env.BATCH_SIZE;

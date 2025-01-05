@@ -25,47 +25,51 @@ let commandCount = 0;
 
 ServerInfo.onReady =  (alea : AleaBft)=>{
     console.log("All servers ready");
-    alea.startAgreementComponent();
+    console.log(`Malicious : ${ServerInfo.IS_MALICIOUS}`)
+    if(!ServerInfo.IS_MALICIOUS){
 
-    // -------------- For delay calculation, it is not needed --------------
-    // if (experimentMode === "Throughput") {
-        for (let i = 0; i < ServerInfo.commandCount; i++) {
-            let command: ClientCommand = {
-                command: `execute ${ServerInfo.OWN_ID}`,
-                id: `${ServerInfo.OWN_ID}_${commandCount++}`
+        alea.startAgreementComponent();
+    
+        // -------------- For delay calculation, it is not needed --------------
+        // if (experimentMode === "Throughput") {
+            for (let i = 0; i < ServerInfo.commandCount; i++) {
+                let command: ClientCommand = {
+                    command: `execute ${ServerInfo.OWN_ID}`,
+                    id: `${ServerInfo.OWN_ID}_${commandCount++}`
+                }
+                console.log(`command: ${command.id} ${Date.now()}`);
+                alea.onReceiveCommand(command, () => {
+                });
             }
-            console.log(`command: ${command.id} ${Date.now()}`);
-            alea.onReceiveCommand(command, () => {
+        // }
+        // -------------- For delay calculation, it is not needed --------------
+    
+        app.get('/', (req, res)=>{
+            let command : ClientCommand = {
+                command : `execute ${ServerInfo.OWN_ID}`,
+                id : `${ServerInfo.OWN_ID}_${commandCount++}`
+            }
+            console.log(`New command id: ${command.id}`);
+            alea.onReceiveCommand(command, ()=>{
+                res.status(200).end(`Command Sent to ${ServerInfo.OWN_ID}`);
             });
-        }
-    // }
-    // -------------- For delay calculation, it is not needed --------------
-
-    app.get('/', (req, res)=>{
-        let command : ClientCommand = {
-            command : `execute ${ServerInfo.OWN_ID}`,
-            id : `${ServerInfo.OWN_ID}_${commandCount++}`
-        }
-        console.log(`New command id: ${command.id}`);
-        alea.onReceiveCommand(command, ()=>{
-            res.status(200).end(`Command Sent to ${ServerInfo.OWN_ID}`);
+        })
+    
+        app.get('/flush', (req, res)=>{
+            alea.flushCommands();
+            res.status(200).end(`Flushed commands`);
         });
-    })
-
-    app.get('/flush', (req, res)=>{
-        alea.flushCommands();
-        res.status(200).end(`Flushed commands`);
-    });
-
-    app.get('/serverinfo', (req, res)=>{
-        res.status(200).json({
-            groupId : ServerInfo.OWN_GROUP_ID,
-            groupSize : ServerInfo.GROUP_SIZE,
-            ownGroupOthersIds : ServerInfo.OWN_GROUP_OTHERS_IDS,
-            amILeader : ServerInfo.AM_I_LEADER,
-            otherGroupLeadersIds : ServerInfo.OTHER_GROUP_LEADERS_IDS
-        });
-    })
+    
+        app.get('/serverinfo', (req, res)=>{
+            res.status(200).json({
+                groupId : ServerInfo.OWN_GROUP_ID,
+                groupSize : ServerInfo.GROUP_SIZE,
+                ownGroupOthersIds : ServerInfo.OWN_GROUP_OTHERS_IDS,
+                amILeader : ServerInfo.AM_I_LEADER,
+                otherGroupLeadersIds : ServerInfo.OTHER_GROUP_LEADERS_IDS
+            });
+        })
+    }
 }
 
 connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID);
