@@ -7,6 +7,7 @@ import { ABAStore } from './ABA';
 import { VCBCMessageType } from './VCBC/VCBCMessageTypes';
 import { VCBCStore } from './VCBC/VCBCStore';
 import { AgreementComponentMessageType, AleaBft, CommandBatch, FILL_GAP_MESSAGE, FILLER_MESSAGE } from './aleaBft';
+import { exit } from 'process';
 
 let readySevers = new Set<string>();
 
@@ -18,6 +19,7 @@ export function connectToPeers(
     // cb: (peerId: string, socket: Socket) => void 
 ) {
 
+    
     let alea = new AleaBft();  
     // const peerConnections: Record<string, Socket> = {};
 

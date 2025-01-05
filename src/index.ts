@@ -8,6 +8,7 @@ import {connectToPeers} from './connectToPeers';
 import {AleaBft, ClientCommand} from './aleaBft';
 import {cmdCountForThroughput, experimentMode} from "./ExpConfig";
 import { time } from 'console';
+import { exit } from 'process';
 
 const PORT = process.env.PORT || 3000;
 // const PEER_PORTS = process.env.PEER_PORTS ? process.env.PEER_PORTS.split(",") : []; // Comma-separated ports of peer servers
@@ -30,37 +31,49 @@ let commandCount = 0;
 
 connectToPeers(ServerInfo.PEER_PORTS, ServerInfo.OWN_ID, (alea : AleaBft)=>{
     // let alea = new AleaBft();  
+    
+    
+
     console.log("All servers ready");
-    alea.startAgreementComponent();
 
-    // -------------- For delay calculation, it is not needed --------------
-    if (experimentMode === "Throughput") {
-        for (let i = 0; i < cmdCountForThroughput; i++) {
-            let command: ClientCommand = {
-                command: `execute ${ServerInfo.OWN_ID}`,
-                id: `${ServerInfo.OWN_ID}_${commandCount++}`
+    console.log(`Serverinfo is malicious: ${ServerInfo.IS_MALICIOUS}`);
+    
+    // if(ServerInfo.IS_MALICIOUS){
+    //     while(true){}
+    // }
+    if(!ServerInfo.IS_MALICIOUS){
+
+        alea.startAgreementComponent();
+    
+        // -------------- For delay calculation, it is not needed --------------
+        if (experimentMode === "Throughput") {
+            for (let i = 0; i < cmdCountForThroughput; i++) {
+                let command: ClientCommand = {
+                    command: `execute ${ServerInfo.OWN_ID}`,
+                    id: `${ServerInfo.OWN_ID}_${commandCount++}`
+                }
+                console.log(`command: ${command.id} ${Date.now()}`);
+                alea.onReceiveCommand(command, () => {
+                });
             }
-            console.log(`command: ${command.id} ${Date.now()}`);
-            alea.onReceiveCommand(command, () => {
+        }
+        // -------------- For delay calculation, it is not needed --------------
+    
+        app.get('/', (req, res)=>{
+            let command : ClientCommand = {
+                command : `execute ${ServerInfo.OWN_ID}`,
+                id : `${ServerInfo.OWN_ID}_${commandCount++}`
+            }
+            console.log(`New command id: ${command.id}`);
+            alea.onReceiveCommand(command, ()=>{
+                res.status(200).end(`Command Sent to ${ServerInfo.OWN_ID}`);
             });
-        }
-    }
-    // -------------- For delay calculation, it is not needed --------------
-
-    app.get('/', (req, res)=>{
-        let command : ClientCommand = {
-            command : `execute ${ServerInfo.OWN_ID}`,
-            id : `${ServerInfo.OWN_ID}_${commandCount++}`
-        }
-        console.log(`New command id: ${command.id}`);
-        alea.onReceiveCommand(command, ()=>{
-            res.status(200).end(`Command Sent to ${ServerInfo.OWN_ID}`);
+        })
+        app.get('/flush', (req, res)=>{
+            alea.flushCommands();
+            res.status(200).end(`Flushed commands`);
         });
-    })
-    app.get('/flush', (req, res)=>{
-        alea.flushCommands();
-        res.status(200).end(`Flushed commands`);
-    });
+    }
 })
 
 export const allPeersRoom = "allPeers";

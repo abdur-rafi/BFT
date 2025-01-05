@@ -10,8 +10,10 @@ let batchSize = process.env.BATCH_SIZE;
 
 let cmdCount = process.env.COMMAND_COUNT;
 
-let MALICIOUS = process.env.MALICIOUS == "true";
+let MALICIOUS = process.env.MALICIOUS == "True";
 
+console.log(process.env);
+console.log(`Malicious : ${MALICIOUS}`)
 
 if(!cmdCount){
     console.log("comd count not provided");
