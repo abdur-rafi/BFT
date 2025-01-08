@@ -55,20 +55,39 @@ def plot_throughput_vs_nodes(filepaths, labels, colors, output_file):
     plt.show()
 
 
+# if __name__ == "__main__":
+#     # File paths to your throughput data files
+#     filepaths = [
+#         "results/throughputExp_cl_alea_bft.txt",
+#         "results/throughputExp_cl_grouped_bft_4.txt",
+#         "results/throughputExp_cl_grouped_bft_8.txt",
+#     ]
+#
+#     # Labels and colors for datasets
+#     labels = ["Alea BFT", "Grouped BFT (GrpSize - 4)", "Grouped BFT (GrpSize - 8)"]
+#     colors = ["blue", "green", "red"]
+#
+#     # File path to save the graph
+#     output_file = "results/throughput_vs_nodes_comparison.png"
+#
+#     # Plot the graph
+#     plot_throughput_vs_nodes(filepaths, labels, colors, output_file)
+
 if __name__ == "__main__":
     # File paths to your throughput data files
     filepaths = [
         "results/throughputExp_cl_alea_bft.txt",
-        "results/throughputExp_cl_grouped_bft_4.txt",
         "results/throughputExp_cl_grouped_bft_8.txt",
+        "results/throughputExp_cl_alea_bft_fault.txt",
+        "results/throughputExp_cl_grouped_bft_8_fault.txt",
     ]
 
     # Labels and colors for datasets
-    labels = ["Alea BFT", "Grouped BFT (GrpSize - 4)", "Grouped BFT (GrpSize - 8)"]
-    colors = ["blue", "green", "red"]
+    labels = ["Alea BFT", "Grouped BFT (GrpSize - 8)", "Alea BFT (With Fault)", "Grouped BFT (GrpSize - 8 With Fault)"]
+    colors = ["blue", "green", "red", "orange"]
 
     # File path to save the graph
-    output_file = "results/throughput_vs_nodes_comparison.png"
+    output_file = "results/throughput_vs_nodes_comparison_all.png"
 
     # Plot the graph
     plot_throughput_vs_nodes(filepaths, labels, colors, output_file)
