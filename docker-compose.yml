@@ -9,7 +9,7 @@ services:
       - OWN_ID=1
       - BATCH_SIZE=1
       - COMMAND_COUNT=1000
-      - MALICIOUS=True
+      - MALICIOUS=False
     ports:
       - "3002:3002"
 
@@ -22,7 +22,7 @@ services:
       - OWN_ID=2
       - BATCH_SIZE=1
       - COMMAND_COUNT=1000
-      - MALICIOUS=True
+      - MALICIOUS=False
     ports:
       - "3003:3003"
 
@@ -35,7 +35,7 @@ services:
       - OWN_ID=3
       - BATCH_SIZE=1
       - COMMAND_COUNT=1000
-      - MALICIOUS=True
+      - MALICIOUS=False
     ports:
       - "3004:3004"
 
@@ -48,7 +48,7 @@ services:
       - OWN_ID=4
       - BATCH_SIZE=1
       - COMMAND_COUNT=1000
-      - MALICIOUS=True
+      - MALICIOUS=False
     ports:
       - "3005:3005"
 
@@ -61,7 +61,7 @@ services:
       - OWN_ID=5
       - BATCH_SIZE=1
       - COMMAND_COUNT=1000
-      - MALICIOUS=True
+      - MALICIOUS=False
     ports:
       - "3006:3006"
 
@@ -74,7 +74,7 @@ services:
       - OWN_ID=6
       - BATCH_SIZE=1
       - COMMAND_COUNT=1000
-      - MALICIOUS=True
+      - MALICIOUS=False
     ports:
       - "3007:3007"
 
@@ -87,7 +87,7 @@ services:
       - OWN_ID=7
       - BATCH_SIZE=1
       - COMMAND_COUNT=1000
-      - MALICIOUS=True
+      - MALICIOUS=False
     ports:
       - "3008:3008"
 
@@ -100,7 +100,7 @@ services:
       - OWN_ID=8
       - BATCH_SIZE=1
       - COMMAND_COUNT=1000
-      - MALICIOUS=True
+      - MALICIOUS=False
     ports:
       - "3009:3009"
 
