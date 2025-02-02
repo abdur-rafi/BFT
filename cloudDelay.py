@@ -94,13 +94,13 @@ def main():
         print(f"Overall Average Delay: {overall_avg_delay / 1000} s")  # Convert to seconds
 
         if experimentXAxis == "Nodes":
-            with open("results/delayExp_cl" + fileExtName + ".txt", "a") as f:
+            with open("results/avg/delayExp_cl" + fileExtName + ".txt", "a") as f:
                 f.write(f"Total number of nodes: {numberOfPortsTakenInExperiment}\n")
                 f.write(f"Average Delay: {overall_avg_delay / 1000} s\n")
                 f.write("\n\n")
 
         elif experimentXAxis == "BatchSize":
-            with open("results/delayExpBt_cl" + fileExtName + ".txt", "a") as f:
+            with open("results/avg/delayExpBt_cl" + fileExtName + ".txt", "a") as f:
                 f.write(f"Batch size: {BatchSize}\n")
                 f.write(f"Average Delay: {overall_avg_delay / 1000} s\n")
                 f.write("\n\n")

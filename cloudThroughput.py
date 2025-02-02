@@ -12,6 +12,7 @@ ports = [3002, 3003, 3004, 3005,
          3030, 3031, 3032, 3033,]
 
 def get_first_and_last_relevant_lines(file):
+    print(f"Processing file: {file}")
     with open(file, 'r') as f:
         lines = f.readlines()
 
@@ -60,13 +61,13 @@ def main():
     print(f"Average throughput: {avgThroughput} commands per second")
 
     if experimentXAxis == "Nodes":
-        with open("results/throughputExp_cl" + fileExtName + ".txt", "a") as f:
+        with open("results/avg/throughputExp_cl" + fileExtName + ".txt", "a") as f:
             f.write(f"Total number of nodes: {numberOfPortsTakenInExperiment}\n")
             f.write(f"Average throughput: {avgThroughput} commands per second\n")
             f.write("\n\n")
 
     elif experimentXAxis == "BatchSize":
-        with open("results/throughputExpBt_cl" + fileExtName + ".txt", "a") as f:
+        with open("results/avg/throughputExpBt_cl" + fileExtName + ".txt", "a") as f:
             f.write(f"Batch size: {BatchSize}\n")
             f.write(f"Average throughput: {avgThroughput} commands per second\n")
             f.write("\n\n")

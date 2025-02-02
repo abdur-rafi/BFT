@@ -1,18 +1,25 @@
 # number of ports taken for this experiment
-numberOfPortsTakenInExperiment = 32 # Change this to the number of ports you want to take for the experiment
+numberOfPortsTakenInExperiment = 8 # Change this to the number of ports you want to take for the experiment
 
-experimentMode = "Delay"  # Change this to "Throughput" or "Delay" based on the experiment you want to run
+experimentMode = "Throughput"  # Change this to "Throughput" or "Delay" based on the experiment you want to run
 
 experimentXAxis = "Nodes"      # Change this to "Nodes" or "BatchSize" based on the experiment you want to run
 
 BatchSize = 128
 
-folderPath = "F:/HISHAM_CSE  ASUS/MSc/CSE 6801/Project/BFT/logsFail/"
+exp_no = "r1"
 
 if experimentXAxis == "Nodes":
-    folder = folderPath + "" + str(numberOfPortsTakenInExperiment)
+    folderPath = ("F:/HISHAM_CSE  ASUS/MSc/CSE 6801/Project/BFT/logsNew/alea_"
+                  + str(numberOfPortsTakenInExperiment) + "/" + exp_no + "/")
 else:
-    folder = folderPath + "" + str(BatchSize)
+    folderPath = ("F:/HISHAM_CSE  ASUS/MSc/CSE 6801/Project/BFT/logsNew/alea_16_bs_"
+                  + str(BatchSize) + "/" + exp_no + "/")
+
+# if experimentXAxis == "Nodes":
+#     folder = folderPath + "" + str(numberOfPortsTakenInExperiment)
+# else:
+#     folder = folderPath + "" + str(BatchSize)
 
 expName = "alea_bft"    # Experiment name: alea_bft or grouped_bft
 
@@ -23,6 +30,13 @@ faultName = "fault"          # "" or "fault" based on the experiment you want to
 fileExtName = "_" + expName if expName == "alea_bft" else f"_{expName}_{grpSize}"
 
 fileExtName += "_fault" if faultName == "fault" else ""
+
+folder = folderPath if faultName == "" else folderPath + "_f"
+
+exp_mode = "plot" # Change this to "plot" or "save" based on the experiment you want to run
+
+if exp_mode == "save":
+    fileExtName += "_" + exp_no
 
 faultPorts = [3002,3003,3004,3005,3006,3007,3008,3009]
     # ,3004,3005,3006,3007,3008,3009]   # which ports to fault if faultName is "fault"

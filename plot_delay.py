@@ -27,7 +27,7 @@ def parse_delay_file(filePath):
 
 if experimentXAxis == "Nodes":
     # File path for the delay experiment data
-    file_path = 'results/delayExp_cl' + fileExtName + '.txt'
+    file_path = 'results/avg/avg_delayExp_cl' + fileExtName + '.txt'
 
     # Parse the file
     nodes, _, delays = parse_delay_file(file_path)
@@ -48,14 +48,14 @@ if experimentXAxis == "Nodes":
     plt.legend(fontsize=12)
 
     # Save the plot as an image file
-    plt.savefig("results/delay_vs_nodes_cl" + fileExtName + ".png", format='png', dpi=300)
+    plt.savefig("results/avg/avg_delay_vs_nodes_cl" + fileExtName + ".png", format='png', dpi=300)
 
     # Show the plot
     plt.show()
 
 elif experimentXAxis == "BatchSize":
     # File path for the delay experiment data
-    file_path = 'results/delayExpBt_cl' + fileExtName + '.txt'
+    file_path = 'results/avg/avg_delayExpBt_cl' + fileExtName + '.txt'
 
     # Parse the file
     _, batchSizes, delays = parse_delay_file(file_path)
@@ -76,7 +76,7 @@ elif experimentXAxis == "BatchSize":
     plt.legend(fontsize=12)
 
     # Save the plot as an image file
-    plt.savefig("results/delay_vs_batch_size_cl" + fileExtName + ".png", format='png', dpi=300)
+    plt.savefig("results/avg/avg_delay_vs_batch_size_cl" + fileExtName + ".png", format='png', dpi=300)
 
     # Show the plot
     plt.show()

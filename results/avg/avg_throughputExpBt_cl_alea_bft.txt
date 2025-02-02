@@ -1,0 +1,15 @@
+Batch size: 1
+Average Throughput: 8661.560618 commands per second
+
+Batch size: 16
+Average Throughput: 22645.010061 commands per second
+
+Batch size: 32
+Average Throughput: 25143.514513 commands per second
+
+Batch size: 64
+Average Throughput: 25027.064855 commands per second
+
+Batch size: 128
+Average Throughput: 27582.106126 commands per second
+
