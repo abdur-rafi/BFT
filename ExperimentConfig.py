@@ -10,8 +10,9 @@ BatchSize = 1
 exp_no = "r3"
 
 if experimentXAxis == "Nodes":
-    folderPath = ("F:/HISHAM_CSE  ASUS/MSc/CSE 6801/Project/Grp-BFT/BFT/logs_new/grouped_bft_"
-                  + str(numberOfPortsTakenInExperiment) + "/" + exp_no + "/")
+    folderPath = ("F:/HISHAM_CSE  ASUS/MSc/CSE 6801/Project/Grp-BFT/BFT/logs_new/grouped_bft_32_gs_16"
+                  # + str(numberOfPortsTakenInExperiment)
+                  + "/" + exp_no + "/")
 else:
     folderPath = ("F:/HISHAM_CSE  ASUS/MSc/CSE 6801/Project/BFT/logsNew/alea_16_bs_"
                   + str(BatchSize) + "/" + exp_no + "/")
@@ -23,7 +24,7 @@ else:
 
 expName = "grouped_bft"    # Experiment name: alea_bft or grouped_bft
 
-grpSize = 8             # Group size (if experiment name is grouped_bft)
+grpSize = 16             # Group size (if experiment name is grouped_bft)
 
 faultName = ""          # "" or "fault" based on the experiment you want to run
 

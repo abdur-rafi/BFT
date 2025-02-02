@@ -73,17 +73,31 @@ def plot_delay_vs_nodes(filepaths, labels, colors, output_file):
 #     plot_delay_vs_nodes(filepaths, labels, colors, output_file)
 
 if __name__ == "__main__":
+    # # File paths to your delay data files
+    # filepaths = [
+    #     "results/delayExp_cl_alea_bft.txt",
+    #     "results/delayExp_cl_grouped_bft_8.txt",
+    #     "results/delayExp_cl_alea_bft_fault.txt",
+    #     "results/delayExp_cl_grouped_bft_8_fault.txt",
+    #     "results/delayExp_cl_grouped_bft_16.txt",
+    # ]
+    #
+    # # Labels and colors for datasets
+    # labels = ["Alea BFT", "Grouped BFT (GrpSize - 8)", "Alea BFT (With Fault)",
+    #           "Grouped BFT (GrpSize - 8 With Fault)", "Grouped BFT (GrpSize - 16)"]
+    # colors = ["red", "orange", "green", "blue", "purple"]
+
     # File paths to your delay data files
     filepaths = [
         "results/delayExp_cl_alea_bft.txt",
+        "results/delayExp_cl_grouped_bft_4.txt",
         "results/delayExp_cl_grouped_bft_8.txt",
-        "results/delayExp_cl_alea_bft_fault.txt",
-        "results/delayExp_cl_grouped_bft_8_fault.txt",
+        "results/delayExp_cl_grouped_bft_16.txt",
     ]
 
     # Labels and colors for datasets
-    labels = ["Alea BFT", "Grouped BFT (GrpSize - 8)", "Alea BFT (With Fault)", "Grouped BFT (GrpSize - 8 With Fault)"]
-    colors = ["red", "orange", "green", "blue"]
+    labels = ["Alea BFT", "Grouped BFT (GrpSize - 4)", "Grouped BFT (GrpSize - 8)", "Grouped BFT (GrpSize - 16)"]
+    colors = ["red", "green", "orange", "purple"]
 
     # File path to save the graph
     output_file = "results/delay_vs_nodes_comparison_all.png"

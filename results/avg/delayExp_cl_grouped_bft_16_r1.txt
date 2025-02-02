@@ -1,0 +1,8 @@
+Total number of nodes: 16
+Average Delay: 60.29449675 s
+
+
+Total number of nodes: 32
+Average Delay: 71.169473625 s
+
+

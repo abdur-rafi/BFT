@@ -1,7 +1,7 @@
 import re
 import numpy as np
 
-prefix = "delayExp_cl_grouped_bft_8"
+prefix = "delayExp_cl_grouped_bft_16"
 
 # Input files
 files = [
