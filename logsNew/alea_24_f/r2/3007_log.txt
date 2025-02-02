@@ -1,0 +1,123 @@
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | 
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | > nodeimplementation@1.0.0 start
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | > ts-node src/index.ts
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | 
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | {
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_config_user_agent: 'npm/10.9.2 node/v23.6.1 linux x64 workspaces/false',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   NODE_VERSION: '23.6.1',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   HOSTNAME: 'b7f9c2afffe8',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   COMMAND_COUNT: '1777',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   YARN_VERSION: '1.22.22',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_node_execpath: '/usr/local/bin/node',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   ALL_PORTS: '3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   SHLVL: '2',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_config_noproxy: '',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   PORT: '3007',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   HOME: '/root',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_package_json: '/app/package.json',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_config_userconfig: '/root/.npmrc',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_config_local_prefix: '/app',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   COLOR: '0',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_config_prefix: '/usr/local',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_config_npm_version: '10.9.2',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_config_cache: '/root/.npm',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_config_node_gyp: '/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   PATH: '/app/node_modules/.bin:/node_modules/.bin:/usr/local/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   NODE: '/usr/local/bin/node',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_package_name: 'nodeimplementation',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_lifecycle_script: 'ts-node src/index.ts',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   BATCH_SIZE: '1',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_package_version: '1.0.0',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_lifecycle_event: 'start',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   OWN_ID: '6',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_config_globalconfig: '/usr/local/etc/npmrc',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_config_init_module: '/root/.npm-init.js',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   PWD: '/app',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_execpath: '/usr/local/lib/node_modules/npm/bin/npm-cli.js',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_config_global_prefix: '/usr/local',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   npm_command: 'start',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   MALICIOUS: 'True',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   INIT_CWD: '/app',
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    |   EDITOR: 'vi'
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | }
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Malicious : true
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Server is running on http://localhost:3007
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | own Id is 6
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3003: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3004: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3005: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3008: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3009: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3010: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3011: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3013: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3014: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3016: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3019: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3020: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3021: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3022: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3025: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3002: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3023: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3024: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3009: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3014: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3019: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3013: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3004: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3003: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3008: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3005: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3022: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3020: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3024: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3021: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3002: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3011: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3010: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3016: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3023: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3025: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3014: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3013: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3021: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3003: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3005: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3024: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3004: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3016: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3009: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3008: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3010: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3019: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3025: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3020: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3022: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3011: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3021: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3014: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3013: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3009: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3003: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3004: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3005: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3025: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3016: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3019: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3011: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3022: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3021: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3014: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3009: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3003: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3004: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3019: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3022: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3021: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Connection error for port 3004: xhr poll error
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | All peer servers connected
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | All ids: 1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,3,4,5,6,7,8,9
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | All servers ready
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Serverinfo is malicious: true
+bft_bft_server3007.1.0ivzmye0xglz@node7.arafi-239826.msc6801project.emulab.net    | Received fill gap message for 17  by 9

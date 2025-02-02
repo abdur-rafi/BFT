@@ -6,8 +6,11 @@ totalCommands = int(sys.argv[3])
 t = int(sys.argv[4])
 addMalice = int(sys.argv[5])
 
+division = numberOfPortsTakenInExperiment
+if addMalice != 0:
+    division -= t
 
-commandsPerNode = (totalCommands // numberOfPortsTakenInExperiment)
+commandsPerNode = (totalCommands // (division))
 commandsPerNode -= commandsPerNode % batchSize
 
 print(f"N: {numberOfPortsTakenInExperiment} bs: {batchSize} tc: {totalCommands} t: {t} addMalice: {addMalice}")

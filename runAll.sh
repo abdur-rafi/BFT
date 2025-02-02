@@ -25,8 +25,31 @@
 # bash runStartAndEnd.sh 24 1 32000 7 0 ./logsNew/alea_24/r3 15m
 
 
-bash runStartAndEnd.sh 32 1 32000 10 0 ./logsNew/alea_32/r1 15m
-sleep 10s
-bash runStartAndEnd.sh 32 1 32000 10 0 ./logsNew/alea_32/r2 15m
-sleep 10s
-bash runStartAndEnd.sh 32 1 32000 10 0 ./logsNew/alea_32/r3 15m
+# bash runStartAndEnd.sh 32 1 32000 10 0 ./logsNew/alea_32/r1 15m
+# sleep 10s
+# bash runStartAndEnd.sh 32 1 32000 10 0 ./logsNew/alea_32/r2 15m
+# sleep 10s
+# bash runStartAndEnd.sh 32 1 32000 10 0 ./logsNew/alea_32/r3 15m
+
+
+# bash runStartAndEnd.sh 32 1 32000 8 1 ./logsNew/alea_32_f/r1 15m
+# sleep 10s
+# bash runStartAndEnd.sh 32 1 32000 8 1 ./logsNew/alea_32_f/r2 15m
+# sleep 10s
+# bash runStartAndEnd.sh 32 1 32000 8 1 ./logsNew/alea_32_f/r3 15m
+
+
+# bash runStartAndEnd.sh 24 1 32000 6 1 ./logsNew/alea_24_f/r1 15m
+# sleep 10s
+# bash runStartAndEnd.sh 24 1 32000 6 1 ./logsNew/alea_24_f/r2 15m
+# sleep 10s
+# bash runStartAndEnd.sh 24 1 32000 6 1 ./logsNew/alea_24_f/r3 15m
+
+N=16
+T=4
+BS=128
+F=0
+for i in {1..3}; do
+    bash runStartAndEnd.sh $N $BS 32000 $T $F ./logsNew/alea_${N}_bs_${BS}/r${i} 5m
+    sleep 10s
+done
