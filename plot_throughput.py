@@ -19,7 +19,7 @@ def parse_throughput_file(filePath):
             elif "Batch size" in line:
                 batchSizes.append(int(re.search(r'\d+', line).group()))
             # Extract "Average throughput" values
-            elif "Average throughput" in line:
+            elif "Average throughput" in line or "Average Throughput" in line:
                 thrput.append(float(re.search(r'\d+\.\d+', line).group()))
 
     return numberOfNodes, batchSizes, thrput
@@ -27,9 +27,11 @@ def parse_throughput_file(filePath):
 if experimentXAxis == "Nodes":
 
     # File path
-    file_path = 'results/throughputExp_cl' + fileExtName + '.txt'
+    file_path = 'results/avg/avg_throughputExp_cl' + fileExtName + '.txt'
     # Parse the file
     nodes, _, throughput = parse_throughput_file(file_path)
+
+    print(nodes, throughput)
 
     # Plotting the graph
     plt.figure(figsize=(10, 6))
@@ -47,7 +49,7 @@ if experimentXAxis == "Nodes":
     plt.legend(fontsize=12)
 
     # Save the plot as an image file
-    plt.savefig("results/throughput_vs_nodes" + fileExtName + ".png", format='png', dpi=300)
+    plt.savefig("results/avg/avg_throughput_vs_nodes" + fileExtName + ".png", format='png', dpi=300)
 
     # Show the plot
     plt.show()
@@ -55,7 +57,7 @@ if experimentXAxis == "Nodes":
 elif experimentXAxis == "BatchSize":
 
     # File path
-    file_path = 'results/throughputExpBt_cl' + fileExtName + '.txt'
+    file_path = 'results/avg/avg_throughputExpBt_cl' + fileExtName + '.txt'
 
     # Parse the file
     _, batchSizes, throughput = parse_throughput_file(file_path)
@@ -76,7 +78,7 @@ elif experimentXAxis == "BatchSize":
     plt.legend(fontsize=12)
 
     # Save the plot as an image file
-    plt.savefig("results/throughput_vs_batchsize" + fileExtName + ".png" , format='png', dpi=300)
+    plt.savefig("results/avg/avg_throughput_vs_batchsize" + fileExtName + ".png" , format='png', dpi=300)
 
     # Show the plot
     plt.show()
