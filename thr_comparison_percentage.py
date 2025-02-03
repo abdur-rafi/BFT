@@ -76,30 +76,14 @@ def plot_throughput_vs_nodes(filepaths, labels, colors, output_file):
 
     # Calculate percentage contributions relative to Alea BFT, considering only common nodes
     alea_data = all_data[0]
-    grp_bft_4_data = all_data[1]
-    grp_bft_8_data = all_data[2]
-    grp_bft_16_data = all_data[3]
+    grp_bft_8_data = all_data[1]
+    grp_bft_16_data = all_data[2]
 
-    perc_contrib_grp4, alea_indices_grp4, grp4_indices = calculate_percentage_contributions_relative_to_alea(
-        alea_data, grp_bft_4_data
-    )
     perc_contrib_grp8, alea_indices_grp8, grp8_indices = calculate_percentage_contributions_relative_to_alea(
         alea_data, grp_bft_8_data
     )
     perc_contrib_grp16, alea_indices_grp16, grp16_indices = calculate_percentage_contributions_relative_to_alea(
         alea_data, grp_bft_16_data
-    )
-
-    # Find the highest percentage contribution for GrpSize 4 (excluding initial nodes)
-    highest_grp4_idx = perc_contrib_grp4.index(max(perc_contrib_grp4))
-    alea_grp4_node = alea_data["nodes"][alea_indices_grp4[highest_grp4_idx]]
-    grp4_value = grp_bft_4_data["throughput"][grp4_indices[highest_grp4_idx]]
-    plt.annotate(
-        f"Grp4 High: {max(perc_contrib_grp4):.2f}%",
-        xy=(alea_grp4_node, grp4_value),
-        xytext=(alea_grp4_node + 1, grp4_value * 1.1),
-        arrowprops=dict(facecolor="orange", arrowstyle="->"),
-        fontsize=10,
     )
 
     # Find the highest percentage contribution for GrpSize 8 (excluding initial nodes)
@@ -162,17 +146,16 @@ if __name__ == "__main__":
     # File paths to your throughput data files
     filepaths = [
         "results/throughputExp_cl_alea_bft.txt",
-        "results/throughputExp_cl_grouped_bft_4.txt",
         "results/throughputExp_cl_grouped_bft_8.txt",
         "results/throughputExp_cl_grouped_bft_16.txt",
     ]
 
     # Labels and colors for datasets
-    labels = ["Alea BFT", "Grouped BFT (GrpSize - 4)", "Grouped BFT (GrpSize - 8)", "Grouped BFT (GrpSize - 16)"]
-    colors = ["blue", "green", "orange", "purple"]
+    labels = ["Alea BFT", "Grouped BFT (GrpSize - 8)", "Grouped BFT (GrpSize - 16)"]
+    colors = ["blue", "orange", "purple"]
 
     # File path to save the graph
-    output_file = "results/throughput_vs_nodes_%_comparison.png"
+    output_file = "results/throughput_vs_nodes_%_comparison_no_fault.png"
 
     # Plot the graph
     plot_throughput_vs_nodes(filepaths, labels, colors, output_file)

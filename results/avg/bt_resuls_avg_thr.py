@@ -2,7 +2,7 @@ import os
 import re
 import numpy as np
 
-prefix = "throughputExpBt_cl_alea_bft"
+prefix = "throughputExpBt_cl_grouped_bft_16"
 
 # Input files
 files = [

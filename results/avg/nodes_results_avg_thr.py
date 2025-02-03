@@ -1,7 +1,7 @@
 import re
 import numpy as np
 
-prefix = "throughputExp_cl_grouped_bft_16"
+prefix = "throughputExp_cl_grouped_bft_8_fault"
 
 # Input files
 files = [

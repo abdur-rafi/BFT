@@ -80,15 +80,6 @@ def plot_delay_vs_nodes(filepaths, labels, colors, output_file):
         fontsize=10,
     )
 
-    # # Annotate lowest difference
-    # plt.annotate(
-    #     f"Lowest Diff: {lowest_diff[1]:.2f}%",
-    #     xy=(nodes[lowest_index], delays1[lowest_index]),
-    #     xytext=(nodes[lowest_index] + 2, delays1[lowest_index] * 1.1),
-    #     arrowprops=dict(facecolor="black", arrowstyle="->"),
-    #     fontsize=10,
-    # )
-
     # Apply logarithmic scale to y-axis
     plt.yscale("log")
 
@@ -127,17 +118,16 @@ if __name__ == "__main__":
     # File paths to your delay data files
     filepaths = [
         "results/delayExp_cl_alea_bft.txt",
-        "results/delayExp_cl_grouped_bft_4.txt",
         "results/delayExp_cl_grouped_bft_8.txt",
         "results/delayExp_cl_grouped_bft_16.txt",
     ]
 
     # Labels and colors for datasets
-    labels = ["Alea BFT", "Grouped BFT (GrpSize - 4)", "Grouped BFT (GrpSize - 8)", "Grouped BFT (GrpSize - 16)"]
-    colors = ["red", "green", "orange", "purple"]
+    labels = ["Alea BFT", "Grouped BFT (GrpSize - 8)", "Grouped BFT (GrpSize - 16)"]
+    colors = ["red", "green", "orange"]
 
     # File path to save the graph
-    output_file = "results/delay_vs_nodes_comparison_percentage.png"
+    output_file = "results/delay_vs_nodes_comparison_percentage_no_fault.png"
 
     # Plot the graph
     plot_delay_vs_nodes(filepaths, labels, colors, output_file)
