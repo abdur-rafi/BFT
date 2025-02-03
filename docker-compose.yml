@@ -5,12 +5,12 @@ services:
     container_name: bft_server_3002
     environment:
       - PORT=3002
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=1
       - FAIL=false
-      - MALICIOUS=True
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - MALICIOUS=False
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -22,12 +22,12 @@ services:
     container_name: bft_server_3003
     environment:
       - PORT=3003
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=2
       - FAIL=false
-      - MALICIOUS=True
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - MALICIOUS=False
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -39,12 +39,12 @@ services:
     container_name: bft_server_3004
     environment:
       - PORT=3004
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=3
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -56,12 +56,12 @@ services:
     container_name: bft_server_3005
     environment:
       - PORT=3005
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=4
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -73,12 +73,12 @@ services:
     container_name: bft_server_3006
     environment:
       - PORT=3006
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=5
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -90,12 +90,12 @@ services:
     container_name: bft_server_3007
     environment:
       - PORT=3007
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=6
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -107,12 +107,12 @@ services:
     container_name: bft_server_3008
     environment:
       - PORT=3008
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=7
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -124,12 +124,12 @@ services:
     container_name: bft_server_3009
     environment:
       - PORT=3009
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=8
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -141,12 +141,12 @@ services:
     container_name: bft_server_3010
     environment:
       - PORT=3010
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=9
       - FAIL=false
-      - MALICIOUS=True
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - MALICIOUS=False
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -158,12 +158,12 @@ services:
     container_name: bft_server_3011
     environment:
       - PORT=3011
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=10
       - FAIL=false
-      - MALICIOUS=True
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - MALICIOUS=False
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -175,12 +175,12 @@ services:
     container_name: bft_server_3012
     environment:
       - PORT=3012
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=11
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -192,12 +192,12 @@ services:
     container_name: bft_server_3013
     environment:
       - PORT=3013
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=12
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -209,12 +209,12 @@ services:
     container_name: bft_server_3014
     environment:
       - PORT=3014
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=13
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -226,12 +226,12 @@ services:
     container_name: bft_server_3015
     environment:
       - PORT=3015
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=14
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -243,12 +243,12 @@ services:
     container_name: bft_server_3016
     environment:
       - PORT=3016
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=15
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
@@ -260,286 +260,14 @@ services:
     container_name: bft_server_3017
     environment:
       - PORT=3017
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
+      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017
       - OWN_ID=16
       - FAIL=false
       - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
+      - BATCH_SIZE=128
+      - COMMAND_COUNT=1920
       - GROUP_SIZE=8
       - t=2
 
     ports:
       - "3017:3017"
-
-  bft_server3018:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3018
-    environment:
-      - PORT=3018
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=17
-      - FAIL=false
-      - MALICIOUS=True
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3018:3018"
-
-  bft_server3019:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3019
-    environment:
-      - PORT=3019
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=18
-      - FAIL=false
-      - MALICIOUS=True
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3019:3019"
-
-  bft_server3020:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3020
-    environment:
-      - PORT=3020
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=19
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3020:3020"
-
-  bft_server3021:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3021
-    environment:
-      - PORT=3021
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=20
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3021:3021"
-
-  bft_server3022:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3022
-    environment:
-      - PORT=3022
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=21
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3022:3022"
-
-  bft_server3023:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3023
-    environment:
-      - PORT=3023
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=22
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3023:3023"
-
-  bft_server3024:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3024
-    environment:
-      - PORT=3024
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=23
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3024:3024"
-
-  bft_server3025:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3025
-    environment:
-      - PORT=3025
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=24
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3025:3025"
-
-  bft_server3026:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3026
-    environment:
-      - PORT=3026
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=25
-      - FAIL=false
-      - MALICIOUS=True
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3026:3026"
-
-  bft_server3027:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3027
-    environment:
-      - PORT=3027
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=26
-      - FAIL=false
-      - MALICIOUS=True
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3027:3027"
-
-  bft_server3028:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3028
-    environment:
-      - PORT=3028
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=27
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3028:3028"
-
-  bft_server3029:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3029
-    environment:
-      - PORT=3029
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=28
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3029:3029"
-
-  bft_server3030:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3030
-    environment:
-      - PORT=3030
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=29
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3030:3030"
-
-  bft_server3031:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3031
-    environment:
-      - PORT=3031
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=30
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3031:3031"
-
-  bft_server3032:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3032
-    environment:
-      - PORT=3032
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=31
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3032:3032"
-
-  bft_server3033:
-    image: abdurrafi403/bft_server:latest
-    container_name: bft_server_3033
-    environment:
-      - PORT=3033
-      - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
-      - OWN_ID=32
-      - FAIL=false
-      - MALICIOUS=False
-      - BATCH_SIZE=1
-      - COMMAND_COUNT=1333
-      - GROUP_SIZE=8
-      - t=2
-
-    ports:
-      - "3033:3033"
