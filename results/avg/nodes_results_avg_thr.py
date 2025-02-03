@@ -1,7 +1,7 @@
 import re
 import numpy as np
 
-prefix = "throughputExp_cl_alea_bft"
+prefix = "throughputExp_cl_alea_bft_fault"
 
 # Input files
 files = [

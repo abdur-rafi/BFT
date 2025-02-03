@@ -1,0 +1,14 @@
+Total number of nodes: 8
+Average throughput: 12321.732253061835 commands per second
+
+
+Total number of nodes: 16
+Average throughput: 9417.753174346124 commands per second
+
+
+Total number of nodes: 24
+Average throughput: 7563.519215708225 commands per second
+
+
+Total number of nodes: 32
+Average throughput: 6421.117869642919 commands per second
