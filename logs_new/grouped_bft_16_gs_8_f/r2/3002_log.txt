@@ -1,0 +1,35 @@
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | 
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | > nodeimplementation@1.0.0 start
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | > ts-node src/index.ts
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | 
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | OWN_ID: 0
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | Server is running on http://localhost:3002
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | own Id is 0
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | Not all peers connected or ready
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | All peer servers connected
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | All ids: 0,1,10,11,12,13,14,15,2,3,4,5,6,7,8,9
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | {
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |   groupId: 0,
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |   groupSize: 8,
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |   ownGroupOthersIds: [
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |     '1', '2', '3',
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |     '4', '5', '6',
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |     '7'
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |   ],
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |   amILeader: true,
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |   otherGroupLeadersIds: [ '8', '9', '10', '11', '12' ],
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |   ownGroupIds: [
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |     '0', '1', '2',
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |     '3', '4', '5',
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |     '6', '7'
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |   ],
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |   allIds: [
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |     '0',  '1',  '10', '11',
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |     '12', '13', '14', '15',
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |     '2',  '3',  '4',  '5',
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |     '6',  '7',  '8',  '9'
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |   ],
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    |   ownGroupLeaderIds: [ '0', '1', '2', '3', '4' ]
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | }
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | All servers ready
+bft_bft_server3002.1.8ple8bugdbl9@node13.arafi-239826.msc6801project.emulab.net    | Malicious : true

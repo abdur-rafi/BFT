@@ -1,0 +1,100 @@
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | 
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | > nodeimplementation@1.0.0 start
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | > ts-node src/index.ts
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | 
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | OWN_ID: 8
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Server is running on http://localhost:3010
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | own Id is 8
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3003: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3009: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3011: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3012: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3013: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3017: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3019: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3020: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3021: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3024: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3025: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3026: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3028: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3031: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3004: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3006: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3007: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3030: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3003: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3017: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3030: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3020: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3011: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3019: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3007: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3026: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3013: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3012: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3031: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3021: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3025: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3009: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3024: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3028: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3003: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3011: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3017: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3020: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3026: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3031: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3019: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3012: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3025: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3021: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3009: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3028: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3013: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3024: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3003: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3031: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3012: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3013: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3025: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3026: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3011: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3020: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3031: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Connection error for port 3012: xhr poll error
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | All peer servers connected
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | All ids: 0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,4,5,6,7,8,9
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Not all peers connected or ready
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | {
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   groupId: 1,
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   groupSize: 8,
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   ownGroupOthersIds: [
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '9',  '10', '11',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '12', '13', '14',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '15'
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   ],
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   amILeader: true,
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   otherGroupLeadersIds: [
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '0',  '1',  '2',  '3',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '4',  '16', '17', '18',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '19', '20', '24', '25',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '26', '27', '28'
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   ],
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   ownGroupIds: [
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '10', '11', '12',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '13', '14', '15',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '8',  '9'
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   ],
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   allIds: [
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '0',  '1',  '10', '11', '12', '13',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '14', '15', '16', '17', '18', '19',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '2',  '20', '21', '22', '23', '24',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '25', '26', '27', '28', '29', '3',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '30', '31', '4',  '5',  '6',  '7',
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |     '8',  '9'
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   ],
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    |   ownGroupLeaderIds: [ '10', '11', '12', '8', '9' ]
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | }
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | All servers ready
+bft_bft_server3010.1.ficmwoeblwyg@node0.arafi-239826.msc6801project.emulab.net    | Malicious : true

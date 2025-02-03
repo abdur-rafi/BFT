@@ -9,7 +9,12 @@ addMalice = int(sys.argv[6])
 
 print(f"N: {numberOfPortsTakenInExperiment} bs: {batchSize} tc: {totalCommands} gs: {groupSize} t: {t} addMalice: {addMalice}")
 
-commandsPerNode = (totalCommands // numberOfPortsTakenInExperiment)
+divide = numberOfPortsTakenInExperiment
+
+if addMalice != 0:
+    divide -= (numberOfPortsTakenInExperiment // groupSize) * t
+
+commandsPerNode = (totalCommands // divide)
 commandsPerNode -= commandsPerNode % batchSize
 
 

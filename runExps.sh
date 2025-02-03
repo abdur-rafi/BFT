@@ -11,7 +11,7 @@ run_experiment() {
     echo "Starting experiment with parameters: N=$N, BS=$BS, GS=$GS, T=$T, F=$F, Run Label=$run_label"
     bash startExp.sh $N $BS 32000 $GS $T $F
     sleep 4m
-    bash endExp.sh $N ./logs_new/grouped_bft_${N}_gs_16/$run_label
+    bash endExp.sh $N ./logs_new/grouped_bft_${N}_gs_8_f/$run_label
     sleep 10s
 }
 
@@ -36,10 +36,12 @@ main() {
 # GS=8
 
 # main $N $BS $F $T $GS
-# main 8 1 0 2 8 
-# main 16 1 0 2 8 
+# main 8 1 1 2 8 
 # sleep 10s
-# main 24 1 0 2 8 
-# main 32 1 0 2 8 
+# main 16 1 1 2 8 
+# sleep 10s
+main 24 1 1 2 8 
+sleep 10s
+main 32 1 1 2 8 
 # main 16 1 0 4 16 
-main 32 1 0 4 16 
+# main 32 1 0 4 16 

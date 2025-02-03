@@ -8,11 +8,11 @@ services:
       - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
       - OWN_ID=1
       - FAIL=false
-      - MALICIOUS=False
+      - MALICIOUS=True
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3002:3002"
@@ -25,11 +25,11 @@ services:
       - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
       - OWN_ID=2
       - FAIL=false
-      - MALICIOUS=False
+      - MALICIOUS=True
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3003:3003"
@@ -44,9 +44,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3004:3004"
@@ -61,9 +61,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3005:3005"
@@ -78,9 +78,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3006:3006"
@@ -95,9 +95,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3007:3007"
@@ -112,9 +112,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3008:3008"
@@ -129,9 +129,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3009:3009"
@@ -144,11 +144,11 @@ services:
       - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
       - OWN_ID=9
       - FAIL=false
-      - MALICIOUS=False
+      - MALICIOUS=True
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3010:3010"
@@ -161,11 +161,11 @@ services:
       - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
       - OWN_ID=10
       - FAIL=false
-      - MALICIOUS=False
+      - MALICIOUS=True
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3011:3011"
@@ -180,9 +180,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3012:3012"
@@ -197,9 +197,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3013:3013"
@@ -214,9 +214,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3014:3014"
@@ -231,9 +231,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3015:3015"
@@ -248,9 +248,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3016:3016"
@@ -265,9 +265,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3017:3017"
@@ -280,11 +280,11 @@ services:
       - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
       - OWN_ID=17
       - FAIL=false
-      - MALICIOUS=False
+      - MALICIOUS=True
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3018:3018"
@@ -297,11 +297,11 @@ services:
       - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
       - OWN_ID=18
       - FAIL=false
-      - MALICIOUS=False
+      - MALICIOUS=True
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3019:3019"
@@ -316,9 +316,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3020:3020"
@@ -333,9 +333,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3021:3021"
@@ -350,9 +350,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3022:3022"
@@ -367,9 +367,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3023:3023"
@@ -384,9 +384,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3024:3024"
@@ -401,9 +401,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3025:3025"
@@ -416,11 +416,11 @@ services:
       - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
       - OWN_ID=25
       - FAIL=false
-      - MALICIOUS=False
+      - MALICIOUS=True
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3026:3026"
@@ -433,11 +433,11 @@ services:
       - ALL_PORTS=3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033
       - OWN_ID=26
       - FAIL=false
-      - MALICIOUS=False
+      - MALICIOUS=True
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3027:3027"
@@ -452,9 +452,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3028:3028"
@@ -469,9 +469,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3029:3029"
@@ -486,9 +486,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3030:3030"
@@ -503,9 +503,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3031:3031"
@@ -520,9 +520,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3032:3032"
@@ -537,9 +537,9 @@ services:
       - FAIL=false
       - MALICIOUS=False
       - BATCH_SIZE=1
-      - COMMAND_COUNT=1000
-      - GROUP_SIZE=16
-      - t=4
+      - COMMAND_COUNT=1333
+      - GROUP_SIZE=8
+      - t=2
 
     ports:
       - "3033:3033"
