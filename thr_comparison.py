@@ -74,33 +74,33 @@ def plot_throughput_vs_nodes(filepaths, labels, colors, output_file):
 #     plot_throughput_vs_nodes(filepaths, labels, colors, output_file)
 
 if __name__ == "__main__":
-    # File paths to your throughput data files
-    filepaths = [
-        "results/throughputExp_cl_alea_bft.txt",
-        "results/throughputExp_cl_grouped_bft_8.txt",
-        "results/throughputExp_cl_grouped_bft_16.txt",
-        "results/throughputExp_cl_alea_bft_fault.txt",
-        "results/throughputExp_cl_grouped_bft_8_fault.txt",
-    ]
-
-    # Labels and colors for datasets
-    labels = ["Alea BFT", "Grouped BFT (GrpSize - 8)", "Grouped BFT (GrpSize - 16)",
-              "Alea BFT (With Fault)", "Grouped BFT (GrpSize - 8 With Fault)"]
-    colors = ["blue", "green", "red", "orange", "purple"]
-
     # # File paths to your throughput data files
     # filepaths = [
     #     "results/throughputExp_cl_alea_bft.txt",
     #     "results/throughputExp_cl_grouped_bft_8.txt",
     #     "results/throughputExp_cl_grouped_bft_16.txt",
+    #     "results/throughputExp_cl_alea_bft_fault.txt",
+    #     "results/throughputExp_cl_grouped_bft_8_fault.txt",
     # ]
     #
     # # Labels and colors for datasets
-    # labels = ["Alea BFT", "Grouped BFT (GrpSize - 8)", "Grouped BFT (GrpSize - 16)"]
-    # colors = ["blue", "orange", "purple"]
+    # labels = ["Alea BFT", "Hierarchical BFT (GrpSize - 8)", "Hierarchical BFT (GrpSize - 16)",
+    #           "Alea BFT (With Fault)", "Hierarchical BFT (GrpSize - 8 With Fault)"]
+    # colors = ["blue", "green", "red", "orange", "purple"]
+
+    # File paths to your throughput data files
+    filepaths = [
+        "results/throughputExp_cl_alea_bft.txt",
+        "results/throughputExp_cl_grouped_bft_8.txt",
+        "results/throughputExp_cl_grouped_bft_16.txt",
+    ]
+
+    # Labels and colors for datasets
+    labels = ["Alea BFT", "Hierarchical BFT (GrpSize - 8)", "Hierarchical BFT (GrpSize - 16)"]
+    colors = ["blue", "orange", "purple"]
 
     # File path to save the graph
-    output_file = "results/throughput_vs_nodes_comparison_all.png"
+    output_file = "results/throughput_vs_nodes_comparison_no_fault.png"
 
     # Plot the graph
     plot_throughput_vs_nodes(filepaths, labels, colors, output_file)

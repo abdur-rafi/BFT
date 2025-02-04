@@ -63,7 +63,7 @@ if __name__ == "__main__":
     ]
 
     # Labels and colors for datasets
-    labels = ["Alea BFT", "Grouped BFT (GrpSize - 8)"]
+    labels = ["Alea BFT", "Hierarchical BFT (GrpSize - 8)"]
     colors = ["blue", "green"]
 
     # File path to save the graph

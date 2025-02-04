@@ -73,33 +73,33 @@ def plot_delay_vs_nodes(filepaths, labels, colors, output_file):
 #     plot_delay_vs_nodes(filepaths, labels, colors, output_file)
 
 if __name__ == "__main__":
-    # File paths to your delay data files
-    filepaths = [
-        "results/delayExp_cl_alea_bft.txt",
-        "results/delayExp_cl_grouped_bft_8.txt",
-        "results/delayExp_cl_grouped_bft_16.txt",
-        "results/delayExp_cl_alea_bft_fault.txt",
-        "results/delayExp_cl_grouped_bft_8_fault.txt",
-    ]
-
-    # Labels and colors for datasets
-    labels = ["Alea BFT", "Grouped BFT (GrpSize - 8)", "Grouped BFT (GrpSize - 16)",
-              "Alea BFT (With Fault)", "Grouped BFT (GrpSize - 8 With Fault)"]
-    colors = ["red", "orange", "green", "blue", "purple"]
-
     # # File paths to your delay data files
     # filepaths = [
     #     "results/delayExp_cl_alea_bft.txt",
     #     "results/delayExp_cl_grouped_bft_8.txt",
     #     "results/delayExp_cl_grouped_bft_16.txt",
+    #     "results/delayExp_cl_alea_bft_fault.txt",
+    #     "results/delayExp_cl_grouped_bft_8_fault.txt",
     # ]
     #
     # # Labels and colors for datasets
-    # labels = ["Alea BFT", "Grouped BFT (GrpSize - 8)", "Grouped BFT (GrpSize - 16)"]
-    # colors = ["red", "green", "orange"]
+    # labels = ["Alea BFT", "Hierarchical BFT (GrpSize - 8)", "Hierarchical BFT (GrpSize - 16)",
+    #           "Alea BFT (With Fault)", "Hierarchical BFT (GrpSize - 8 With Fault)"]
+    # colors = ["red", "orange", "green", "blue", "purple"]
+
+    # File paths to your delay data files
+    filepaths = [
+        "results/delayExp_cl_alea_bft.txt",
+        "results/delayExp_cl_grouped_bft_8.txt",
+        "results/delayExp_cl_grouped_bft_16.txt",
+    ]
+
+    # Labels and colors for datasets
+    labels = ["Alea BFT", "Hierarchical BFT (GrpSize - 8)", "Hierarchical BFT (GrpSize - 16)"]
+    colors = ["red", "green", "orange"]
 
     # File path to save the graph
-    output_file = "results/delay_vs_nodes_comparison_all.png"
+    output_file = "results/delay_vs_nodes_comparison_no_fault.png"
 
     # Plot the graph
     plot_delay_vs_nodes(filepaths, labels, colors, output_file)
